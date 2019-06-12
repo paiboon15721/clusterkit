@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit:100,200,300,400&subset=thai');
+@import 'variables';
+@import '../../node_modules/bootstrap/scss/bootstrap';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss';
+
+@import './base/base';
+@import './base/typography';
+
+@import './components/header';
+@import './components/carousel';
+@import './components/featurette';
+@import './components/navbar';
+@import './components/jumbotron';
+@import './components/learn-more';
+@import './components/card-deck';
+@import './components/footer';

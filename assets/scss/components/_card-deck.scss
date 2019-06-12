@@ -1,0 +1,21 @@
+.card-deck {
+  justify-content: center;
+  @include media-breakpoint-down(sm) {
+    align-items: center;
+  }
+  .card {
+    min-width: 220px;
+    max-width: 320px;
+    width: 100%;
+
+    .card-body {
+      ul {
+        margin: 2rem 0 3rem 0;
+
+        li {
+          margin-top: 0.5rem;
+        }
+      }
+    }
+  }
+}

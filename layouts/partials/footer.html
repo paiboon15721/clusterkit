@@ -1,0 +1,50 @@
+<footer class="container pt-2 mb-md-4 mt-5 pt-md-3">
+  <div class="row">
+    <div class="col-12 col-md">
+      <h5>{{ .Site.Title }} Inc.</h5>
+      <ul class="list-unstyled text-small">
+        <li class="text-muted">
+          {{ .Site.Params.contact.address | markdownify }}
+        </li>
+        <li class="text-muted my-2">
+          <a href="callto:{{ replace .Site.Params.contact.phone ` ` `` }}">
+            <span>
+              <i class="fas fa-phone mr-2"></i>
+              {{ .Site.Params.contact.phone }}
+            </span>
+          </a>
+        </li>
+        <li class="text-muted my-2">
+          <a href="mailto:{{ .Site.Params.contact.email }}">
+            <span>
+              <i class="fas fa-envelope mr-2"></i>
+              {{ .Site.Params.contact.email }}
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>{{ .Site.Title }}</h5>
+      <ul class="list-unstyled text-small">
+        {{ range.Site.Menus.main }}
+        <li>
+          <a class="text-muted" href="{{ .URL }}">{{ .Name }}</a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>บริการสารสนเทศ</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="text-muted" href="#">คู่มือผู้ใช้</a></li>
+        <li><a class="text-muted" href="#">คู่มือเริ่มต้นใช้งาน</a></li>
+      </ul>
+    </div>
+    <div class="col-12 border-top mt-3">
+      <small class="d-block text-muted my-4">
+        Copyright &copy; 2018-2019 Dayone All rights reserved.
+      </small>
+    </div>
+  </div>
+</footer>

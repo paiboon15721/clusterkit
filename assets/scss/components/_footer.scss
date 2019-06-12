@@ -1,0 +1,13 @@
+footer {
+  a {
+    color: inherit;
+    &:hover {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  li {
+    margin-top: 0.4rem;
+  }
+}

@@ -1,0 +1,17 @@
+$font-family-base: 'Kanit';
+
+$theme-colors: (
+  'primary': #20c997,
+);
+
+$primary: map-get($theme-colors, primary);
+$secondary: #fff;
+
+$navbar-height: 4.5rem;
+$nav-link-padding-x: 1.5rem !important;
+$enable-responsive-font-sizes: true;
+
+$display1-size: 5.5rem;
+$display2-size: 4.5rem;
+$display3-size: 3.5rem;
+$display4-size: 3rem;

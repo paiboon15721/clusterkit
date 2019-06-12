@@ -1,0 +1,8 @@
+.navbar {
+  height: $navbar-height;
+  transition: background-color 200ms linear;
+
+  @include media-breakpoint-down(sm) {
+    background-color: $light;
+  }
+}

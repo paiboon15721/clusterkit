@@ -1,0 +1,7 @@
+body {
+  padding-top: $navbar-height;
+}
+
+@mixin debug {
+  border: 1px solid red;
+}

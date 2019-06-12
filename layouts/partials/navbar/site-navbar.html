@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-md navbar-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="{{ `/` | relURL }}">
+      <img
+        src="{{ `/logo.png` | relURL }}"
+        height="45"
+        class="d-inline-block align-top"
+        alt=""
+      />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        {{ $currentPage := . }}
+        {{ range.Site.Menus.main }}
+        <li
+          class="nav-item{{ if $currentPage.IsMenuCurrent `main` . }} active{{ end }}"
+        >
+          <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
+        </li>
+        {{ end }}
+      </ul>
+      <a href="callto:{{ replace .Site.Params.contact.phone ` ` `` }}">
+        <span class="navbar-text">
+          <i class="fas fa-phone mr-2"></i>
+          {{ .Site.Params.contact.phone }}
+        </span>
+      </a>
+    </div>
+  </div>
+</nav>

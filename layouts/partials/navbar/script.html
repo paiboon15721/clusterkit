@@ -1,0 +1,10 @@
+<script>
+  var $nav = $('.navbar')
+  var $navCollapse = $('.navbar-collapse')
+  $(document).scroll(function() {
+    $nav.toggleClass('bg-light', $(this).scrollTop() > $nav.height())
+  })
+  $('main, footer').on('click', function() {
+    $navCollapse.collapse('hide')
+  })
+</script>
