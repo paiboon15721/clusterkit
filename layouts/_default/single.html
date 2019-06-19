@@ -9,6 +9,21 @@
     <div class="col-md-8">
       <p>{{ .Content }}</p>
     </div>
+    <div class="col-md-4">
+      <div class="list-group">
+        {{ $currentPage := . }}
+        {{ with .Site.GetPage (.Section | printf "/%s") }}
+        {{ range.Pages }}
+        <a
+          href="{{ .Permalink }}"
+          class="list-group-item list-group-item-action {{ if eq $currentPage.Title .Title }}active{{ end }}"
+        >
+          {{ .Title }}
+        </a>
+        {{ end }}
+        {{ end }}
+      </div>
+    </div>
   </div>
 </div>
 {{ end }}
