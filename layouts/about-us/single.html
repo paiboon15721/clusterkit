@@ -1,0 +1,19 @@
+{{ define "content" }}
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="display-5">{{ .Title }}</h1>
+    </div>
+    <div class="col-md-12">
+      {{ range first 1 (.Resources.ByType "image") }}
+      {{ $image := . }}
+      {{ $image := $image.Resize "400x q50" }}
+      <div class="d-flex">
+        <img src="{{ $image.RelPermalink }}" class="img-fluid mx-auto my-3" />
+      </div>
+      {{ end }}
+      {{ .Content }}
+    </div>
+  </div>
+</div>
+{{ end }}
