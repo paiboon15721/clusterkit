@@ -1,6 +1,6 @@
 <footer class="container pt-2 mb-md-4 mt-5 pt-md-3">
   <div class="row">
-    <div class="col-12 col-md">
+    <div class="col-12 col-sm-6 col-md">
       <h5>{{ .Site.Title }} Inc.</h5>
       <ul class="list-unstyled text-small">
         <li class="text-muted">
@@ -24,7 +24,7 @@
         </li>
       </ul>
     </div>
-    <div class="col-6 col-md">
+    <div class="col-12 col-sm-6 col-md">
       <h5>{{ .Site.Title }}</h5>
       <ul class="list-unstyled text-small">
         {{ range.Site.Menus.main }}
@@ -34,16 +34,101 @@
         {{ end }}
       </ul>
     </div>
-    <div class="col-6 col-md">
+    <div class="col-12 col-sm-6 col-md">
+      <h5>ClusterKit Tutorial</h5>
+      <ul class="list-unstyled text-small">
+        <li>
+          <a
+            class="text-muted"
+            href="http://www.clusterkit.co.th/pdf/ZorinOS.pdf"
+            target="_blank"
+          >
+            Zonrin OS Education
+          </a>
+        </li>
+        <li>
+          <a
+            class="text-muted"
+            href="http://www.clusterkit.co.th/pdf/SparkLocal&Zeppelin.pdf"
+            target="_blank"
+          >
+            Apache Spark and Zeppelin
+          </a>
+        </li>
+        <li>
+          <a
+            class="text-muted"
+            href="http://www.clusterkit.co.th/pdf/WRF3.8.1_InstallationGuide.pdf"
+            target="_blank"
+          >
+            WRF on Rocks Cluster
+          </a>
+        </li>
+        <li>
+          <a
+            class="text-muted"
+            href="http://www.clusterkit.co.th/pdf/MariaDBGaleraCluster_Tutorial.pdf"
+            target="_blank"
+          >
+            MariaDB Galera Cluster
+          </a>
+        </li>
+        <li>
+          <a
+            class="text-muted"
+            href="http://www.clusterkit.co.th/pdf/OpenStack_Tutorial.pdf"
+            target="_blank"
+          >
+            OpenStack
+          </a>
+        </li>
+        <li>
+          <a
+            class="text-muted"
+            href="http://www.clusterkit.co.th/pdf/EC2_Tutorial.pdf"
+            target="_blank"
+          >
+            Amazon EC2
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-12 col-sm-6 col-md">
       <h5>บริการสารสนเทศ</h5>
       <ul class="list-unstyled text-small">
-        <li><a class="text-muted" href="#">คู่มือผู้ใช้</a></li>
-        <li><a class="text-muted" href="#">คู่มือเริ่มต้นใช้งาน</a></li>
+        <li>
+          <a
+            class="text-muted"
+            href="http://www.clusterkit.co.th/pdf/CloudComputingWithOpenSourceOssfest11.pdf"
+            target="_blank"
+          >
+            Cloud Computing With Open Source
+          </a>
+        </li>
+        <li>
+          <a
+            class="text-muted"
+            href="http://www.clusterkit.co.th/pdf/MySQL_Cluster_Ossfest11.pdf"
+            target="_blank"
+          >
+            MySQL Cluster
+          </a>
+        </li>
+        <li>
+          <a
+            class="text-muted"
+            href="http://www.clusterkit.co.th/pdf/HPC-Intro-EGAT.pdf"
+            target="_blank"
+          >
+            Cluster HPC on Open Source
+          </a>
+        </li>
       </ul>
     </div>
     <div class="col-12 border-top mt-3">
       <small class="d-block text-muted my-4">
-        Copyright &copy; 2007-{{ now.Year }} {{ .Site.Title }} All rights reserved.
+        Copyright &copy; 2007-{{ now.Year }} {{ .Site.Title }} All rights
+        reserved.
       </small>
     </div>
   </div>
