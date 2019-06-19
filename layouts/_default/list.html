@@ -21,9 +21,11 @@
             <div class="card-body">
               <h5 class="card-title">{{ .Params.projectName }}</h5>
               <p class="card-text">
-                {{ .Summary }}
+                {{ .Content | truncate 120 }}
               </p>
-              <a href="{{ .Permalink }}" class="btn btn-primary">อ่านต่อ</a>
+              <a href="{{ .Permalink }}" class="btn btn-sm btn-primary">
+                อ่านต่อ
+              </a>
             </div>
           </div>
         </div>
