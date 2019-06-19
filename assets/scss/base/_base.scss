@@ -5,3 +5,7 @@ body {
 @mixin debug {
   border: 1px solid red;
 }
+
+.debug {
+  @include debug;
+}
