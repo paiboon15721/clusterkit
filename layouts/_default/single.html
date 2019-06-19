@@ -1,12 +1,15 @@
 {{ define "content" }}
 <div class="container">
   <div class="row">
-    <div class="col">
-      <h1>{{ .Params.projectName }}@{{ .Title }}</h1>
-    </div>
-  </div>
-  <div class="row">
     <div class="col-md-8">
+      <h1 class="display-5">{{ .Params.projectName }}@{{ .Title }}</h1>
+      {{ range first 1 (.Resources.ByType "image") }}
+      {{ $image := . }}
+      {{ $image := $image.Resize "200x q50" }}
+      <div class="d-flex">
+        <img src="{{ $image.RelPermalink }}" class="img-fluid mx-auto my-3" />
+      </div>
+      {{ end }}
       {{ .Content }}
     </div>
     <div class="col-md-4">

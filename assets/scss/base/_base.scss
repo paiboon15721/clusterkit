@@ -9,3 +9,8 @@ body {
 .debug {
   @include debug;
 }
+
+.list-group {
+  position: sticky;
+  top: $navbar-height;
+}
