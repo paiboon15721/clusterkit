@@ -1,5 +1,6 @@
 {
   "baseURL": "https://paiboon15721.github.io/clusterkit",
+  "canonifyurls": true,
   "languageCode": "en-us",
   "title": "ClusterKit",
   "params": {

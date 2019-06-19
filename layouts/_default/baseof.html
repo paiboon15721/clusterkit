@@ -9,12 +9,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>{{ .Site.Title }}</title>
     {{ $style := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
-    <link rel="shortcut icon" type="image/png" href="{{ `/favicon.ico` | relURL }}"/>
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="{{ `/favicon.ico` | relURL }}"
+    />
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
   </head>
   <body>
     {{ partial "navbar/site-navbar.html" . }}
-    <main role="main" >
+    <main role="main">
       {{ block "content" . }}
       {{ end }}
     </main>
