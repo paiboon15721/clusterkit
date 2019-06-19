@@ -2,7 +2,7 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <h1>{{ .Title }}</h1>
+      <h1>{{ .Params.projectName }}@{{ .Title }}</h1>
     </div>
   </div>
   <div class="row">
@@ -18,7 +18,7 @@
           href="{{ .Permalink }}"
           class="list-group-item list-group-item-action {{ if eq $currentPage.Title .Title }}active{{ end }}"
         >
-          {{ .Title }}
+          {{ .Params.projectName }}@{{ .Title }}
         </a>
         {{ end }}
         {{ end }}
