@@ -39,5 +39,7 @@
       crossorigin="anonymous"
     ></script>
     {{ partial "navbar/script.html" }}
+    {{ block "javascript" . }}
+    {{ end }}
   </body>
 </html>

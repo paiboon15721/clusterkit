@@ -1,10 +1,12 @@
 <footer class="container pt-2 mb-md-4 mt-5 pt-md-3">
   <div class="row">
     <div class="col-12 col-sm-6 col-md">
-      <h5>{{ .Site.Title }} Inc.</h5>
+      <h5>บริษัท คลัสเตอร์คิท จำกัด</h5>
       <ul class="list-unstyled text-small">
         <li class="text-muted">
           {{ .Site.Params.contact.address | markdownify }}
+          <br />
+          เลขทะเบียนนิติบุคคล: {{ .Site.Params.contact.corporateNumber }}
         </li>
         <li class="text-muted my-2">
           <a href="callto:{{ replace .Site.Params.contact.phone ` ` `` }}">
