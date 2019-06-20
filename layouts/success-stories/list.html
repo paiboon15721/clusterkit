@@ -1,34 +1,26 @@
 {{ define "content" }}
 <div class="container">
-  <div class="row">
+  <div class="card-deck">
     {{ range.Pages }}
     {{ $page := . }}
-    <div class="col-sm-6">
-      <div class="card mb-3">
-        <div class="row no-gutters">
-          <div class="col-md-4 p-3 d-flex">
-            {{ range first 1 (.Resources.ByType "image") }}
-            {{ $image := . }}
-            {{ $image := $image.Resize "300x q50" }}
-            <img
-              src="{{ $image.RelPermalink }}"
-              class="card-img align-self-center"
-              alt="{{ $page.Title }} logo"
-            />
-            {{ end }}
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">{{ .Params.projectName }}</h5>
-              <p class="card-text">
-                {{ .Content | truncate 120 }}
-              </p>
-              <a href="{{ .Permalink }}" class="btn btn-sm btn-primary">
-                อ่านต่อ
-              </a>
-            </div>
-          </div>
-        </div>
+    <div class="card mb-3">
+      {{ range first 1 (.Resources.ByType "image") }}
+      {{ $image := . }}
+      {{ $image := $image.Resize "300x q50" }}
+      <img
+        src="{{ $image.RelPermalink }}"
+        class="card-img"
+        alt="{{ $page.Title }} logo"
+      />
+      {{ end }}
+      <div class="card-body">
+        <h5 class="card-title">{{ .Params.projectName }}</h5>
+        <p class="card-text">
+          {{ .Content | truncate 120 }}
+        </p>
+        <a href="{{ .Permalink }}" class="btn btn-sm btn-primary">
+          อ่านต่อ
+        </a>
       </div>
     </div>
     {{ end }}

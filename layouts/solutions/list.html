@@ -1,18 +1,16 @@
 {{ define "content" }}
 <div class="container">
-  <div class="row">
+  <div class="card-deck">
     {{ range.Pages }}
-    <div class="col-sm-6 mb-3">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">{{ .Title }}</h5>
-          <p class="card-text">
-            {{ .Content | truncate 250 }}
-          </p>
-          <a href="{{ .Permalink }}" class="btn btn-sm btn-primary">
-            อ่านต่อ
-          </a>
-        </div>
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">{{ .Title }}</h5>
+        <p class="card-text">
+          {{ .Content | truncate 250 }}
+        </p>
+        <a href="{{ .Permalink }}" class="btn btn-sm btn-primary">
+          อ่านต่อ
+        </a>
       </div>
     </div>
     {{ end }}
