@@ -1,13 +1,14 @@
 {
   "name": "clusterkit",
   "version": "1.0.0",
-  "description": "Clusterkit Webpage",
+  "description": "ClusterKit Webpage",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "rimraf public && hugo --minify && gh-pages -d public"
   },
   "author": "Paiboon Auengkongkatong",
   "license": "ISC",
+  "homepage": "https://paiboon15721.github.io/clusterkit",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.9.0",
     "bootstrap": "^4.3.1",
