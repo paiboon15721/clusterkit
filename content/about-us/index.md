@@ -5,7 +5,7 @@ draft: false
 type: about-us
 menu:
   main:
-    weight: 50
+    weight: 60
 ---
 
 ## ก่อนที่จะมาเป็น "คลัสเตอร์คิท"

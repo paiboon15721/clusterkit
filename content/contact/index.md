@@ -5,7 +5,7 @@ draft: false
 type: 'contact'
 menu:
   main:
-    weight: 60
+    weight: 70
 ---
 
 ## แผนที่
