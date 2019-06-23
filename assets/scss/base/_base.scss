@@ -18,3 +18,11 @@ body {
     padding: 0.25rem 1.25rem;
   }
 }
+
+.map {
+  height: 40rem;
+
+  @include media-breakpoint-down(sm) {
+    height: 30rem;
+  }
+}
