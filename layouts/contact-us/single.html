@@ -1,0 +1,24 @@
+{{ define "content" }}
+{{ partial "contact.html" }}
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="markdown">
+        {{ .Content }}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="learn-more mt-5">
+  <div class="container">
+    <h3>ก่อนที่จะมาเป็นคลัสเตอร์คิทในวันนี้</h3>
+    <a
+      class="btn btn-secondary btn-lg px-5 mt-3"
+      href="{{ `/about-us/` | relURL }}"
+      role="button"
+    >
+      เกี่ยวกับเรา
+    </a>
+  </div>
+</div>
+{{ end }}

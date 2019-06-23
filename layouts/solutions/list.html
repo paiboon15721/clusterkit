@@ -1,6 +1,11 @@
 {{ define "content" }}
-{{ partial "jumbotron.html" . }}
 <div class="container">
+  <div class="header">
+    <h1 class="display-4">โซลูชั่นสำหรับยุค Big Data</h1>
+    <p class="lead">
+      เราให้บริการออกแบบ ติดตั้ง และบำรุงรักษาโดยทีมผู้เชี่ยวชาญ
+    </p>
+  </div>
   <div class="card-deck">
     {{ range.Pages }}
     <div class="card mb-3">
@@ -15,6 +20,18 @@
       </div>
     </div>
     {{ end }}
+  </div>
+</div>
+<div class="learn-more mt-5">
+  <div class="container">
+    <h3>หากคุณมีข้อสงสัย เรายินดีให้คำปรึกษา</h3>
+    <a
+      class="btn btn-secondary btn-lg px-5 mt-3"
+      href="{{ `/contact-us/` | relURL }}"
+      role="button"
+    >
+      ติดต่อเรา
+    </a>
   </div>
 </div>
 {{ end }}

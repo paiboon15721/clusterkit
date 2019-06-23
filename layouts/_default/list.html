@@ -1,6 +1,14 @@
 {{ define "content" }}
-{{ partial "jumbotron.html" . }}
 <div class="container">
+  <div class="header">
+    <h1 class="display-4">{{ .Site.Title }}</h1>
+    <p class="lead">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum commodi
+      accusantium iure voluptate culpa, molestias animi! Ipsum, quasi odit! Eius
+      modi earum obcaecati architecto veritatis animi natus officiis! Ducimus,
+      nesciunt.
+    </p>
+  </div>
   <div class="card-deck">
     {{ range.Pages }}
     <div class="card mb-3">

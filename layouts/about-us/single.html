@@ -1,6 +1,11 @@
 {{ define "content" }}
-{{ partial "jumbotron.html" . }}
 <div class="container">
+  <div class="header">
+    <h1 class="display-4">เราใส่ใจในทุกรายละเอียด</h1>
+    <p class="lead">
+      บริษัทเอกชนรายแรกในประเทศที่ประกอบธุรกิจด้านนี้โดยเฉพาะ
+    </p>
+  </div>
   <hr class="featurette-divider" />
   <div class="row featurette">
     <div class="col-md-7">
@@ -114,5 +119,17 @@
   </div>
 
   <hr class="featurette-divider" />
+</div>
+<div class="learn-more">
+  <div class="container">
+    <h3>เราได้รับความไว้วางใจจากลูกค้ามากมาย</h3>
+    <a
+      class="btn btn-secondary btn-lg px-5 mt-3"
+      href="{{ `/success-stories/` | relURL }}"
+      role="button"
+    >
+      เยี่ยมชมผลงานของเรา
+    </a>
+  </div>
 </div>
 {{ end }}

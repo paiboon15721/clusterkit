@@ -1,6 +1,12 @@
 {{ define "content" }}
-{{ partial "jumbotron.html" . }}
 <div class="container">
+  <div class="header">
+    <h1 class="display-4">ผลงานของเรา</h1>
+    <p class="lead">
+      เราให้บริการตั้งแต่ระบบขนาดเล็กจนถึงระบบขนาดใหญ่
+      ประสบการณ์ที่ผ่านมาของทีมงานเรามีมากมาย
+    </p>
+  </div>
   <div class="card-deck">
     {{ range.Pages }}
     {{ $page := . }}
@@ -25,6 +31,18 @@
       </div>
     </div>
     {{ end }}
+  </div>
+</div>
+<div class="learn-more mt-5">
+  <div class="container">
+    <h3>เราให้บริการปรึกษา ออกแบบ และติดตั้งระบบมากมาย</h3>
+    <a
+      class="btn btn-secondary btn-lg px-5 mt-3"
+      href="{{ `/solutions/` | relURL }}"
+      role="button"
+    >
+      ดูโซลูชั่นของเรา
+    </a>
   </div>
 </div>
 {{ end }}

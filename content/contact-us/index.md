@@ -1,8 +1,8 @@
 ---
-title: 'ติดต่อ'
+title: 'ติดต่อเรา'
 date: 2019-06-23T09:42:15+07:00
 draft: false
-type: 'contact'
+type: 'contact-us'
 menu:
   main:
     weight: 70
