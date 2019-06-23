@@ -1,61 +1,6 @@
 {{ define "content" }}
 {{ partial "jumbotron.html" . }}
-<div class="container">
-  <div class="row my-5">
-    <div class="col text-center">
-      <h1 class="display-4">ติดต่อเรา</h1>
-      <h2 class="display-5">หากคุณมีข้อสงสัย เรายินดีให้คำปรึกษา</h2>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6 offset-md-3">
-      <form
-        action="https://formspree.io/{{ .Site.Params.contact.email }}"
-        method="POST"
-      >
-        <div class="form-group">
-          <input
-            class="form-control"
-            type="text"
-            placeholder="ชื่อ"
-            name="name"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <input
-            class="form-control"
-            type="tel"
-            placeholder="หมายเลขโทรศัพท์"
-            name="tel"
-          />
-        </div>
-        <div class="form-group">
-          <input
-            class="form-control"
-            type="email"
-            placeholder="อีเมล์"
-            name="email"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <input
-            class="form-control"
-            type="text"
-            placeholder="ข้อความ"
-            name="message"
-            required
-          />
-        </div>
-        <button type="submit" class="btn btn-primary float-right px-5">
-          ส่ง
-        </button>
-      </form>
-    </div>
-  </div>
-</div>
-{{ partial "map.html" }}
+{{ partial "contact.html" }}
 <div class="container">
   <div class="row">
     <div class="col-md-12">
