@@ -5,5 +5,5 @@ draft: false
 type: 'success-stories'
 menu:
   main:
-    weight: 20
+    weight: 40
 ---
