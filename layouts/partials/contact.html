@@ -6,48 +6,51 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-6 offset-md-3">
+    <div class="col-md-8 offset-md-2">
       <form
+        class="needs-validation"
+        novalidate
         action="https://formspree.io/{{ .Site.Params.contact.email }}"
         method="POST"
       >
-        <div class="form-group">
-          <input
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="name">ชื่อ</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="ชื่อ - นามสกุล"
+              value=""
+              required
+            />
+            <div class="invalid-feedback">กรุณาระบุชื่อ</div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="email">อีเมล</label>
+            <input
+              type="text"
+              class="form-control"
+              id="email"
+              placeholder="ชื่อ@โดเมน.com"
+              value=""
+              required
+            />
+            <div class="invalid-feedback">กรุณาระบุอีเมล</div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="message">ข้อความ</label>
+          <textarea
             class="form-control"
-            type="text"
-            placeholder="ชื่อ"
-            name="name"
+            id="message"
+            placeholder="ข้อความของคุณ"
             required
-          />
+          ></textarea>
+          <div class="invalid-feedback">กรุณาระบุข้อความของคุณ</div>
         </div>
-        <div class="form-group">
-          <input
-            class="form-control"
-            type="tel"
-            placeholder="หมายเลขโทรศัพท์"
-            name="tel"
-          />
-        </div>
-        <div class="form-group">
-          <input
-            class="form-control"
-            type="email"
-            placeholder="อีเมล์"
-            name="email"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <input
-            class="form-control"
-            type="text"
-            placeholder="ข้อความ"
-            name="message"
-            required
-          />
-        </div>
-        <button type="submit" class="btn btn-primary float-right px-5">
-          ส่ง
+        <button type="submit" class="btn btn-primary btn-lg mt-3 float-right px-5">
+          ส่งข้อความ
         </button>
       </form>
     </div>
