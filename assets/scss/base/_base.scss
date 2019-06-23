@@ -12,5 +12,9 @@ body {
 
 .list-group {
   position: sticky;
-  top: $navbar-height;
+  top: $navbar-height + 1rem;
+
+  .list-group-item {
+    padding: 0.25rem 1.25rem;
+  }
 }
