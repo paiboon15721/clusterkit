@@ -1,5 +1,5 @@
 ---
-title: "Contact"
+title: 'ติดต่อ'
 date: 2019-06-23T09:42:15+07:00
 draft: false
 menu:
