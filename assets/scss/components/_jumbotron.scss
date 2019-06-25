@@ -1,8 +1,21 @@
 .jumbotron {
   background-color: transparent;
+  padding: 0 2rem;
+  margin-bottom: 7rem;
 
-  p {
-    max-width: 25rem;
-    font-size: 1.2rem;
+  .left {
+    margin-top: 4rem;
+
+    p {
+      max-width: 25rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  img {
+    width: 24rem;
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
   }
 }

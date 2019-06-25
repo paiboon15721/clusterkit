@@ -1,7 +1,7 @@
 .navbar {
   transition: background-color 200ms linear;
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     background-color: $light;
   }
 }
