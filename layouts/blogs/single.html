@@ -1,32 +1,10 @@
 {{ define "content" }}
 <div class="container mt-5">
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-8 offset-md-2">
       <h1 class="display-5">{{ .Title }}</h1>
-      {{ range first 1 (.Resources.ByType "image") }}
-      {{ $image := . }}
-      {{ $image := $image.Resize "200x q50" }}
-      <div class="d-flex">
-        <img src="{{ $image.RelPermalink }}" class="img-fluid mx-auto my-3" />
-      </div>
-      {{ end }}
       <div class="markdown">
         {{ .Content }}
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="list-group">
-        {{ $currentPage := . }}
-        {{ with .Site.GetPage (.Section | printf "/%s") }}
-        {{ range.Pages }}
-        <a
-          href="{{ .Permalink }}"
-          class="list-group-item list-group-item-action {{ if eq $currentPage.Title .Title }}active{{ end }}"
-        >
-          {{ .Title }}
-        </a>
-        {{ end }}
-        {{ end }}
       </div>
     </div>
   </div>
