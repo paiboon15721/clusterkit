@@ -10,6 +10,9 @@
     }
     width: 20%;
     height: 30rem;
+    @include media-breakpoint-up(lg) {
+      width: 35%;
+    }
   }
 
   &-left {
@@ -25,6 +28,9 @@
     right: 0;
     width: 40%;
     height: 32 + $navbar-height;
+    @include media-breakpoint-up(lg) {
+      width: 42%;
+    }
   }
 
   &-2 {
@@ -33,6 +39,9 @@
     height: 35rem;
     @include media-breakpoint-down(md) {
       height: 28rem;
+    }
+    @include media-breakpoint-up(lg) {
+      width: 40%;
     }
   }
 }
