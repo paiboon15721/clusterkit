@@ -33,7 +33,7 @@ draft: false
 
 ## หลักการทำงาน
 
-{{< image src="/imgs/solutions/web-cluster-1.png" title="Web Cluster Diagram" >}}
+{{< image src="/imgs/blogs/web-cluster-1.png" title="Web Cluster Diagram" >}}
 
 หลักการทำงานของเว็บคลัสเตอร์ เมื่อเครื่อง Load Balance ได้รับ request มา ตัว Load Balance จะนำ request นั้น ไปกระจายโหลดไปยังเครื่องเซิร์ฟเวอร์ต่าง ๆ ที่อยู่ในระบบเว็บคลัสเตอร์ โดยมีอัลกอริทึ่มหลาย ๆ รูปแบบ เช่น
 
@@ -46,13 +46,13 @@ draft: false
 
 ### NAT Method
 
-{{< image src="/imgs/solutions/web-cluster-2.png" title="NAT Method Architecture" >}}
+{{< image src="/imgs/blogs/web-cluster-2.png" title="NAT Method Architecture" >}}
 
 วีธีการตอบกลับแบบ NAT (Network Address Translation) จะมีรูปแบบการตอบกลับโดยที่เมื่อเครื่อง เซิร์ฟเวอร์ Load Balance (router) ได้รับคำร้อง (request) มาจากเครื่องที่ขอรับบริการ (Client)แล้ว ตัวเครื่อง Load Balance จะทำการส่งต่อคำร้องนั้นไปยังเซิร์ฟเวอร์ในกลุ่มคลัสเตอร์ (real server) เพื่อทำการประมวลผล request ที่ได้รับมา เมื่อเครื่อง real server ประมวลผลเสร็จ จะส่งข้อมูลตอบกลับไป ยัง Load Balance เพื่อให้ Load Balance ส่งต่อข้อมูลกลับไปยังเครื่องที่ร้องขอข้อมูล (Client) ก็จะจบกระบวนการ การตอบกลับแบบ NAT ซึ่งวิธีการตอบกลับนี้จะพบได้ใน Hardware Load Balance ส่วนใหญ่ในท้องตลาดนั่นเอง
 
 ### Direct Route Method
 
-{{< image src="/imgs/solutions/web-cluster-3.png" title="Direct Route Method Architecture" >}}
+{{< image src="/imgs/blogs/web-cluster-3.png" title="Direct Route Method Architecture" >}}
 
 วีธีการตอบกลับแบบ Direct Rounting จะเป็นการตอบกลับข้อมูลจากเครื่องในกลุ่มคลัสเตอร์ (real server) กลับไปยังเครื่องที่ขอรับบริการ(Client)โดยตรง โดยไม่ต้องผ่านตัว Load Balance
 โดยเมื่อเครื่อง Load Balance ได้รับคำร้องจากเครื่องที่ขอรับบริการ (Client) เครื่อง Load Balance จะส่งคำร้อง ต่อไปยังกลุ่มคลัสเตอร์ (real server) และเมื่อกลุ่มเซิร์ฟเวอร์ได้รับคำร้องแล้ว จะตอบกลับไปยังเครื่องที่ขอรับบริการโดยตรง โดยที่ไม่ผ่าน Load Balance ซึ่งวิธีการตอบกลับแบบ Direct Route จะมีประสิทธิภาพในการทำงานมากกว่าการตอบกลับแบบ NAT เนื่องจากระบบจะไม่เป็นคอขวดที่เครื่อง Load Balance ในกรณีที่มี traffic มาก
