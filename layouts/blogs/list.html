@@ -10,10 +10,9 @@
     {{ range.Pages }}
     <div class="col-lg-4 col-md-6 px-md-5 mb-5">
       <h2 class="display-6">
-        <a href="{{ .Permalink }}">
-          {{ .Title }}
-        </a>
+        {{ .Title }}
       </h2>
+      <div class="h2-line"></div>
       <div class="markdown">
         {{ .Content | truncate 200 }}
         <a href="{{ .Permalink }}" class="btn btn-outline-primary btn-sm">
