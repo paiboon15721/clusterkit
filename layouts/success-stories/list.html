@@ -11,6 +11,7 @@
   <hr class="featurette-divider" />
   <div class="row featurette">
     {{ $odd := modBool $index 2 }}
+    <div class="square-{{ if $odd }}right{{ else }}left{{ end }}"></div>
     <div class="col-md-7{{ if not $odd }} order-md-2{{ end }}">
       <h2 class="featurette-heading">
         <a href="{{ .Permalink }}"> {{ .Params.projectName }}</a> @ {{ .Title }}
@@ -22,7 +23,7 @@
     <div class="img-container col-md-5 order-md-1">
       {{ range first 1 (.Resources.ByType "image") }}
       {{ $image := . }}
-      {{ $image := .Resize "600x q50" }}
+      {{ $image := .Resize "x400 q50" }}
       <img
         src="{{ $image.RelPermalink }}"
         class="img-fluid"

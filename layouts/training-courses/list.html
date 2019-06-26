@@ -8,7 +8,7 @@
   </div>
   <div class="row">
     {{ range.Pages }}
-    <div class="col-lg-4 col-md-6 p-5">
+    <div class="col-lg-4 col-md-6 px-md-5 mb-5">
       <h2 class="display-6">
         <a href="{{ .Permalink }}">
           {{ .Title }}
@@ -16,12 +16,10 @@
       </h2>
       <div class="markdown">
         <ul class="list-unstyled">
+          <li>จำนวน: {{ .Params.totalHours }} ชั่วโมง</li>
+          <li>ระยะเวลา: {{ .Params.totalDays }} วัน</li>
+          <li>ราคา: {{ .Params.price | lang.NumFmt 0 }} บาท</li>
           <li>
-            ระยะเวลา: {{ .Params.totalHours }} ชั่วโมง ({{ .Params.totalDays }}
-            วัน)
-          </li>
-          <li>
-            ราคา: {{ .Params.price | lang.NumFmt 0 }} บาท
             (รวมภาษีมูลค่าเพิ่มแล้ว)
           </li>
         </ul>

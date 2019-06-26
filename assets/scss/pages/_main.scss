@@ -3,15 +3,25 @@
 }
 
 .square {
+  &-left,
+  &-right,
   &-1,
   &-2 {
     position: absolute;
     background-color: $primary;
-    width: 40%;
-    height: 32 + $navbar-height;
     @include media-breakpoint-down(sm) {
       display: none;
     }
+    width: 20%;
+    height: 30rem;
+  }
+
+  &-left {
+    left: 0;
+  }
+
+  &-right {
+    right: 0;
   }
 
   &-1 {
