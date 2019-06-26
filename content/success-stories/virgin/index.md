@@ -1,6 +1,6 @@
 ---
-title: 'Virgin'
-projectName: 'VirginRadioThailand.com'
+title: 'VirginThailand'
+projectName: 'Web Cluster'
 date: 2019-06-19T06:40:03+07:00
 draft: false
 ---

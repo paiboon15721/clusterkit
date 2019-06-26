@@ -2,14 +2,14 @@
 <div class="container mt-5">
   <div class="row">
     <div class="col-md-8">
-      <h1 class="display-5">{{ .Params.projectName }}@{{ .Title }}</h1>
-      {{ range first 1 (.Resources.ByType "image") }}
-      {{ $image := . }}
-      {{ $image := $image.Resize "200x q50" }}
-      <div class="d-flex">
-        <img src="{{ $image.RelPermalink }}" class="img-fluid mx-auto my-3" />
+      <div class="text-center">
+        <h1 class="display-5">{{ .Params.projectName }}@{{ .Title }}</h1>
+        {{ range first 1 (.Resources.ByType "image") }}
+        {{ $image := . }}
+        {{ $image := .Resize "600x" }}
+        <img src="{{ $image.RelPermalink }}" class="img-fluid my-3" />
+        {{ end }}
       </div>
-      {{ end }}
       <div class="markdown">
         {{ .Content }}
       </div>

@@ -7,31 +7,32 @@
       ประสบการณ์ที่ผ่านมาของทีมงานเรามีมากมาย
     </p>
   </div>
-  <div class="card-deck">
-    {{ range.Pages }}
-    {{ $page := . }}
-    <div class="card mb-3">
+  {{ range $index, $page := .Pages }}
+  <hr class="featurette-divider" />
+  <div class="row featurette">
+    {{ $odd := modBool $index 2 }}
+    <div class="col-md-7{{ if not $odd }} order-md-2{{ end }}">
+      <h2 class="featurette-heading">
+        <a href="{{ .Permalink }}"> {{ .Params.projectName }}@{{ .Title }}</a>
+      </h2>
+      <p class="lead">
+        {{ .Content | truncate 320 }}
+      </p>
+    </div>
+    <div class="img-container col-md-5 order-md-1">
       {{ range first 1 (.Resources.ByType "image") }}
       {{ $image := . }}
-      {{ $image := $image.Resize "300x q50" }}
+      {{ $image := .Resize "600x q50" }}
       <img
         src="{{ $image.RelPermalink }}"
-        class="card-img"
-        alt="{{ $page.Title }} logo"
+        class="img-fluid"
+        alt="{{ $page.Title }}"
       />
       {{ end }}
-      <div class="card-body">
-        <h5 class="card-title">{{ .Params.projectName }}</h5>
-        <p class="card-text">
-          {{ .Content | truncate 120 }}
-        </p>
-        <a href="{{ .Permalink }}" class="btn btn-sm btn-primary">
-          อ่านต่อ
-        </a>
-      </div>
     </div>
-    {{ end }}
   </div>
+  {{ end }}
+  <hr class="featurette-divider" />
 </div>
 <div class="learn-more mt-5">
   <div class="container">
