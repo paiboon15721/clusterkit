@@ -12,6 +12,21 @@
       </div>
       {{ end }}
       <div class="markdown">
+        <ul class="list-unstyled">
+          <li>
+            ระยะเวลา: {{ .Params.totalHours }} ชั่วโมง ({{ .Params.totalDays }}
+            วัน)
+          </li>
+          <li>
+            ราคา: {{ .Params.price | lang.NumFmt 0 }} บาท
+            (รวมภาษีมูลค่าเพิ่มแล้ว)
+          </li>
+          <li>
+            <a href="{{ .Params.pdfURL }}" target="_blank">
+              รายละเอียดหลักสูตรรูปแบบ PDF
+            </a>
+          </li>
+        </ul>
         {{ .Content }}
       </div>
     </div>
@@ -19,7 +34,7 @@
 </div>
 <div class="learn-more mt-5">
   <div class="container">
-    <h3>หากคุณมีข้อสงสัย เรายินดีให้คำปรึกษา</h3>
+    <h3>หากคุณมีข้อสงสัย กรุณาติดต่อเรา</h3>
     <a
       class="btn btn-secondary btn-lg px-5 mt-3"
       href="{{ `/contact-us/` | relURL }}"
