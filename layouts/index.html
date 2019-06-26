@@ -1,21 +1,7 @@
 {{ define "content" }}
 {{ partial "main/jumbotron-1.html" }}
 {{ partial "main/jumbotron-2.html" }}
-{{ partial "main/our-solutions.html" }}
-<div class="learn-more training-section">
-  <div class="container my-5">
-    <h3>
-      เรามีให้บริการเทรนนิ่งทั้งในและนอกสถานที่
-      โดยทีมงานที่มีความเชี่ยวชาญจากประสบการณ์จริง
-    </h3>
-    <a
-      class="btn btn-secondary btn-lg px-5 mt-3"
-      href="{{ `/training-courses/` | relURL }}"
-      role="button"
-    >
-      ดูคอร์สเทรนนิ่งของเรา
-    </a>
-  </div>
-</div>
+{{ partial "our-solutions.html" }}
+{{ partial "main/training-section.html" }}
 {{ partial "contact.html" }}
 {{ end }}

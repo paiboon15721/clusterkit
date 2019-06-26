@@ -17,8 +17,11 @@
         <a href="{{ .Permalink }}"> {{ .Params.projectName }}</a> @ {{ .Title }}
       </h2>
       <p class="lead">
-        {{ .Content | truncate 320 }}
+        {{ .Summary | truncate 320 }}
       </p>
+      <a href="{{ .Permalink }}" class="btn btn-outline-primary btn-sm px-4">
+        อ่านต่อ
+      </a>
     </div>
     <div class="img-container col-md-5 order-md-1">
       {{ range first 1 (.Resources.ByType "image") }}
