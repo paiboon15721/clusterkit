@@ -22,8 +22,11 @@
   }
 
   &-2 {
-    top: -5rem;
+    top: -6rem;
     width: 30%;
     height: 35rem;
+    @include media-breakpoint-down(md) {
+      height: 28rem;
+    }
   }
 }
