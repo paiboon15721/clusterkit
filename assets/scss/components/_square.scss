@@ -24,12 +24,14 @@
   }
 
   &-1 {
-    top: 0;
+    top: 6rem;
     right: 0;
     width: 40%;
-    height: 32 + $navbar-height;
+    height: 31rem;
     @include media-breakpoint-up(lg) {
-      width: 42%;
+      top: 4rem;
+      width: 38%;
+      height: 36rem;
     }
   }
 
