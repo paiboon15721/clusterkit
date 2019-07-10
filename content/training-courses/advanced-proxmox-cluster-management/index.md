@@ -1,5 +1,6 @@
 ---
 title: 'Advanced Proxmox Cluster Management'
+subID: '27'
 date: 2019-06-23T10:51:48+07:00
 draft: false
 totalHours: 12

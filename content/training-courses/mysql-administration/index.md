@@ -1,5 +1,6 @@
 ---
 title: 'Mysql Administration'
+subID: '14'
 date: 2019-06-23T11:01:25+07:00
 draft: false
 totalHours: 12

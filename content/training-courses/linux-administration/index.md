@@ -1,5 +1,6 @@
 ---
 title: 'Linux Administration'
+subID: '12'
 date: 2019-06-23T10:58:37+07:00
 draft: false
 totalHours: 30

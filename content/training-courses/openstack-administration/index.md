@@ -1,5 +1,6 @@
 ---
 title: 'Openstack Administration'
+subID: '20'
 date: 2019-06-23T10:52:42+07:00
 draft: false
 totalHours: 18
