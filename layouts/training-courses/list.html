@@ -6,7 +6,7 @@
       สอนโดยทีมงานผู้เชี่ยวชาญ พร้อมที่จะแบ่งปันจากประสบการณ์จริง
     </p>
   </div>
-  <div class="row">
+  <div id="app" class="row">
     {{ range.Pages }}
     <div class="col-lg-4 col-md-6 px-md-5 mb-5">
       <h2 class="display-6">
@@ -22,6 +22,11 @@
           <li>ราคา: {{ .Params.price | lang.NumFmt 0 }} บาท</li>
           <li>
             (รวมภาษีมูลค่าเพิ่มแล้ว)
+          </li>
+          <li>
+            <button class="btn btn-sm btn-success px-3" disabled>
+              ลงทะเบียน {{ .Params.subID }} ${message}
+            </button>
           </li>
         </ul>
       </div>
@@ -44,4 +49,18 @@
     </a>
   </div>
 </div>
+{{ end }}
+{{ define "javascript" }}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+<script>
+  console.log('hi')
+  var app = new Vue({
+    el: '#app',
+    delimiters: ['${', '}'],
+    data: {
+      message: 'Hello Vue!',
+    },
+  })
+</script>
 {{ end }}
