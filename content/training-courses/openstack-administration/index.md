@@ -3,6 +3,7 @@ title: 'Openstack Administration'
 subID: '20'
 date: 2019-06-23T10:52:42+07:00
 draft: false
+weight: 30
 totalHours: 18
 totalDays: 3
 price: 10700

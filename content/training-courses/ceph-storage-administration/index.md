@@ -3,6 +3,7 @@ title: 'Ceph Storage Administration'
 subID: '22'
 date: 2019-06-23T10:52:33+07:00
 draft: false
+weight: 20
 totalHours: 12
 totalDays: 2
 price: 7490

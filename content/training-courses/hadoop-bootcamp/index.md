@@ -3,6 +3,7 @@ title: 'Hadoop Bootcamp'
 subID: '24'
 date: 2019-06-23T10:52:01+07:00
 draft: false
+weight: 10
 totalHours: 18
 totalDays: 3
 price: 10700

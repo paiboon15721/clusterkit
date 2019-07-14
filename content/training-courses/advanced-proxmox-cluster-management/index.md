@@ -3,6 +3,7 @@ title: 'Advanced Proxmox Cluster Management'
 subID: '27'
 date: 2019-06-23T10:51:48+07:00
 draft: false
+weight: 40
 totalHours: 12
 totalDays: 2
 price: 7490

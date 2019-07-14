@@ -3,6 +3,7 @@ title: 'Postgresql Administration'
 subID: '16'
 date: 2019-06-23T11:01:16+07:00
 draft: false
+weight: 60
 totalHours: 12
 totalDays: 2
 price: 7490
