@@ -1,0 +1,8 @@
+<script>
+  $('#registerModal').on('show.bs.modal', function(e) {
+    var button = $(e.relatedTarget)
+    var subID = button.data('subid')
+    var modal = $(this)
+    modal.find('.modal-title').text('ลงทะเบียน' + subID)
+  })
+</script>

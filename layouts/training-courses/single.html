@@ -30,6 +30,9 @@
             <button
               id="app"
               class="btn btn-sm btn-success px-3"
+              data-toggle="modal"
+              data-target="#registerModal"
+              data-subid="{{ .Params.subID }}"
               :class="{ 'btn-dark': isNotOpening('{{ .Params.subID }}')}"
               :disabled="isNotOpening('{{ .Params.subID }}')"
             >
@@ -54,10 +57,12 @@
     </a>
   </div>
 </div>
+{{ partial "register/site-register" }}
 {{ end }}
 {{ define "javascript" }}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+{{ partial "register/script" }}
 <script>
   var app = new Vue({
     el: '#app',
