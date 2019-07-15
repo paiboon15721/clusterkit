@@ -1,8 +1,31 @@
+<script
+  type="text/javascript"
+  src="https://earthchie.github.io/jquery.Thailand.js/jquery.Thailand.js/dependencies/JQL.min.js"
+></script>
+<script
+  type="text/javascript"
+  src="https://earthchie.github.io/jquery.Thailand.js/jquery.Thailand.js/dependencies/typeahead.bundle.js"
+></script>
+<link
+  rel="stylesheet"
+  href="https://earthchie.github.io/jquery.Thailand.js/jquery.Thailand.js/dist/jquery.Thailand.min.css"
+/>
+<script
+  type="text/javascript"
+  src="https://earthchie.github.io/jquery.Thailand.js/jquery.Thailand.js/dist/jquery.Thailand.min.js"
+></script>
 <script>
   $('#registerModal').on('show.bs.modal', function(e) {
     var button = $(e.relatedTarget)
     var subID = button.data('subid')
     var modal = $(this)
     modal.find('.modal-title').text('ลงทะเบียน' + subID)
+  })
+
+  $.Thailand({
+    $district: $('#district'),
+    $amphoe: $('#amphoe'),
+    $province: $('#province'),
+    $zipcode: $('#zipcode'),
   })
 </script>

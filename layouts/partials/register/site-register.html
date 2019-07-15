@@ -6,7 +6,7 @@
   aria-labelledby="registerModalLabel"
   aria-hidden="true"
 >
-  <div class="modal-dialog modal-xl" role="document">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="registerModalLabel">ลงทะเบียน</h5>
@@ -23,22 +23,75 @@
         <form>
           <div class="form-row">
             <div class="form-group col-md-6">
-              <label for="nameEN">ชื่อ (ภาษาอังกฤษ)</label>
-              <input
-                type="text"
-                class="form-control"
-                id="nameEN"
-                placeholder="Name"
-              />
+              <label for="nameEN">ชื่อภาษาอังกฤษ</label>
+              <input type="text" class="form-control" id="nameEN" />
             </div>
             <div class="form-group col-md-6">
-              <label for="surnameEN">นามสกุล (ภาษาอังกฤษ)</label>
+              <label for="surnameEN">นามสกุลภาษาอังกฤษ</label>
+              <input type="text" class="form-control" id="surnameEN" />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="nameTH">ชื่อภาษาไทย</label>
+              <input type="text" class="form-control" id="nameTH" />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="surnameTH">นามสกุลภาษาไทย</label>
+              <input type="text" class="form-control" id="surnameTH" />
+            </div>
+            <div class="form-group col-md-12">
+              <label for="address">ที่อยู่</label>
+              <input type="text" class="form-control" id="address" />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="district">ตำบล</label>
+              <input type="text" class="form-control" id="district" />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="amphoe">อำเภอ</label>
+              <input type="text" class="form-control" id="amphoe" />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="province">จังหวัด</label>
+              <input type="text" class="form-control" id="province" />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="zipcode">รหัสไปรษณีย์</label>
+              <input type="text" class="form-control" id="zipcode" />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="nameTH">หมายเลขโทรศัพท์ที่ใช้ติดต่อ</label>
+              <input type="text" class="form-control" id="nameTH" />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="surnameTH">อีเมล</label>
+              <input type="email" class="form-control" id="surnameTH" />
+            </div>
+            <div class="form-group col-md-6">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="quotation"
+                />
+                <label class="form-check-label" for="quotation">
+                  ต้องการใบเสนอราคา
+                </label>
+                <span class="form-text text-muted">
+                  บริษัทจะจัดส่งให้ในวันทำการถัดไป
+                </span>
+              </div>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="note">หมายเหตุ</label>
               <input
                 type="text"
                 class="form-control"
-                id="surnameEN"
-                placeholder="Surname"
+                id="note"
+                aria-describedby="noteHelp"
               />
+              <span class="form-text text-danger" id="noteHelp">
+                โปรดแจ้ง หากท่านทานอาหารเจ มังสวิรัติหรือฮาลาล
+              </span>
             </div>
           </div>
         </form>
