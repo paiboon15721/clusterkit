@@ -20,6 +20,7 @@
     delimiters: ['${', '}'],
     data: {
       subID: '',
+      type: '1',
     },
     mounted() {
       console.log('mounted')
@@ -35,5 +36,12 @@
     $amphoe: $('#amphoe'),
     $province: $('#province'),
     $zipcode: $('#zipcode'),
+  })
+
+  $.Thailand({
+    $district: $('#companyDistrict'),
+    $amphoe: $('#companyAmphoe'),
+    $province: $('#companyProvince'),
+    $zipcode: $('#companyZipcode'),
   })
 </script>
