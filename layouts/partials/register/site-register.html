@@ -13,7 +13,9 @@
   >
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="registerModalLabel">ลงทะเบียน ${subID}</h5>
+        <h5 class="modal-title" id="registerModalLabel">
+          ลงทะเบียน (${subName})
+        </h5>
         <button
           type="button"
           class="close"
@@ -26,6 +28,14 @@
       <div class="modal-body">
         <form>
           <div class="form-row">
+            <div class="form-group col-md-12">
+              <label for="class">รุ่น</label>
+              <select id="class" v-model="selectedClass" class="form-control">
+                <option v-for="v in openingClasses" :value="v.course_class">
+                  รุ่นที่ ${v.course_class} เรียนวันที่ ${v.course_datestudies}
+                </option>
+              </select>
+            </div>
             <div class="form-group col-md-6">
               <label for="nameEN">ชื่อภาษาอังกฤษ</label>
               <input type="text" class="form-control" id="nameEN" />
@@ -138,10 +148,14 @@
                 <input type="text" class="form-control" id="companyNameEN" />
               </div>
               <div class="form-group col-md-6">
+                <label for="branch">สาขา (ถ้ามี)</label>
+                <input type="text" class="form-control" id="branch" />
+              </div>
+              <div class="form-group col-md-6">
                 <label for="taxID">เลขประจำตัวผู้เสียภาษี</label>
                 <input type="text" class="form-control" id="taxID" />
               </div>
-              <div class="form-group col-md-6">
+              <div class="form-group col-md-12">
                 <label for="companyAddress">ที่อยู่</label>
                 <input type="text" class="form-control" id="companyAddress" />
               </div>

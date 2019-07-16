@@ -35,6 +35,7 @@
               data-toggle="modal"
               data-target="#registerModal"
               data-subid="{{ .Params.subID }}"
+              data-subname="{{ .Title }}"
               :class="{ 'btn-dark': isNotOpening('{{ .Params.subID }}')}"
               :disabled="isNotOpening('{{ .Params.subID }}')"
             >

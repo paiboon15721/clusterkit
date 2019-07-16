@@ -20,7 +20,10 @@
     delimiters: ['${', '}'],
     data: {
       subID: '',
+      subName: '',
+      openingClasses: [],
       type: '1',
+      selectedClass: '',
     },
     mounted() {
       console.log('mounted')
@@ -29,6 +32,16 @@
 
   $('#registerModal').on('show.bs.modal', function(e) {
     register.subID = $(e.relatedTarget).data('subid')
+    register.subName = $(e.relatedTarget).data('subname')
+    axios
+      .get(
+        'http://www.clusterkit.co.th/api/opening-classes.php?subID=' +
+          register.subID,
+      )
+      .then(res => {
+        register.openingClasses = res.data
+        register.selectedClass = register.openingClasses[0].course_class
+      })
   })
 
   $.Thailand({
