@@ -15,11 +15,19 @@
   src="https://earthchie.github.io/jquery.Thailand.js/jquery.Thailand.js/dist/jquery.Thailand.min.js"
 ></script>
 <script>
+  var register = new Vue({
+    el: '#register',
+    delimiters: ['${', '}'],
+    data: {
+      subID: '',
+    },
+    mounted() {
+      console.log('mounted')
+    },
+  })
+
   $('#registerModal').on('show.bs.modal', function(e) {
-    var button = $(e.relatedTarget)
-    var subID = button.data('subid')
-    var modal = $(this)
-    modal.find('.modal-title').text('ลงทะเบียน' + subID)
+    register.subID = $(e.relatedTarget).data('subid')
   })
 
   $.Thailand({
