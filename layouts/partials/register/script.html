@@ -21,12 +21,12 @@
     data: {
       subID: '',
       subName: '',
+      nameEN: '',
+      address: '',
+      province: '',
       openingClasses: [],
       type: '1',
-      selectedClass: '',
-    },
-    mounted() {
-      console.log('mounted')
+      courseID: '',
     },
   })
 
@@ -40,7 +40,7 @@
       )
       .then(res => {
         register.openingClasses = res.data
-        register.selectedClass = register.openingClasses[0].course_class
+        register.courseID = register.openingClasses[0].course_id
       })
   })
 
@@ -49,6 +49,9 @@
     $amphoe: $('#amphoe'),
     $province: $('#province'),
     $zipcode: $('#zipcode'),
+    onDataFill: function(data) {
+      console.log(data)
+    },
   })
 
   $.Thailand({
