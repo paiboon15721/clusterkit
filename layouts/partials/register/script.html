@@ -18,7 +18,7 @@
   var register = new Vue({
     el: '#register',
     delimiters: ['${', '}'],
-    data: {
+    data: () => ({
       errors: [],
       isValidated: false,
       openingClasses: [],
@@ -48,10 +48,11 @@
       companyAmphoe: '',
       companyProvince: '',
       companyZipcode: '',
-    },
+    }),
     methods: {
       submit: function(e) {
         if (this.$refs.registerForm.checkValidity()) {
+          console.log(this.$data)
         } else {
           this.$refs.registerForm.reportValidity()
         }
@@ -61,6 +62,7 @@
   })
 
   $('#registerModal').on('show.bs.modal', function(e) {
+    Object.assign(register.$data, register.$options.data())
     register.subID = $(e.relatedTarget).data('subid')
     register.subName = $(e.relatedTarget).data('subname')
     axios
