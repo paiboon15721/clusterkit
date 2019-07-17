@@ -26,189 +26,223 @@
         </button>
       </div>
       <div class="modal-body">
-        <form autocomplete="off">
-          <div class="form-row">
-            <div class="form-group col-md-12">
-              <label for="class">กรุณาเลือกรุ่นที่เรียน</label>
-              <select id="class" v-model="courseID" class="form-control">
-                <option v-for="v in openingClasses" :value="v.course_id">
-                  รุ่นที่ ${v.course_class} เรียนวันที่ ${v.course_datestudies}
-                </option>
-              </select>
-            </div>
-            <div class="form-group col-md-6">
-              <label for="nameEN">ชื่อภาษาอังกฤษ</label>
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label for="class">กรุณาเลือกรุ่นที่เรียน</label>
+            <select id="class" v-model="courseID" class="form-control">
+              <option v-for="v in openingClasses" :value="v.course_id">
+                รุ่นที่ ${v.course_class} เรียนวันที่ ${v.course_datestudies}
+              </option>
+            </select>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="nameEN">ชื่อภาษาอังกฤษ</label>
+            <input
+              type="text"
+              class="form-control"
+              v-model="nameEN"
+              id="nameEN"
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="surnameEN">นามสกุลภาษาอังกฤษ</label>
+            <input
+              type="text"
+              class="form-control"
+              v-model="surnameEN"
+              id="surnameEN"
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="nameTH">ชื่อภาษาไทย</label>
+            <input
+              type="text"
+              class="form-control"
+              v-model="nameTH"
+              id="nameTH"
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="surnameTH">นามสกุลภาษาไทย</label>
+            <input
+              type="text"
+              class="form-control"
+              v-model="surnameTH"
+              id="surnameTH"
+            />
+          </div>
+          <div class="form-group col-md-12">
+            <label for="address">ที่อยู่</label>
+            <input
+              type="text"
+              class="form-control"
+              v-model="address"
+              id="address"
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="district">ตำบล</label>
+            <input type="text" class="form-control" id="district" />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="amphoe">อำเภอ</label>
+            <input type="text" class="form-control" id="amphoe" />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="province">จังหวัด</label>
+            <input type="text" class="form-control" id="province" />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="zipcode">รหัสไปรษณีย์</label>
+            <input type="text" class="form-control" id="zipcode" />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="tel">หมายเลขโทรศัพท์ที่ใช้ติดต่อ</label>
+            <input type="text" class="form-control" v-model="tel" id="tel" />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="email">อีเมล</label>
+            <input
+              type="email"
+              class="form-control"
+              v-model="email"
+              id="email"
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <div class="form-check">
               <input
-                type="text"
-                class="form-control"
-                v-model="nameEN"
-                id="nameEN"
+                class="form-check-input"
+                type="checkbox"
+                v-model="quotation"
+                true-value="yes"
+                false-value="no"
+                id="quotation"
               />
-            </div>
-            <div class="form-group col-md-6">
-              <label for="surnameEN">นามสกุลภาษาอังกฤษ</label>
-              <input
-                type="text"
-                class="form-control"
-                v-model="surnameEN"
-                id="surnameEN"
-              />
-            </div>
-            <div class="form-group col-md-6">
-              <label for="nameTH">ชื่อภาษาไทย</label>
-              <input
-                type="text"
-                class="form-control"
-                v-model="nameTH"
-                id="nameTH"
-              />
-            </div>
-            <div class="form-group col-md-6">
-              <label for="surnameTH">นามสกุลภาษาไทย</label>
-              <input
-                type="text"
-                class="form-control"
-                v-model="surnameTH"
-                id="surnameTH"
-              />
-            </div>
-            <div class="form-group col-md-12">
-              <label for="address">ที่อยู่</label>
-              <input
-                type="text"
-                class="form-control"
-                v-model="address"
-                id="address"
-              />
-            </div>
-            <div class="form-group col-md-6">
-              <label for="district">ตำบล</label>
-              <input type="text" class="form-control" id="district" />
-            </div>
-            <div class="form-group col-md-6">
-              <label for="amphoe">อำเภอ</label>
-              <input type="text" class="form-control" id="amphoe" />
-            </div>
-            <div class="form-group col-md-6">
-              <label for="province">จังหวัด</label>
-              <input type="text" class="form-control" id="province" />
-            </div>
-            <div class="form-group col-md-6">
-              <label for="zipcode">รหัสไปรษณีย์</label>
-              <input type="text" class="form-control" id="zipcode" />
-            </div>
-            <div class="form-group col-md-6">
-              <label for="nameTH">หมายเลขโทรศัพท์ที่ใช้ติดต่อ</label>
-              <input type="text" class="form-control" id="nameTH" />
-            </div>
-            <div class="form-group col-md-6">
-              <label for="surnameTH">อีเมล</label>
-              <input type="email" class="form-control" id="surnameTH" />
-            </div>
-            <div class="form-group col-md-6">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  id="quotation"
-                />
-                <label class="form-check-label" for="quotation">
-                  ต้องการใบเสนอราคา
-                </label>
-                <span class="form-text text-danger">
-                  บริษัทจะจัดส่งให้ในวันทำการถัดไป
-                </span>
-              </div>
-            </div>
-            <div class="form-group col-md-6">
-              <label for="note">หมายเหตุ</label>
-              <input
-                type="text"
-                class="form-control"
-                id="note"
-                aria-describedby="noteHelp"
-              />
-              <span class="form-text text-danger" id="noteHelp">
-                โปรดแจ้ง หากท่านทานอาหารเจ มังสวิรัติหรือฮาลาล
+              <label class="form-check-label" for="quotation">
+                ต้องการใบเสนอราคา
+              </label>
+              <span class="form-text text-danger">
+                บริษัทจะจัดส่งให้ในวันทำการถัดไป
               </span>
             </div>
-            <div class="form-group col-md-12">
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="type"
-                  id="type1"
-                  v-model="type"
-                  value="1"
-                  checked
-                />
-                <label class="form-check-label" for="type1">
-                  บุคคลทั่วไป
-                </label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="type"
-                  id="type2"
-                  v-model="type"
-                  value="2"
-                />
-                <label class="form-check-label" for="type2">
-                  บริษัท/องค์กร
-                </label>
-              </div>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="note">หมายเหตุ</label>
+            <input
+              type="text"
+              class="form-control"
+              v-model="note"
+              id="note"
+              aria-describedby="noteHelp"
+            />
+            <span class="form-text text-danger" id="noteHelp">
+              โปรดแจ้ง หากท่านทานอาหารเจ มังสวิรัติหรือฮาลาล
+            </span>
+          </div>
+          <div class="form-group col-md-12">
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="type"
+                id="type1"
+                v-model="type"
+                value="1"
+                checked
+              />
+              <label class="form-check-label" for="type1">
+                บุคคลทั่วไป
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="type"
+                id="type2"
+                v-model="type"
+                value="2"
+              />
+              <label class="form-check-label" for="type2">
+                บริษัท/องค์กร
+              </label>
             </div>
           </div>
-          <fieldset :disabled="type == 1">
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="companyNameTH">ชื่อหน่วยงานภาษาไทย</label>
-                <input type="text" class="form-control" id="companyNameTH" />
-              </div>
-              <div class="form-group col-md-6">
-                <label for="companyNameEN">ชื่อหน่วยงานภาษาอังกฤษ</label>
-                <input type="text" class="form-control" id="companyNameEN" />
-              </div>
-              <div class="form-group col-md-6">
-                <label for="branch">สาขา (ถ้ามี)</label>
-                <input type="text" class="form-control" id="branch" />
-              </div>
-              <div class="form-group col-md-6">
-                <label for="taxID">เลขประจำตัวผู้เสียภาษี</label>
-                <input type="text" class="form-control" id="taxID" />
-              </div>
-              <div class="form-group col-md-12">
-                <label for="companyAddress">ที่อยู่</label>
-                <input type="text" class="form-control" id="companyAddress" />
-              </div>
-              <div class="form-group col-md-6">
-                <label for="companyDistrict">ตำบล</label>
-                <input type="text" class="form-control" id="companyDistrict" />
-              </div>
-              <div class="form-group col-md-6">
-                <label for="companyAmphoe">อำเภอ</label>
-                <input type="text" class="form-control" id="companyAmphoe" />
-              </div>
-              <div class="form-group col-md-6">
-                <label for="companyProvince">จังหวัด</label>
-                <input type="text" class="form-control" id="companyProvince" />
-              </div>
-              <div class="form-group col-md-6">
-                <label for="companyZipcode">รหัสไปรษณีย์</label>
-                <input type="text" class="form-control" id="companyZipcode" />
-              </div>
+        </div>
+        <fieldset :disabled="type == 1">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="companyNameTH">ชื่อหน่วยงานภาษาไทย</label>
+              <input
+                type="text"
+                class="form-control"
+                v-model="companyNameTH"
+                id="companyNameTH"
+              />
             </div>
-          </fieldset>
-        </form>
+            <div class="form-group col-md-6">
+              <label for="companyNameEN">ชื่อหน่วยงานภาษาอังกฤษ</label>
+              <input
+                type="text"
+                class="form-control"
+                v-model="companyNameEN"
+                id="companyNameEN"
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="branch">สาขา (ถ้ามี)</label>
+              <input
+                type="text"
+                class="form-control"
+                v-model="branch"
+                id="branch"
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="taxID">เลขประจำตัวผู้เสียภาษี</label>
+              <input
+                type="text"
+                class="form-control"
+                v-model="taxID"
+                id="taxID"
+              />
+            </div>
+            <div class="form-group col-md-12">
+              <label for="companyAddress">ที่อยู่</label>
+              <input
+                type="text"
+                class="form-control"
+                v-model="companyAddress"
+                id="companyAddress"
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="companyDistrict">ตำบล</label>
+              <input type="text" class="form-control" id="companyDistrict" />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="companyAmphoe">อำเภอ</label>
+              <input type="text" class="form-control" id="companyAmphoe" />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="companyProvince">จังหวัด</label>
+              <input type="text" class="form-control" id="companyProvince" />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="companyZipcode">รหัสไปรษณีย์</label>
+              <input type="text" class="form-control" id="companyZipcode" />
+            </div>
+          </div>
+        </fieldset>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">
           ปิด
         </button>
-        <button type="button" class="btn btn-primary">ลงทะเบียน</button>
+        <button type="button" @click="submit" class="btn btn-primary">
+          ลงทะเบียน
+        </button>
       </div>
     </div>
   </div>
