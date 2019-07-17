@@ -20,6 +20,7 @@
     delimiters: ['${', '}'],
     data: {
       errors: [],
+      isValidated: false,
       openingClasses: [],
       courseID: '',
       subID: '',
@@ -50,7 +51,11 @@
     },
     methods: {
       submit: function(e) {
-        console.log(this.subID)
+        if (this.$refs.registerForm.checkValidity()) {
+        } else {
+          this.$refs.registerForm.reportValidity()
+        }
+        this.isValidated = true
       },
     },
   })
