@@ -28,17 +28,17 @@
       courseID: '',
       subID: '',
       subName: '',
-      nameEN: '',
-      surnameEN: '',
-      nameTH: '',
-      surnameTH: '',
-      address: '',
-      district: '',
-      amphoe: '',
-      province: '',
-      zipcode: '',
-      tel: '',
-      email: '',
+      nameEN: 'mock',
+      surnameEN: 'mock',
+      nameTH: 'mock',
+      surnameTH: 'mock',
+      address: 'mock',
+      district: 'mock',
+      amphoe: 'mock',
+      province: 'mock',
+      zipcode: '10150',
+      tel: '02528324324',
+      email: 'mock@mock.com',
       quotation: 'no',
       note: '',
       type: '1',
@@ -54,17 +54,29 @@
     }),
     methods: {
       submit: function(e) {
-        this.loading = true
-        setTimeout(function() {
-          this.loading = false
-          registerModal.modal('hide')
-          successModal.modal('show')
-        }, 2000)
         if (this.$refs.registerForm.checkValidity()) {
+          var params = new URLSearchParams()
+          params.append('data', 'value1')
+          this.loading = true
+          axios
+            .post('http://www.clusterkit.co.th/api/register.php', params, {
+              headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+              },
+            })
+            .then(res => {
+              this.loading = false
+              registerModal.modal('hide')
+              successModal.modal('show')
+              console.log(res.data)
+            })
+            .catch(e => {
+              this.loading = false
+            })
         } else {
           this.$refs.registerForm.reportValidity()
         }
-        // this.isValidated = true
+        this.isValidated = true
       },
     },
   })
