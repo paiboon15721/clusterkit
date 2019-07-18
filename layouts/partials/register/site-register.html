@@ -42,7 +42,18 @@
         <button type="button" class="btn btn-secondary" data-dismiss="modal">
           ปิด
         </button>
-        <button type="submit" form="registerForm" class="btn btn-primary">
+        <button
+          type="submit"
+          form="registerForm"
+          class="btn btn-primary"
+          :disabled="loading"
+        >
+          <span
+            v-if="loading"
+            class="spinner-border spinner-border-sm"
+            role="status"
+            aria-hidden="true"
+          ></span>
           ลงทะเบียน
         </button>
       </div>
