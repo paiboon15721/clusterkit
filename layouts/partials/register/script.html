@@ -55,9 +55,9 @@
     methods: {
       submit: function(e) {
         if (this.$refs.registerForm.checkValidity()) {
-          var params = new URLSearchParams()
-          params.append('data', 'value1')
           this.loading = true
+          var params = new URLSearchParams()
+          params.append('courseID', this.courseID)
           axios
             .post('http://www.clusterkit.co.th/api/register.php', params, {
               headers: {

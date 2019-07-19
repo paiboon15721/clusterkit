@@ -75,7 +75,7 @@
     methods: {
       isNotOpening: function(subID) {
         return !this.openingCourses.some(function(e) {
-          return e.sub_id === subID
+          return e === subID
         })
       },
     },
