@@ -109,6 +109,7 @@
 
   registerModal.on('show.bs.modal', function(e) {
     Object.assign(register.$data, register.$options.data())
+    register.loading = true
     register.subID = $(e.relatedTarget).data('subid')
     register.subName = $(e.relatedTarget).data('subname')
     axios
@@ -119,6 +120,7 @@
       .then(res => {
         register.openingClasses = res.data
         register.courseID = register.openingClasses[0].course_id
+        register.loading = false
       })
   })
 
