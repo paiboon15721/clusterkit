@@ -1,15 +1,15 @@
 <div
   class="modal fade"
-  id="successModal"
+  id="failModal"
   tabindex="-1"
   role="dialog"
-  aria-labelledby="successModalLabel"
+  aria-labelledby="failModalLabel"
   aria-hidden="true"
 >
   <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="successModalLabel">
+        <h5 class="modal-title" id="failModalLabel">
           รายละเอียด
         </h5>
         <button
@@ -22,12 +22,9 @@
         </button>
       </div>
       <div class="modal-body">
-        <pre id="debug">Loading...</pre>
-        <div class="alert alert-success" role="alert">
-          <h4 class="alert-heading">ลงทะเบียนเสร็จสมบูรณ์!</h4>
-        </div>
-        <div class="container">
-          {{ partial "register/site-after-register" . }}
+        <pre id="debug2">Loading...</pre>
+        <div class="alert alert-danger" role="alert">
+          <h4 class="alert-heading">ลงทะเบียนล้มเหลว!</h4>
         </div>
       </div>
       <div class="modal-footer">

@@ -15,7 +15,6 @@
   src="https://earthchie.github.io/jquery.Thailand.js/jquery.Thailand.js/dist/jquery.Thailand.min.js"
 ></script>
 <script>
-  var successModal = $('#successModal')
   var registerModal = $('#registerModal')
   var register = new Vue({
     el: '#register',
@@ -42,15 +41,15 @@
       quotation: 'no',
       note: '',
       type: '1',
-      companyNameEN: '',
-      companyNameTH: '',
+      companyNameEN: 'mock',
+      companyNameTH: 'mock',
       branch: '',
-      taxID: '',
-      companyAddress: '',
-      companyDistrict: '',
-      companyAmphoe: '',
-      companyProvince: '',
-      companyZipcode: '',
+      taxID: '213213123',
+      companyAddress: 'mock',
+      companyDistrict: 'mock',
+      companyAmphoe: 'mock',
+      companyProvince: 'mock',
+      companyZipcode: 'mock',
     }),
     methods: {
       submit: function(e) {
@@ -58,6 +57,31 @@
           this.loading = true
           var params = new URLSearchParams()
           params.append('courseID', this.courseID)
+          params.append('nameEN', this.nameEN)
+          params.append('surnameEN', this.surnameEN)
+          params.append('nameTH', this.nameTH)
+          params.append('surnameTH', this.surnameTH)
+          params.append('address', this.address)
+          params.append('district', this.district)
+          params.append('amphoe', this.amphoe)
+          params.append('province', this.province)
+          params.append('zipcode', this.zipcode)
+          params.append('tel', this.tel)
+          params.append('email', this.email)
+          params.append('quotation', this.quotation)
+          params.append('note', this.note)
+          params.append('type', this.type)
+          if (this.type === '2') {
+            params.append('companyNameEN', this.companyNameEN)
+            params.append('companyNameTH', this.companyNameTH)
+            params.append('branch', this.branch)
+            params.append('taxID', this.taxID)
+            params.append('companyAddress', this.companyAddress)
+            params.append('companyDistrict', this.companyDistrict)
+            params.append('companyAmphoe', this.companyAmphoe)
+            params.append('companyProvince', this.companyProvince)
+            params.append('companyZipcode', this.companyZipcode)
+          }
           axios
             .post('http://www.clusterkit.co.th/api/register.php', params, {
               headers: {
@@ -67,11 +91,13 @@
             .then(res => {
               this.loading = false
               registerModal.modal('hide')
-              successModal.modal('show')
-              console.log(res.data)
+              $('#successModal').modal('show')
+              $('#debug').html(JSON.stringify(res.data, null, 2))
             })
             .catch(e => {
               this.loading = false
+              $('#failModal').modal('show')
+              $('#debug2').html(JSON.stringify(e.response.data, null, 2))
             })
         } else {
           this.$refs.registerForm.reportValidity()
@@ -81,7 +107,7 @@
     },
   })
 
-  $('#registerModal').on('show.bs.modal', function(e) {
+  registerModal.on('show.bs.modal', function(e) {
     Object.assign(register.$data, register.$options.data())
     register.subID = $(e.relatedTarget).data('subid')
     register.subName = $(e.relatedTarget).data('subname')
