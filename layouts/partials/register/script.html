@@ -16,11 +16,17 @@
 ></script>
 <script>
   var registerModal = $('#registerModal')
+  var failModal = new Vue({
+    el: '#failModal',
+    delimiters: ['${', '}'],
+    data: () => ({
+      errors: [],
+    }),
+  })
   var register = new Vue({
     el: '#register',
     delimiters: ['${', '}'],
     data: () => ({
-      errors: [],
       loading: false,
       isValidated: false,
       openingClasses: [],
@@ -97,7 +103,7 @@
             .catch(e => {
               this.loading = false
               $('#failModal').modal('show')
-              $('#debug2').html(JSON.stringify(e.response.data, null, 2))
+              failModal.errors = e.response.data
             })
         } else {
           this.$refs.registerForm.reportValidity()
