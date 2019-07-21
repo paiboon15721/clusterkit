@@ -4,7 +4,8 @@
   "description": "ClusterKit Webpage",
   "main": "index.js",
   "scripts": {
-    "deploy": "rimraf public && hugo --minify && gh-pages -d public"
+    "deploy": "rimraf public && hugo --minify && gh-pages -d public",
+    "build": "rimraf public && hugo --minify"
   },
   "author": "Paiboon Auengkongkatong",
   "license": "ISC",
