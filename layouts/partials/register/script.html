@@ -33,29 +33,29 @@
       courseID: '',
       subID: '',
       subName: '',
-      nameEN: 'mock',
-      surnameEN: 'mock',
-      nameTH: 'mock',
-      surnameTH: 'mock',
-      address: 'mock',
-      district: 'mock',
-      amphoe: 'mock',
-      province: 'mock',
-      zipcode: '10150',
-      tel: '02528324324',
-      email: 'mock@mock.com',
+      nameEN: '',
+      surnameEN: '',
+      nameTH: '',
+      surnameTH: '',
+      address: '',
+      district: '',
+      amphoe: '',
+      province: '',
+      zipcode: '',
+      tel: '',
+      email: '',
       quotation: 'no',
       note: '',
       type: '1',
-      companyNameEN: 'mock',
-      companyNameTH: 'mock',
+      companyNameEN: '',
+      companyNameTH: '',
       branch: '',
-      taxID: '213213123',
-      companyAddress: 'mock',
-      companyDistrict: 'mock',
-      companyAmphoe: 'mock',
-      companyProvince: 'mock',
-      companyZipcode: 'mock',
+      taxID: '',
+      companyAddress: '',
+      companyDistrict: '',
+      companyAmphoe: '',
+      companyProvince: '',
+      companyZipcode: '',
     }),
     methods: {
       submit: function(e) {
@@ -98,13 +98,10 @@
               this.loading = false
               registerModal.modal('hide')
               $('#successModal').modal('show')
-              $('#debug').html(JSON.stringify(res.data, null, 2))
             })
             .catch(e => {
               this.loading = false
               $('#failModal').modal('show')
-              console.log(e.response)
-              $('#debug2').html(JSON.stringify(e.response.data, null, 2))
               failModal.errors = e.response.data
             })
         } else {
