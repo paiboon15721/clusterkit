@@ -3,7 +3,7 @@
   <head>
     {{ partial "seo-schema" . }}
     <link rel="icon" href="{{ `favicon.ico` | relURL }}" />
-    <title>{{ .Site.Title }} - {{ .Title }}</title>
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
     {{ $style := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
     <link
       rel="shortcut icon"
