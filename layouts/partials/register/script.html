@@ -103,6 +103,8 @@
             .catch(e => {
               this.loading = false
               $('#failModal').modal('show')
+              console.log(e.response)
+              $('#debug2').html(JSON.stringify(e.response.data, null, 2))
               failModal.errors = e.response.data
             })
         } else {
