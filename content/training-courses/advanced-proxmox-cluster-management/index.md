@@ -6,7 +6,7 @@ draft: false
 weight: 40
 totalHours: 12
 totalDays: 2
-price: 7490
+price: 10700
 pdfURL: 'http://www.clusterkit.co.th/training/pdf/Advanced%20Proxmox%20Cluster%20Management.pdf'
 ---
 
