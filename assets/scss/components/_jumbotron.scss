@@ -26,7 +26,7 @@
       }
     }
 
-    img {
+    .img-fluid {
       width: 24rem;
       @include media-breakpoint-down(md) {
         margin-top: 3rem;

@@ -29,6 +29,7 @@
     width: 40%;
     height: 31rem;
     @include media-breakpoint-up(lg) {
+      @include debug;
       top: 4rem;
       width: 38%;
       height: 36rem;
