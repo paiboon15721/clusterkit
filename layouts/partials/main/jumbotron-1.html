@@ -1,13 +1,7 @@
 <div class="jumbotron-1 mt-5">
   {{ $rocket := resources.Get "imgs/rocket.jpg" }}
   {{ $rocket = $rocket.Resize "1200x" }}
-  <div class="square-1">
-    <img
-      class="img-overlay"
-      src="{{ $rocket.RelPermalink }}"
-      alt="speed rocket overlay"
-    />
-  </div>
+  <div class="square-1"></div>
   <div class="container">
     <div class="row">
       <div class="col-md-6 left">
