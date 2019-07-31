@@ -1,9 +1,15 @@
 <div class="form-row">
   <div class="form-group col-md-12">
     <label for="class">กรุณาเลือกรุ่นที่เรียน</label>
-    <select id="class" v-model="courseID" class="form-control">
-      <option v-for="v in openingClasses" :value="v.course_id">
-        รุ่นที่ ${v.course_class} เรียนวันที่ ${v.course_datestudies}
+    <select id="class" v-model="courseID" class="form-control" required>
+      <option disabled selected value> -- กรุณาเลือกวันที่เรียน -- </option>
+      <option
+        v-for="v in openingClasses"
+        :value="v.course_id"
+        :disabled="v.registered >= v.course_seatlimit"
+      >
+        รุ่นที่ ${v.course_class} เรียนวันที่ ${v.course_datestudies} ${
+        (v.registered >= v.course_seatlimit) ? '(เต็มแล้ว)' : '' }
       </option>
     </select>
   </div>

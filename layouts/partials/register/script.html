@@ -124,7 +124,6 @@
       )
       .then(res => {
         register.openingClasses = res.data
-        register.courseID = register.openingClasses[0].course_id
         register.loading = false
       })
   })
