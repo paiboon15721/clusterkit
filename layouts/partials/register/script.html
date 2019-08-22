@@ -14,6 +14,7 @@
   type="text/javascript"
   src="https://earthchie.github.io/jquery.Thailand.js/jquery.Thailand.js/dist/jquery.Thailand.min.js"
 ></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LePQbQUAAAAAILI-KSHN9i43DkaNAktt0bq_4mu"></script>
 <script>
   var registerModal = $('#registerModal')
   var failModal = new Vue({
@@ -88,21 +89,28 @@
             params.append('companyProvince', this.companyProvince)
             params.append('companyZipcode', this.companyZipcode)
           }
-          axios
-            .post('http://www.clusterkit.co.th/api/register.php', params, {
-              headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-              },
+          grecaptcha
+            .execute('6LePQbQUAAAAAILI-KSHN9i43DkaNAktt0bq_4mu', {
+              action: 'homepage',
             })
-            .then(res => {
-              this.loading = false
-              registerModal.modal('hide')
-              $('#successModal').modal('show')
-            })
-            .catch(e => {
-              this.loading = false
-              $('#failModal').modal('show')
-              failModal.errors = e.response.data
+            .then(function(token) {
+              params.append('token', token)
+              axios
+                .post('http://www.clusterkit.co.th/api/register.php', params, {
+                  headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                  },
+                })
+                .then(res => {
+                  this.loading = false
+                  registerModal.modal('hide')
+                  $('#successModal').modal('show')
+                })
+                .catch(e => {
+                  this.loading = false
+                  $('#failModal').modal('show')
+                  failModal.errors = e.response.data
+                })
             })
         } else {
           this.$refs.registerForm.reportValidity()
