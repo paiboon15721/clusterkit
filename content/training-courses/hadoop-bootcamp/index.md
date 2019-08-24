@@ -7,7 +7,7 @@ weight: 10
 totalHours: 18
 totalDays: 3
 price: 10700
-pdfURL: ''
+pdfURL: 'http://clusterkit.co.th/training/pdf/Hadoop%20Bootcamp.pdf'
 ---
 
 ## รายละเอียดหลักสูตร
