@@ -11,7 +11,8 @@ before_install:
   - sudo apt-get install -y hugo
 before_script:
   - yarn
-  - hugo --minify
+  - hugo version
+  - hugo
 
 deploy:
   provider: script
