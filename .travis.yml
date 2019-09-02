@@ -21,3 +21,5 @@ deploy:
   script: 
     - ls -la
     - find public -type f -exec curl -u xxx:psw --ftp-create-dirs -T {} ftp://${SFTP_USER}:${SFTP_PASSWORD}@ftp.clusterkit.co.th/domains/clusterkit.co.th/test_upload/{} \;
+  on:
+    branch: deploy
