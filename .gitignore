@@ -1,6 +1,7 @@
 node_modules
 resources
 public_html
+public
 _DS_Store
 .DS_Store
 .vscode
