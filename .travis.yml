@@ -10,16 +10,11 @@ branches:
 notifications:
   email: true
 
-before_install:
+install:
   - wget https://github.com/gohugoio/hugo/releases/download/v0.57.2/hugo_extended_0.57.2_Linux-64bit.deb
   - sudo dpkg -i hugo_extended_0.57.2_Linux-64bit.deb
+  - hugo --minify
 
-deploy:
-  provider: script
-  before_script:
-    - hugo --minify
-  script: 
-    - ls -la
-    - find public -type f -exec curl -u xxx:psw --ftp-create-dirs -T {} ftp://${SFTP_USER}:${SFTP_PASSWORD}@ftp.clusterkit.co.th/domains/clusterkit.co.th/test_upload/{} \;
-  on:
-    branch: deploy
+script: 
+  - ls -la
+  - find public -type f -exec curl -u xxx:psw --ftp-create-dirs -T {} ftp://${SFTP_USER}:${SFTP_PASSWORD}@ftp.clusterkit.co.th/domains/clusterkit.co.th/test_upload/{} \;
