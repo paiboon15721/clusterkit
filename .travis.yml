@@ -11,10 +11,14 @@ before_install:
   - sudo dpkg -i hugo_extended_0.57.2_Linux-64bit.deb
 before_script:
   - hugo version
+  - ls -la
   - hugo --minify
+  - ls -la
 
 deploy:
   provider: script
-  script: find public -type f -exec curl -u xxx:psw --ftp-create-dirs -T {} ftp://${SFTP_USER}:${SFTP_PASSWORD}@ftp.clusterkit.co.th/domains/clusterkit.co.th/test_upload/{} \;
+  script: 
+    - ls -la
+    - find public -type f -exec curl -u xxx:psw --ftp-create-dirs -T {} ftp://${SFTP_USER}:${SFTP_PASSWORD}@ftp.clusterkit.co.th/domains/clusterkit.co.th/test_upload/{} \;
   on:
     tags: true
