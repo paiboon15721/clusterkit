@@ -14,6 +14,7 @@ install:
   - wget https://github.com/gohugoio/hugo/releases/download/v0.57.2/hugo_extended_0.57.2_Linux-64bit.deb
   - sudo dpkg -i hugo_extended_0.57.2_Linux-64bit.deb
   - hugo --minify
+  - mv public public_html
 
 script: 
-  - find public -type f -exec curl --ftp-create-dirs -T {} ftp://${SFTP_USER}:${SFTP_PASSWORD}@ftp.clusterkit.co.th/domains/clusterkit.co.th/{} \;
+  - find public_html -type f -exec curl --ftp-create-dirs -T {} ftp://${SFTP_USER}:${SFTP_PASSWORD}@ftp.clusterkit.co.th/domains/clusterkit.co.th/{} \;
