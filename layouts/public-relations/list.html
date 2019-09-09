@@ -1,0 +1,40 @@
+{{ define "content" }}
+<div class="container">
+  <div class="header">
+    <h1 class="display-4">ข่าวสารและโปรโมชั่น</h1>
+    <p class="lead">
+      ติดตามการอัพเดทข่าวสาร และโปรโมชั่นใหม่ๆ ได้ที่นี่
+    </p>
+  </div>
+  <div class="row">
+    {{ range.Pages }}
+    <div class="col-lg-4 col-md-6 px-md-5 mb-5">
+      <h2 class="display-6">
+        <a href="{{ .Permalink }}" class="text-dark">
+          {{ .Title }}
+        </a>
+      </h2>
+      <div class="h2-line"></div>
+      <div class="markdown">
+        {{ .Content | truncate 400 }}
+        <a href="{{ .Permalink }}" class="btn btn-outline-primary btn-sm">
+          อ่านต่อ
+        </a>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>
+<div class="learn-more mt-5">
+  <div class="container">
+    <h3>เรามีคอร์สเชิงเทคนิคสอนโดยทีมงานที่มีความเชี่ยวชาญ</h3>
+    <a
+      class="btn btn-secondary btn-lg px-5 mt-3"
+      href="{{ `/training-courses/` | relURL }}"
+      role="button"
+    >
+      หลักสูตรฝึกอบรมของเรา
+    </a>
+  </div>
+</div>
+{{ end }}
