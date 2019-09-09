@@ -1,3 +1,10 @@
+{{ define "meta" }}
+{{ range first 1 (.Resources.ByType "image") }}
+{{ $image := . }}
+{{ $image := $image.Fill "1200x630" }}
+<meta property="og:image" content="{{ $image.Permalink }}" />
+{{ end }}
+{{ end }}
 {{ define "content" }}
 <div class="container mt-5">
   <div class="row">
@@ -5,6 +12,16 @@
       <h1 class="display-5">{{ .Title }}</h1>
       <div class="h1-line"></div>
       <div class="markdown">
+        {{ $page := . }}
+        {{ range first 1 (.Resources.ByType "image") }}
+        {{ $image := . }}
+        {{ $image = $image.Resize "1200x" }}
+        <img
+          src="{{ $image.RelPermalink }}"
+          class="img-fluid mb-4"
+          alt="{{ $page.Title }}"
+        />
+        {{ end }}
         {{ .Content }}
       </div>
     </div>
