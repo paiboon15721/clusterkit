@@ -17,7 +17,7 @@
         {{ $page := . }}
         {{ range first 1 (.Resources.ByType "image") }}
         {{ $image := . }}
-        {{ $image = $image.Resize "1200x q50" }}
+        {{ $image = $image.Resize "1200x" }}
         <img
           src="{{ $image.RelPermalink }}"
           class="img-fluid my-2"
