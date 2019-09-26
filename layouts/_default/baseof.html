@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
   </head>
   <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v4.0&appId=512515016217939&autoLogAppEvents=1"></script>
     {{ partial "navbar/site-navbar.html" . }}
     <main role="main">
       {{ block "content" . }}
