@@ -1,5 +1,5 @@
 ---
-title: 'Mysql Basic'
+title: 'MySQL Basic'
 subID: '15'
 date: 2019-06-23T11:01:34+07:00
 draft: false
