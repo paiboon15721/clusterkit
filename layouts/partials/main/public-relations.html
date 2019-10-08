@@ -1,0 +1,19 @@
+<div class="text-center promotions">
+  <h3 class="display-4">ข่าวสารและโปรโมชั่น</h3>
+</div>
+<div class="container">
+  <div class="row">
+    {{ range first 3 (.Site.GetPage "/public-relations").Pages }}
+    {{ partial "public-relation-item" . }}
+    {{ end }}
+  </div>
+</div>
+<div class="text-center">
+  <a
+    class="btn btn-success btn-lg px-5 mt-3"
+    href="{{ `/public-relations/` | relURL }}"
+    role="button"
+  >
+    ดูข่าวสารและโปรโมชั่นเพิ่มเติม
+  </a>
+</div>
