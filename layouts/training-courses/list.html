@@ -1,27 +1,38 @@
 {{ define "content" }}
-<div class="container">
+<div id="app" class="container">
   <div class="header">
     <h1 class="display-4">ฝึกอบรม</h1>
     <p class="lead">
       สอนโดยทีมงานผู้เชี่ยวชาญ พร้อมที่จะแบ่งปันจากประสบการณ์จริง
     </p>
   </div>
-  <div id="app" class="row">
-    {{ range.Pages }}
-    <div class="col-lg-4 col-md-6 px-md-5 mb-5">
+  <div v-if="loading" class="text-center">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+  <div class="row">
+    <div v-for="v in subjects" class="col-md-6 px-md-5 mb-5">
       <h2 class="display-6">
-        <a href="{{ .Permalink }}" class="text-dark">
-          {{ .Title }}
+        <a :href="v.detail_url" class="text-dark">
+          ${v.sub_enname}
         </a>
       </h2>
       <div class="h2-line"></div>
       <div class="markdown">
         <ul class="list-unstyled">
-          <li>จำนวน: {{ .Params.totalHours }} ชั่วโมง</li>
-          <li>ระยะเวลา: {{ .Params.totalDays }} วัน</li>
-          <li>ราคา: {{ .Params.price | lang.NumFmt 0 }} บาท</li>
+          <li>จำนวน: ${v.sub_period} ชั่วโมง (${v.sub_days} วัน)</li>
           <li>
-            (รวมภาษีมูลค่าเพิ่มแล้ว)
+            ราคา: ${v.sub_price.toLocaleString()} บาท (รวมภาษีมูลค่าเพิ่มแล้ว)
+          </li>
+          <li
+            v-for="c in v.classes"
+            class="text-info"
+            :class="{ 'text-danger': c.closed || (c.registered >= c.course_seatlimit) }"
+          >
+            รุ่นที่ ${c.course_class} เรียนวันที่ ${c.course_datestudies} ${
+            (c.registered >= c.course_seatlimit) ? '(เต็มแล้ว)' : '' }
+            ${c.closed ? '(ปิดรับการลงทะเบียน)' : ''}
           </li>
           <li>
             <button
@@ -30,21 +41,20 @@
               data-keyboard="false"
               data-toggle="modal"
               data-target="#registerModal"
-              data-subid="{{ .Params.subID }}"
-              data-subname="{{ .Title }}"
-              :class="{ 'btn-dark': isNotOpening('{{ .Params.subID }}')}"
-              :disabled="isNotOpening('{{ .Params.subID }}')"
+              :data-subid="v.sub_id"
+              :data-subname="v.sub_enname"
+              :class="{ 'btn-dark': !v.opening }"
+              :disabled="!v.opening"
             >
               ลงทะเบียน
             </button>
           </li>
         </ul>
       </div>
-      <a href="{{ .Permalink }}" class="btn btn-outline-primary btn-sm">
+      <a :href="v.detail_url" class="btn btn-outline-primary btn-sm">
         ดูรายละเอียดเพิ่มเติม
       </a>
     </div>
-    {{ end }}
   </div>
 </div>
 <div class="learn-more mt-5">
@@ -70,19 +80,15 @@
     el: '#app',
     delimiters: ['${', '}'],
     data: {
-      openingCourses: [],
-    },
-    methods: {
-      isNotOpening: function(subID) {
-        return !this.openingCourses.some(function(e) {
-          return e === subID
-        })
-      },
+      loading: false,
+      subjects: [],
     },
     mounted() {
-      axios
-        .get('http://www.clusterkit.co.th/api/opening-courses.php')
-        .then(res => (this.openingCourses = res.data))
+      this.loading = true
+      axios.get('http://www.clusterkit.co.th/api/subjects.php').then(res => {
+        this.loading = false
+        this.subjects = res.data
+      })
     },
   })
 </script>
