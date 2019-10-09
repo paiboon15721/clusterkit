@@ -11,11 +11,23 @@
   text-align: center;
   box-shadow: 2px 2px 3px #999;
 
+  @include media-breakpoint-down(sm) {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+  }
+
   &:hover {
     color: #0084ff;
   }
 
   i {
+    font-size: 3em;
     margin-top: 10px;
+    @include media-breakpoint-down(sm) {
+      font-size: 2.5em;
+      margin-top: 8px;
+    }
   }
 }
