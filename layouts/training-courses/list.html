@@ -6,11 +6,7 @@
       สอนโดยทีมงานผู้เชี่ยวชาญ พร้อมที่จะแบ่งปันจากประสบการณ์จริง
     </p>
   </div>
-  <div v-if="loading" class="text-center">
-    <div class="spinner-border text-primary" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-  </div>
+  {{ partial "training-courses/loading" }}
   <div class="row">
     <div v-for="v in subjects" class="col-md-6 px-md-5 mb-5">
       <h2 class="display-6">
