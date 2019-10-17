@@ -83,7 +83,13 @@
       this.loading = true
       axios.get('http://www.clusterkit.co.th/api/subjects.php').then(res => {
         this.loading = false
-        this.subjects = res.data
+        var subjects = res.data.map(v => {
+          if (v.classes.length) {
+            v.sub_price = v.classes[0].course_price
+          }
+          return v
+        })
+        this.subjects = subjects
       })
     },
   })
