@@ -8,8 +8,9 @@
         :value="v.course_id"
         :disabled="v.registered >= v.course_seatlimit || v.closed"
       >
-        รุ่นที่ ${v.course_class} เรียนวันที่ ${v.course_datestudies} ${
-        (v.registered >= v.course_seatlimit) ? '(เต็มแล้ว)' : '' } ${v.closed ?
+        รุ่นที่ ${v.course_class} เรียนวันที่ ${v.course_datestudies}
+        (${v.course_price.toLocaleString()} บาท) ${ (v.registered >=
+        v.course_seatlimit) ? '(เต็มแล้ว)' : '' } ${v.closed ?
         '(ปิดรับการลงทะเบียน)' : ''}
       </option>
     </select>

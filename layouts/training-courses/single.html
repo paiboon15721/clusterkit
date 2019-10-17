@@ -79,7 +79,12 @@
     delimiters: ['${', '}'],
     data: {
       loading: false,
-      v: null,
+      v: {
+        sub_enname: '',
+        sub_period: 0,
+        sub_price: 0,
+        classes: [],
+      },
     },
     mounted() {
       this.loading = true
@@ -89,7 +94,11 @@
         )
         .then(res => {
           this.loading = false
-          this.v = res.data
+          var subject = res.data
+          if (subject.classes.length) {
+            subject.sub_price = subject.classes[0].course_price
+          }
+          this.v = subject
         })
     },
   })
