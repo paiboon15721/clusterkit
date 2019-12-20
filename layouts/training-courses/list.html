@@ -8,7 +8,7 @@
   </div>
   {{ partial "training-courses/loading" }}
   <div class="row">
-    <div v-for="v in subjects" class="col-md-6 px-md-5 mb-5">
+    <div v-cloak v-for="v in subjects" class="col-md-6 px-md-5 mb-5">
       <h2 class="display-6">
         <a :href="v.detail_url" class="text-dark">
           ${v.sub_enname}

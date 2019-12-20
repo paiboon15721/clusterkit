@@ -1,7 +1,7 @@
 {{ define "content" }}
 <div class="container mt-5">
   <div class="row">
-    <div id="app" class="col-md-8 offset-md-2">
+    <div v-cloak id="app" class="col-md-8 offset-md-2">
       <h1 class="display-5">${v.sub_enname}</h1>
       <div class="h1-line"></div>
       {{ range first 1 (.Resources.ByType "image") }}
