@@ -1,6 +1,6 @@
 ---
 title: 'เปิดอบรม Hadoop Bootcamp'
-date: 2019-11-08T14:99:06+07:00
+date: 2019-10-08T14:10:06+07:00
 draft: false
 ---
 
