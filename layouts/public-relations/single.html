@@ -21,9 +21,12 @@
         {{ $image := . }}
         <img
           src="{{ $image.RelPermalink }}"
-          class="img-fluid mb-4"
+          class="img-fluid mb-2"
           alt="{{ $page.Title }}"
         />
+        <div class="d-flex justify-content-end mb-2">
+          <time>วันที่ {{ $page.Date.Format "02/01/2006" }}</time>
+        </div>
         {{ end }}
         {{ .Content }}
       </div>
