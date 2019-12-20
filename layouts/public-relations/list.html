@@ -7,7 +7,7 @@
     </p>
   </div>
   <div class="row">
-    {{ range.Pages }}
+    {{ range.Pages.ByDate.Reverse }}
     {{ partial "public-relation-item" . }}
     {{ end }}
   </div>
