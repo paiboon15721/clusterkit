@@ -1,7 +1,7 @@
 ---
-title: 'Ckan Data Management Portal'
-subID: '31' 
-date: 2019-12-23T09:36:25+07:00
+title: 'Power Bi'
+subID: '30' 
+date: 2019-12-23T11:04:43+07:00
 draft: false
 totalHours: 18
 totalDays: 3

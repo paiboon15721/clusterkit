@@ -1,7 +1,7 @@
 ---
-title: 'Ckan Data Management Portal'
-subID: '31' 
-date: 2019-12-23T09:36:25+07:00
+title: 'Data Mining With Apache Spark'
+subID: '32' 
+date: 2019-12-23T16:06:43+07:00
 draft: false
 totalHours: 18
 totalDays: 3
