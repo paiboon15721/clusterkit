@@ -1,14 +1,14 @@
 ---
-title: '{{ replace .Name "-" " " | title }}'
-subID: '' 
-date: {{ .Date }}
+title: 'Ckan Data Management Portal'
+subID: '31' 
+date: 2019-12-23T09:36:25+07:00
 draft: false
 totalHours: 18
 totalDays: 3
 price: 10700
 pdfURL: ''
 ---
-
+<!--
 ## รายละเอียดหลักสูตร
 
 ## หลักสูตรนี้เหมาะสำหรับ
@@ -22,3 +22,4 @@ pdfURL: ''
 ## สิ่งที่ผู้เข้าอบรมต้องเตรียม
 
 ## เนื้อหาหลักสูตร
+-->
