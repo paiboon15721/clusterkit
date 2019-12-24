@@ -75,7 +75,7 @@ pdfURL: 'http://www.clusterkit.co.th/training/pdf/Ceph%20Storage%20Administratio
 - Rados Gateway – REST based interface to Ceph storage
 - Ceph File System
 - MDS Server
-  - CephFS client ( in kernel/ FUSE)
+  - CephFS client (in kernel/ FUSE)
   - MDS install and using
   - Workshop : MDS install and Mount Ceph File system
 - High Availability

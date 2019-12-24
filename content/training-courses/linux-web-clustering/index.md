@@ -42,79 +42,79 @@ pdfURL: 'http://www.clusterkit.co.th/training/pdf/Linux%20Web%20Clustering.pdf'
 #### เช้า
 
 - รู้จักกับระบบเว็บคลัสเตอร์
-- เว็บคลัสเตอร์คืออะไร
-- รูปแบบการกระจายภาระงานของเว็บ (Web Load Balancing)
-- DNS Round Robin
-- Scale out
-- Hardware Load Balancing
-- Software Load Balancing
-- สถาปัตยกรรมและหลักการออกแบบเว็บคลัสเตอร์
+    - เว็บคลัสเตอร์คืออะไร
+    - รูปแบบการกระจายภาระงานของเว็บ (Web Load Balancing)
+        - DNS Round Robin
+        - Scale out
+        - Hardware Load Balancing
+        - Software Load Balancing
+    - สถาปัตยกรรมและหลักการออกแบบเว็บคลัสเตอร์
 - ขั้นตอนการติดตั้งระบบปฏิบัติการ Linux
-- **Workshop 1:** ประกอบคลัสเตอร์และติดตั้งระบบปฏิบัติการ Linux
+    - **Workshop 1:** ประกอบคลัสเตอร์และติดตั้งระบบปฏิบัติการ Linux
 - การตั้งค่า SSH ให้ทำงานแบบ Single Sign On with Public key Infrastructure (PKI)
-- **Workshop 2:** ปรับแต่งการเชื่อมต่อภายในระบบคลัสเตอร์และทบทวนคำสั่งที่เกี่ยวข้อง
+    - **Workshop 2:** ปรับแต่งการเชื่อมต่อภายในระบบคลัสเตอร์และทบทวนคำสั่งที่เกี่ยวข้อง
 
 #### บ่าย
 
 - ทบทวนความรู้ทฤษฎีระบบเครือข่ายในส่วนที่เกี่ยวข้องกับระบบเว็บคลัสเตอร์
-- MAC Address
-- ARP Protocol
-- Public และ Private Network
+    - MAC Address
+    - ARP Protocol
+    - Public และ Private Network
 - ทบทวนเรื่อง Web Server
-- การทำงานของ Web Server
-- Configuration ที่สำคัญของ Web Server
+    - การทำงานของ Web Server
+    - Configuration ที่สำคัญของ Web Server
 - การกระจายภาระงานด้วย Linux Virtual Server (LVS)
-- รู้จักกับ Linux Virtual Server
+    - รู้จักกับ Linux Virtual Server
 - รู้จักกับ LVS Scheduling Algorithm ประเภทต่าง ๆ
 - ทฤษฎีการกระจายภาระงาน (Load Balancing) เบื้องต้น
 - การปรับแต่งเว็บคลัสเตอร์แบบ NAT
 - การปรับแต่งเว็บคลัสเตอร์แบบ Direct Route
-- หลักการของ Virtual IP
-- MAC Spoofing
-- การติดตั้งและใช้งาน arptable_jf เพื่อจัดการกับปัญหา MAC Address ในการทำงานของระบบเว็บคลัสเตอร์
+    - หลักการของ Virtual IP
+    - MAC Spoofing
+    - การติดตั้งและใช้งาน arptable_jf เพื่อจัดการกับปัญหา MAC Address ในการทำงานของระบบเว็บคลัสเตอร์
 - Piranha configuration tool
-- **Workshop 3:** สร้างเว็บคลัสเตอร์แบบ NAT ด้วย Piranha GUI พร้อมทดสอบวิธีการกระจายแบบต่าง ๆ
-- **Workshop 4:** สร้างเว็บคลัสเตอร์แบบ Direct Route ด้วย Piranha GUI พร้อมทดสอบวิธีการกระจายแบบต่าง ๆ
+    - **Workshop 3:** สร้างเว็บคลัสเตอร์แบบ NAT ด้วย Piranha GUI พร้อมทดสอบวิธีการกระจายแบบต่าง ๆ
+    - **Workshop 4:** สร้างเว็บคลัสเตอร์แบบ Direct Route ด้วย Piranha GUI พร้อมทดสอบวิธีการกระจายแบบต่าง ๆ
 
 ### วันที่ 2
 
 #### เช้า
 
 - การกระจายภาระงานด้วยซอฟต์แวร์ HAProxy
-- **Workshop 5:** การติดตั้งใช้งาน HAProxy
-- เปรียบเทียบการทำงานระหว่า HAProxy และ LVS
+    - **Workshop 5:** การติดตั้งใช้งาน HAProxy
+    - เปรียบเทียบการทำงานระหว่า HAProxy และ LVS
 - การทำระบบภาวะทนต่อความผิดพร่องสูง
-- หลักการทำงานแบบ High Availability (HA) ของ Load Balancer
-- การสร้างระบบ High Availability สำหรับระบบ Web Cluster
-- **Workshop 6:** สร้างระบบ High Availability สำหรับระบบเว็บคลัสเตอร์ พร้อมทดสอบการทำงาน
+    - หลักการทำงานแบบ High Availability (HA) ของ Load Balancer
+    - การสร้างระบบ High Availability สำหรับระบบ Web Cluster
+    - **Workshop 6:** สร้างระบบ High Availability สำหรับระบบเว็บคลัสเตอร์ พร้อมทดสอบการทำงาน
 
 #### บ่าย
 
 - วิธีการจัดการไฟล์เว็บในรูปแบบต่าง ๆ เพื่อความสะดวกในการ Update ข้อมูลที่เดียว
-- ความแตกต่างระหว่าง Share Disk และ Share Storage
-- Network File System (NFS), ISCSI, GlusterFS (60 min)
-- ISCSI รูปแบบใช้ เพื่อให้ทุกเครื่องเห็นที่เดียวกัน
-- **Workshop 7:** การสร้าง Share Directory บน NFS และการทำ Auto mount
+    - ความแตกต่างระหว่าง Share Disk และ Share Storage
+    - Network File System (NFS), ISCSI, GlusterFS (60 min)
+    - ISCSI รูปแบบใช้ เพื่อให้ทุกเครื่องเห็นที่เดียวกัน
+    - **Workshop 7:** การสร้าง Share Directory บน NFS และการทำ Auto mount
 - รู้จักกับ GlusterFS
-- การทำงานของ GlusterFS ในรูปแบบต่าง ๆ
-- องค์ประกอบของเครื่องในระบบ
-- **Workshop 8:** การติดตั้งและใช้งาน GlusterFS แบบ Replication (3 เครื่อง)การรักษาความปลอดภัยของระบบ (100 min)
+    - การทำงานของ GlusterFS ในรูปแบบต่าง ๆ
+    - องค์ประกอบของเครื่องในระบบ
+    - **Workshop 8:** การติดตั้งและใช้งาน GlusterFS แบบ Replication (3 เครื่อง)การรักษาความปลอดภัยของระบบ (100 min)
 
 ### วันที่ 3
 
 #### เช้า
 
 - รู้จักกับ Memcache
-- **Workshop 9:** การใช้งาน Memcache ในการจัดการ session ภายในคลัสเตอร์
+    - **Workshop 9:** การใช้งาน Memcache ในการจัดการ session ภายในคลัสเตอร์
 - แนะนำ Ganglia ระบบ Web Monitoring tools
-- **Workshop 10:** ติดตั้งระบบ Web Monitoring
+    - **Workshop 10:** ติดตั้งระบบ Web Monitoring
 - การปรับแต่งประสิทธิภาพ
-- การทดลองยิงโหลดด้วย awk
-- วางแผนการรับโหลด
+    - การทดลองยิงโหลดด้วย awk
+    - วางแผนการรับโหลด
 
 #### บ่าย
 
 - การปรับแต่งประสิทธิภาพ(ต่อ)
-- การปรับแต่ระบบปฏิบัติการเพื่อรองรับภาระงานที่เพิ่มขึ้น
+    - การปรับแต่ระบบปฏิบัติการเพื่อรองรับภาระงานที่เพิ่มขึ้น
 - การใช้งาน MySQLTuner เพื่อปรับแต่งประสิทธิภาพให้ MySQL
-- แนะนำระบบฐานข้อมูลแบบกระจายในแบบต่าง ๆ เช่น MarieDB Galera Cluster, MySQL Cluster
+    - แนะนำระบบฐานข้อมูลแบบกระจายในแบบต่าง ๆ เช่น MarieDB Galera Cluster, MySQL Cluster
