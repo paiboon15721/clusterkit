@@ -45,12 +45,12 @@ pdfURL: 'http://www.clusterkit.co.th/training/pdf/Advanced%20Proxmox%20Cluster%2
 - Virtualize Engine : KVM and LXC
 - Network Device
 - Network model
-- Bridge (Default)
-- Routed
-- NAT
+    - Bridge (Default)
+    - Routed
+    - NAT
 - Storage Model
-- Local
-- Share Storage
+    - Local
+    - Share Storage
 - **Workshop:** ติดตั้งซอฟต์แวร์ Proxmox แบบ Single Node
 - Introduction to web-based management (GUI)
 - Authentication and User management
