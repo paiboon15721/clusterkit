@@ -21,30 +21,7 @@
           <li>
             ราคา: ${v.sub_price.toLocaleString()} บาท (รวมภาษีมูลค่าเพิ่มแล้ว)
           </li>
-          <li
-            v-for="c in v.classes"
-            class="text-info"
-            :class="{ 'text-danger': c.closed || (c.registered >= c.course_seatlimit) }"
-          >
-            รุ่นที่ ${c.course_class} เรียนวันที่ ${c.course_datestudies} ${
-            (c.registered >= c.course_seatlimit) ? '(เต็มแล้ว)' : '' }
-            ${c.closed ? '(ปิดรับการลงทะเบียน)' : ''}
-          </li>
-          <li>
-            <button
-              class="btn btn-sm btn-success px-3"
-              data-backdrop="static"
-              data-keyboard="false"
-              data-toggle="modal"
-              data-target="#registerModal"
-              :data-subid="v.sub_id"
-              :data-subname="v.sub_enname"
-              :class="{ 'btn-dark': !v.opening }"
-              :disabled="!v.opening"
-            >
-              ลงทะเบียน
-            </button>
-          </li>
+          {{ partial "training-courses/register-events" }}
         </ul>
       </div>
       <a :href="v.detail_url" class="btn btn-outline-primary btn-sm">
@@ -65,33 +42,31 @@
     </a>
   </div>
 </div>
-{{ partial "register/site-register" . }}
-{{ end }}
-{{ define "javascript" }}
+{{ partial "register/site-register" . }} {{ end }} {{ define "javascript" }}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
 {{ partial "register/script" }}
 <script>
   var app = new Vue({
-    el: '#app',
-    delimiters: ['${', '}'],
+    el: "#app",
+    delimiters: ["${", "}"],
     data: {
       loading: false,
-      subjects: [],
+      subjects: []
     },
     mounted() {
-      this.loading = true
-      axios.get('http://www.clusterkit.co.th/api/subjects.php').then(res => {
-        this.loading = false
+      this.loading = true;
+      axios.get("http://www.clusterkit.co.th/api/subjects.php").then(res => {
+        this.loading = false;
         var subjects = res.data.map(v => {
           if (v.classes.length) {
-            v.sub_price = v.classes[0].course_price
+            v.sub_price = v.classes[0].course_price;
           }
-          return v
-        })
-        this.subjects = subjects
-      })
-    },
-  })
+          return v;
+        });
+        this.subjects = subjects;
+      });
+    }
+  });
 </script>
 {{ end }}

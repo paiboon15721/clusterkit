@@ -125,6 +125,7 @@
     register.loading = true
     register.subID = $(e.relatedTarget).data('subid')
     register.subName = $(e.relatedTarget).data('subname')
+    register.courseID = $(e.relatedTarget).data('courseid')
     axios
       .get(
         'http://www.clusterkit.co.th/api/opening-classes.php?subID=' +
