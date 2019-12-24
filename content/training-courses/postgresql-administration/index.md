@@ -26,10 +26,11 @@ pdfURL: 'http://www.clusterkit.co.th/training/pdf/PostgreSQL%20Administration.pd
 
 ## ซอฟต์แวร์ที่ใช้
 
-1. CentOS Linux
-2. PostgreSQL
-3. pgAdmin3
+1. CentOS7 
+2. PostgreSQL เวอร์ชัน 9 และ เวอร์ชัน 12
+3. pgAdmin3 และ pgAdmin4
 4. phpPgAdmin
+5. Nagios
 
 ## สิ่งที่ผู้เข้าอบรมต้องเตรียม
 
@@ -41,24 +42,25 @@ pdfURL: 'http://www.clusterkit.co.th/training/pdf/PostgreSQL%20Administration.pd
 
 - แนะนําให้รจักกับระบบจัดการฐานข้อมูล PostgreSQL
 - เปรียบเทียบข้อแตกต่างระหว่าง MySQL และ PostgreSQL
-- การติดตั้งและการเปิดปิดบริการของ PostgreSQL
+- การติดตั้งและการเปิดปิดบริการของ PostgreSQL เวอร์ชัน 9
+- การปรับแต่งไฟล์วอลล์ (Firewall) สําหรับ PostgreSQL 
 - การปรับค่าคอนฟิกกูเรชั่นที่สําคัญของ PostgreSQL
-  - การกําหนดสิทธิในการเข้าใช้งานในรูปแบบต่าง ๆ
+- การกําหนดสิทธิในการเข้าใช้งานในรูปแบบต่าง ๆ
 - การเพิ่มลบบัญชีผู้ใช้ให้กับ PostgreSQL
 - การใช้งาน PostgreSQL ในรูปแบบ command-line
 - การใช้งาน PostgreSQL กับภาษาไทย
 - การใช้งาน PostgreSQL ร่วมกับ PHP
-  - การปรับแต่งคอนฟิกกูเรชั่นที่จําเป็นเฉพาะสําหรับลีนุกซ์เซิรฟเวอร์ และไฟล์ php.ini
 - การติดตั้งและใช้งานโปรแกรม phpPgAdmin เพื่อจัดการฐานข้อมูล PosgreSQL ผ่านเว็บ
+- การติดตั้งโปรแกรม pgAdmin3 และ pgAdmin4 
 
 ### วันที่ 2
 
-- การใช้งานโปรแกรม pgAdmin3
-- การปรับแต่งไฟล์วอลล์ (Firewall) สําหรับ PostgreSQL
+- การอัพเดทเวอร์ชัน PostgreSQL 
 - การใช้งานทราคเซคชั่น (Transaction)
 - เข้าใจเรื่อง Tablespace
 - การสํารองข้อมูลและนํากลับข้อมูลบน PostgreSQL
-  - การตั้งเวลาการสํารองข้อมูลและเทคนิคที่เกี่ยวข้อง
+- การตั้งเวลาการสํารองข้อมูลและเทคนิคที่เกี่ยวข้อง
 - หน้าที่ทสําคัญของผู้ดูแลระบบในการบริหารตรวจตราระบบ เทคนิคการวิเคราะห์และแก้ปัญหา
+- การเชื่อมต่อ PostgreSQL ด้วย SSL
 - การติดตั้งและใช้งาน Nagios web monitoring เพื่อตรวจตรา PostgreSQL
 - การทํา replication บน PostgreSQL
