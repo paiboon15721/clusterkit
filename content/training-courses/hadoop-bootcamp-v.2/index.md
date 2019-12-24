@@ -38,6 +38,10 @@ pdfURL: 'http://clusterkit.co.th/training/pdf/Hadoop_Bootcamp_V2.pdf'
 4. VirtualBox (ทีมงานคลัสเตอร์ตคิทจะเตรียม VirtualBox Image ที่ติดตั้ง Linux CentOS-7 ไว้ให้)
 5. OpenLandscape Cloud ( ผู้เรียนจะได้ใช้งานคลาวด์จำนวน 6 VMs มีหน่วยความจำขนาด 1x16GB และ 5x4GB ตลอด 3 วัน)
 
+## สิ่งที่ผู้เข้าอบรมต้องเตรียม
+
+ผู้เข้าอบรมต้องเตรียมเครื่องคอมพิวเตอร์ที่มีหน่วยความจำไม่น้อยกว่า 4 GB และมีพื้นที่ว่าง (Disk space) ไม่น้อยกว่า 50GB มาในการอบรม พร้อมติดตั้ง VirtualBox และ VirtualBox Extension Pack และเปิดฟังก์ชั่น Virtualization ใน BIOS มาให้เรียบร้อยตาม{{< link url="http://www.clusterkit.co.th/training/pdf/VirtualBox_64bit_Problem.pdf" text="คู่มือ" >}}
+
 ## เนื้อหาหลักสูตร
 
 ### วันที่ 1
