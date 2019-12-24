@@ -53,6 +53,10 @@ a:hover {
   margin: 10rem 0 4rem 0;
 }
 
+.disabled {
+  pointer-events: none;
+}
+
 [v-cloak] {
   display: none;
 }

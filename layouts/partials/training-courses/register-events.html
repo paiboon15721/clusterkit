@@ -1,0 +1,34 @@
+<li v-for="c in v.classes">
+  <a
+    href="#"
+    class="text-info"
+    :class="{ 'text-danger disabled': c.closed || (c.registered >= c.course_seatlimit) }"
+    data-backdrop="static"
+    data-keyboard="false"
+    data-toggle="modal"
+    data-target="#registerModal"
+    :data-subid="v.sub_id"
+    :data-subname="v.sub_enname"
+    :data-courseid="c.course_id"
+  >
+    รุ่นที่ ${c.course_class} เรียนวันที่ ${c.course_datestudies} ${
+    (c.registered >= c.course_seatlimit) ? '(เต็มแล้ว)' : '' } ${c.closed ?
+    '(ปิดรับการลงทะเบียน)' : ''}
+  </a>
+</li>
+<li>
+  <button
+    class="btn btn-sm btn-success px-3"
+    data-backdrop="static"
+    data-keyboard="false"
+    data-toggle="modal"
+    data-target="#registerModal"
+    data-courseid=""
+    :data-subid="v.sub_id"
+    :data-subname="v.sub_enname"
+    :class="{ 'btn-dark': !v.opening }"
+    :disabled="!v.opening"
+  >
+    ลงทะเบียน
+  </button>
+</li>
