@@ -43,10 +43,10 @@ draft: false
       <td>{{< link url="../../training-courses/power-bi" text="ลงทะเบียน" >}}</td>
     </tr>
     <tr>
-      <td>Data Mining with Apache Spark</td>
+      <td>Machine Learning with Apache Spark</td>
       <td>รุ่นที่ 1 วันที่ 24 - 25 ก.พ. 63<br>
           รุ่นที่ 2 วันที่ 11 - 12 มิ.ย. 63<br></td>
-      <td>{{< link url="../../training-courses/data-mining-with-apache-spark" text="ลงทะเบียน" >}}</td>
+      <td>{{< link url="../../training-courses/machine-learning-with-apache-spark/" text="ลงทะเบียน" >}}</td>
     </tr>
     <tr>
       <td>Rocks Cluster Administration</td>
