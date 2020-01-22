@@ -1,5 +1,5 @@
 {
-  "baseURL": "http://www.clusterkit.co.th/",
+   "baseURL": "http://192.168.123.39:8080/",
   "languageCode": "en-us",
   "title": "ClusterKit",
   "params": {
