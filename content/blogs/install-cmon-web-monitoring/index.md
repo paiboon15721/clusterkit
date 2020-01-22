@@ -4,9 +4,9 @@ date: 2010-01-17T15:06:26+07:00
 draft: false
 ---
 
-CMON เป็นเว็บแอพพลิเคชั่น ซึ่งเป็นซอฟต์แวร์ open source ใช้สำหรับตรวจดูสถานะการทำงานของระบบ MySQL Cluster อ้างอิงจาก http://johanandersson.blogspot.com/2008/08/cluster-monitoring-cmon.html
+CMON เป็นเว็บแอพพลิเคชั่น ซึ่งเป็นซอฟต์แวร์ open source ใช้สำหรับตรวจดูสถานะการทำงานของระบบ MySQL Cluster โดยการติดตั้งแนะนำให้ติดตั้งที่เครื่อง management โดยให้เพิ่ม slot ของ sql node ให้กับเครื่อง management ด้วย อ้างอิงจาก http://johanandersson.blogspot.com/2008/08/cluster-monitoring-cmon.html
 
-โดยการติดตั้งแนะนำให้ติดตั้งที่เครื่อง management โดยให้เพิ่ม slot ของ sql node ให้กับเครื่อง management ด้วย
+
 
 ## 1. ขั้นตอนการติดตั้งซอฟต์แวร์
 
