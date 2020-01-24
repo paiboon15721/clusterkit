@@ -1,5 +1,5 @@
 ---
-title: 'Data Mining With Apache Spark'
+title: 'Machine Learning With Apache Spark'
 subID: '32'
 date: 2019-12-23T16:06:43+07:00
 draft: false
@@ -11,7 +11,8 @@ pdfURL: 'http://www.clusterkit.co.th/training/pdf/Machine-Learning-with-Apache-S
 
 ## รายละเอียดหลักสูตร
 
-หลักสูตรนี้ผู้เข้าอบรมจะได้เรียนรู้หลักการพื้นฐานของการประมวลผลของ Apache Spark ที่เป็นเครื่องมือในการจัดการ วิเคราะห์ และทำโมเดลสำหรับข้อมูลขนาดใหญ่บน Parallel computing architecture นอกนี้ผู้เข้าอบรมจะได้เรียนรู้การติดตั้งเครื่องมือที่ใช้ในการเขียน Spark Application การรัน Apache Spark บน Hadoop Cluster ขั้นตอนและองค์ประกอบของ Machine Learning การสร้าง Model ในการวิเคราะห์ข้อมูลด้วย Apache Spark โดยเน้นการลงมือปฏิบัติให้สามารถนำ Apache Spark ไปใช้งานจริง
+หลักสูตรนี้ผู้เข้าอบรมจะได้เรียนรู้หลักการพื้นฐานของการประมวลผลของ Apache Spark ที่เป็นเครื่องมือในการจัดการ วิเคราะห์ และทำโมเดลสำหรับข้อมูลขนาดใหญ่บน Parallel computing architecture นอกจากนี้ผู้เข้าอบรมจะได้เรียนรู้การติดตั้งเครื่องมือที่ใช้ในการเขียน Spark Application ขั้นตอนและองค์ประกอบของ Machine Learning การสร้าง Model ในการวิเคราะห์ข้อมูลด้วย Apache Spark โดยเน้นการลงมือปฏิบัติให้สามารถนำ Apache Spark  ไปใช้งานจริง 
+
 
 ## หลักสูตรนี้เหมาะสำหรับ
 
@@ -24,8 +25,8 @@ pdfURL: 'http://www.clusterkit.co.th/training/pdf/Machine-Learning-with-Apache-S
 
 ## ความรู้พื้นฐาน
 
-ผู้เข้าอบรมมีพื้นฐานการเขียนโปรแกรมภาษา Python
-ผู้เข้าอบรมมีพื้นฐานการใช้งานระบบปฏิบัติการ Linux เบื้องต้น
+- ผู้เข้าอบรมมีพื้นฐานการเขียนโปรแกรมภาษา Python
+- ผู้เข้าอบรมมีพื้นฐานการใช้งานระบบปฏิบัติการ Linux เบื้องต้น
 
 ## ซอฟต์แวร์ที่ใช้
 
@@ -56,11 +57,11 @@ pdfURL: 'http://www.clusterkit.co.th/training/pdf/Machine-Learning-with-Apache-S
   - Model evaluation
 - Hands-on lab
   - การเข้าถึงข้อมูล เขียนโปรแกรมเพื่อประมวลและการจัดเตรียมข้อมูลด้วย Spark
-    - การ Explore และ Visualize ข้อมูล
-    - การ Transform ข้อมูล
-    - การ Extract feature จากข้อมูล
+      - การ Explore และ Visualize ข้อมูล
+      - การ Transform ข้อมูล
+      - การ Extract feature จากข้อมูล
   - การใช้ Machine Learning Algorithms (MLlib)
-    - Classification
-    - Regression
-    - Clustering
-    - Collaborative filtering
+      - Classification
+      - Regression
+      - Clustering
+      - Collaborative filtering
