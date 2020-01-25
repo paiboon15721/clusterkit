@@ -1,8 +1,9 @@
 {
-   "baseURL": "http://clusterkit.co.th/",
+  "baseURL": "http://clusterkit.co.th",
   "languageCode": "en-us",
   "title": "ClusterKit",
   "params": {
+    "apiURL": "http://localhost:4000",
     "contact": {
       "phone": "0 2881 3800",
       "email": "info@clusterkit.co.th",
