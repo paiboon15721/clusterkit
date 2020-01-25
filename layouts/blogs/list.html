@@ -14,6 +14,9 @@
           {{ .Title }}
         </a>
       </h2>
+      <div class="d-flex justify-content-end">
+        <time>วันที่ {{ .Date.Format "02/01/2006" }}</time>
+      </div>
       <div class="h2-line"></div>
       <div class="markdown">
         {{ .Content | truncate 200 }}
@@ -28,11 +31,7 @@
 <div class="learn-more mt-5">
   <div class="container">
     <h3>เรามีคอร์สเชิงเทคนิคสอนโดยทีมงานที่มีความเชี่ยวชาญ</h3>
-    <a
-      class="btn btn-secondary btn-lg px-5 mt-3"
-      href="{{ `/training-courses/` | relURL }}"
-      role="button"
-    >
+    <a class="btn btn-secondary btn-lg px-5 mt-3" href="{{ `/training-courses/` | relURL }}" role="button">
       หลักสูตรฝึกอบรมของเรา
     </a>
   </div>

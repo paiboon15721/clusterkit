@@ -43,10 +43,10 @@ draft: false
       <td>{{< link url="../../training-courses/power-bi" text="ลงทะเบียน" >}}</td>
     </tr>
     <tr>
-      <td>Data Mining with Apache Spark</td>
+      <td>Machine Learning with Apache Spark</td>
       <td>รุ่นที่ 1 วันที่ 24 - 25 ก.พ. 63<br>
           รุ่นที่ 2 วันที่ 11 - 12 มิ.ย. 63<br></td>
-      <td>{{< link url="../../training-courses/data-mining-with-apache-spark" text="ลงทะเบียน" >}}</td>
+      <td>{{< link url="../../training-courses/machine-learning-with-apache-spark/" text="ลงทะเบียน" >}}</td>
     </tr>
     <tr>
       <td>Rocks Cluster Administration</td>
@@ -78,7 +78,7 @@ draft: false
 * สำหรับลูกค้าที่มาอบรม 2 ท่าน พิเศษท่านที่ 2 ลดทันที 50% (โปรโมชันนี้ไม่สามารถใช้รวมกับโปรโมชันอื่นได้)
 
 ## จำนวนผู้อบรม 
-จำกัดรุ่นละ 12 ท่าน (เฉพาะหลักสูตร Advanced Proxmox Cluster Management จำกัดรุ่นละ 2 ท่าน)
+จำกัดรุ่นละ 12 ท่าน (เฉพาะหลักสูตร Advanced Proxmox Cluster Management จำกัดรุ่นละ 2 ท่าน และหลักสูตร Lustre File System จำกัดรุ่นละ 6 ท่าน)
 
 ## เวลาอบรม  
 9:00 - 16:00 น.
