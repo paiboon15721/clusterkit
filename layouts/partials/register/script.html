@@ -16,153 +16,150 @@
 ></script>
 <script src="https://www.google.com/recaptcha/api.js?render=6LePQbQUAAAAAILI-KSHN9i43DkaNAktt0bq_4mu"></script>
 <script>
-  var registerModal = $('#registerModal')
+  var registerModal = $("#registerModal");
   var failModal = new Vue({
-    el: '#failModal',
-    delimiters: ['${', '}'],
+    el: "#failModal",
+    delimiters: ["${", "}"],
     data: () => ({
-      errors: [],
-    }),
-  })
+      errors: []
+    })
+  });
   var register = new Vue({
-    el: '#register',
-    delimiters: ['${', '}'],
+    el: "#register",
+    delimiters: ["${", "}"],
     data: () => ({
       loading: false,
       isValidated: false,
-      openingClasses: [],
-      courseID: '',
-      subID: '',
-      subName: '',
-      nameEN: '',
-      surnameEN: '',
-      nameTH: '',
-      surnameTH: '',
-      address: '',
-      district: '',
-      amphoe: '',
-      province: '',
-      zipcode: '',
-      tel: '',
-      email: '',
-      quotation: 'no',
-      note: '',
-      type: '1',
-      companyNameEN: '',
-      companyNameTH: '',
-      branch: '',
-      taxID: '',
-      companyAddress: '',
-      companyDistrict: '',
-      companyAmphoe: '',
-      companyProvince: '',
-      companyZipcode: '',
+      courses: [],
+      courseID: "",
+      subID: "",
+      subName: "",
+      nameEN: "",
+      surnameEN: "",
+      nameTH: "",
+      surnameTH: "",
+      address: "",
+      district: "",
+      amphoe: "",
+      province: "",
+      zipcode: "",
+      tel: "",
+      email: "",
+      quotation: "no",
+      note: "",
+      type: "1",
+      companyNameEN: "",
+      companyNameTH: "",
+      branch: "",
+      taxID: "",
+      companyAddress: "",
+      companyDistrict: "",
+      companyAmphoe: "",
+      companyProvince: "",
+      companyZipcode: ""
     }),
     methods: {
       submit: function(e) {
         if (this.$refs.registerForm.checkValidity()) {
-          this.loading = true
-          var params = new URLSearchParams()
-          params.append('courseID', this.courseID)
-          params.append('nameEN', this.nameEN)
-          params.append('surnameEN', this.surnameEN)
-          params.append('nameTH', this.nameTH)
-          params.append('surnameTH', this.surnameTH)
-          params.append('address', this.address)
-          params.append('district', this.district)
-          params.append('amphoe', this.amphoe)
-          params.append('province', this.province)
-          params.append('zipcode', this.zipcode)
-          params.append('tel', this.tel)
-          params.append('email', this.email)
-          params.append('quotation', this.quotation)
-          params.append('note', this.note)
-          params.append('type', this.type)
-          if (this.type === '2') {
-            params.append('companyNameEN', this.companyNameEN)
-            params.append('companyNameTH', this.companyNameTH)
-            params.append('branch', this.branch)
-            params.append('taxID', this.taxID)
-            params.append('companyAddress', this.companyAddress)
-            params.append('companyDistrict', this.companyDistrict)
-            params.append('companyAmphoe', this.companyAmphoe)
-            params.append('companyProvince', this.companyProvince)
-            params.append('companyZipcode', this.companyZipcode)
+          this.loading = true;
+          /*  grecaptcha
+            .execute("6LePQbQUAAAAAILI-KSHN9i43DkaNAktt0bq_4mu", {
+              action: "homepage"
+            })
+            .then(function(token) {*/
+          var body = {
+            course: this.courseID,
+            customer: {
+              fnameTh: this.nameTH,
+              lnameTh: this.surnameTH,
+              fnameEn: this.nameEN,
+              lnameEn: this.surnameEN,
+              address: this.address,
+              subDistrict: this.district,
+              district: this.amphoe,
+              province: this.province,
+              postcode: this.zipcode,
+              tel: this.tel,
+              email: this.email
+            },
+            note: this.note,
+            needQuotation: this.quotation === "yes",
+            captchaToken: "token"
+          };
+          if (this.type === "2") {
+            body.company = {
+              nameTh: this.companyNameTH,
+              nameEn: this.companyNameEN,
+              branch: this.branch,
+              taxId: this.taxID,
+              address: this.companyAddress,
+              subDistrict: this.companyDistrict,
+              district: this.companyAmphoe,
+              province: this.companyProvince,
+              postcode: this.companyZipcode
+            };
           }
-          grecaptcha
-            .execute('6LePQbQUAAAAAILI-KSHN9i43DkaNAktt0bq_4mu', {
-              action: 'homepage',
+          axios
+            .post("{{ .Site.Params.apiURL }}/api/public/registers", body)
+            .then(res => {
+              this.loading = false;
+              registerModal.modal("hide");
+              $("#successModal").modal("show");
             })
-            .then(function(token) {
-              params.append('token', token)
-              axios
-                .post('http://www.clusterkit.co.th/api/register.php', params, {
-                  headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                  },
-                })
-                .then(res => {
-                  this.loading = false
-                  registerModal.modal('hide')
-                  $('#successModal').modal('show')
-                })
-                .catch(e => {
-                  this.loading = false
-                  $('#failModal').modal('show')
-                  failModal.errors = e.response.data
-                })
-            })
+            .catch(e => {
+              this.loading = false;
+              $("#failModal").modal("show");
+              failModal.errors = e.response.data.message;
+            });
+          // });
         } else {
-          this.$refs.registerForm.reportValidity()
+          this.$refs.registerForm.reportValidity();
         }
-        this.isValidated = true
-      },
-    },
-  })
+        this.isValidated = true;
+      }
+    }
+  });
 
-  registerModal.on('show.bs.modal', function(e) {
-    Object.assign(register.$data, register.$options.data())
-    register.loading = true
-    register.subID = $(e.relatedTarget).data('subid')
-    register.subName = $(e.relatedTarget).data('subname')
-    register.courseID = $(e.relatedTarget).data('courseid')
-    axios
-      .get(
-        'http://www.clusterkit.co.th/api/opening-classes.php?subID=' +
-          register.subID,
-      )
-      .then(res => {
-        register.openingClasses = res.data
-        register.loading = false
-      })
-  })
+  registerModal.on("show.bs.modal", function(e) {
+    Object.assign(register.$data, register.$options.data());
+    register.subID = $(e.relatedTarget).data("subid");
+    register.subName = $(e.relatedTarget).data("subname");
+    register.courseID = $(e.relatedTarget).data("courseid");
+    if (app.v) {
+      register.courses = app.v.courses;
+    } else {
+      register.courses = app.subjects.find(
+        v => v._id === register.subID
+      ).courses;
+    }
+  });
   $.Thailand.setup({
-    database: '/db.json',
-  })
+    database: "/db.json"
+  });
 
   $.Thailand({
-    $district: $('#district'),
-    $amphoe: $('#amphoe'),
-    $province: $('#province'),
-    $zipcode: $('#zipcode'),
+    $district: $("#district"),
+    $amphoe: $("#amphoe"),
+    $province: $("#province"),
+    $zipcode: $("#zipcode"),
     onDataFill: function(data) {
-      register.district = data.district
-      register.amphoe = data.amphoe
-      register.province = data.province
-      register.zipcode = data.zipcode
-    },
-  })
+      register.district = data.district;
+      register.amphoe = data.amphoe;
+      register.province = data.province;
+      register.zipcode = data.zipcode;
+    }
+  });
 
   $.Thailand({
-    $district: $('#companyDistrict'),
-    $amphoe: $('#companyAmphoe'),
-    $province: $('#companyProvince'),
-    $zipcode: $('#companyZipcode'),
+    $district: $("#companyDistrict"),
+    $amphoe: $("#companyAmphoe"),
+    $province: $("#companyProvince"),
+    $zipcode: $("#companyZipcode"),
     onDataFill: function(data) {
-      register.companyDistrict = data.district
-      register.companyAmphoe = data.amphoe
-      register.companyProvince = data.province
-      register.companyZipcode = data.zipcode
-    },
-  })
+      register.companyDistrict = data.district;
+      register.companyAmphoe = data.amphoe;
+      register.companyProvince = data.province;
+      register.companyZipcode = data.zipcode;
+    }
+  });
 </script>
