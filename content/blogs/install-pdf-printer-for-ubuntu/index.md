@@ -18,7 +18,7 @@ install cups-pdf from repository โดย สั่ง
 
 จากนั้นไปที่  System -> Administration -> Printing กด new printer เลือก Print into PDF File
 
-PDF Printer (Virtual Printer) คลิ๊ก Forward
+PDF Printer (Virtual Printer) คลิก Forward
 
 Manufacturer -> Generic
 
@@ -26,7 +26,7 @@ Model -> postscript color
 
 Driver -> Standard
 
-คลิ๊ก Forward
+คลิก Forward
 
 ตั้งชื่อ Name -> PDF_Printer (ตั้งเป็นอะไรก็ได้แต่ชื่อไม่ให้มีช่องว่าง)
 

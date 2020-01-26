@@ -57,4 +57,4 @@ http://dag.wieers.com/rpm/packages/rpmforge-release/
             #  <ntfsdevice>     <mount path>      <file system>
             /dev/hdb1           /media/ni_c          ntfs-3g          defaults        0 0
 
-เมื่อเริ่มระบบใหม่ระบบก็จะ automount โดยอัติโนมัติ
+เมื่อเริ่มระบบใหม่ระบบก็จะ automount โดยอัตโนมัติ
