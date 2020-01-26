@@ -104,11 +104,15 @@
             .then(res => {
               this.loading = false;
               registerModal.modal("hide");
-              $("#successModal").modal("show");
+              $("#successModal")
+                .modal({ backdrop: "static", keyboard: false })
+                .modal("show");
             })
             .catch(e => {
               this.loading = false;
-              $("#failModal").modal("show");
+              $("#failModal")
+                .modal({ backdrop: "static", keyboard: false })
+                .modal("show");
               failModal.errors = e.response.data.message;
             });
           // });
