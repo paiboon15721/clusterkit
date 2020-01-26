@@ -19,7 +19,7 @@ http://www.zend.com/en/products/server-ce/downloads
       </td>
 </table>
 
-3. เข้าไปยังไดเร็กทอรี่ที่แตกออกมา และรันสคริปต์ install_zs.sh
+3. เข้าไปยังไดเรกทอรี่ที่แตกออกมา และรันสคริปต์ install_zs.sh
 <table class="table table-bordered">
       <td>
        # cd ZendServer-RepositoryInstaller-linux  
