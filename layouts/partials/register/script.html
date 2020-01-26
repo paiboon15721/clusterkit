@@ -78,7 +78,7 @@
               subDistrict: this.district,
               district: this.amphoe,
               province: this.province,
-              postcode: this.zipcode,
+              postcode: this.zipcode.toString(),
               tel: this.tel,
               email: this.email
             },
@@ -96,7 +96,7 @@
               subDistrict: this.companyDistrict,
               district: this.companyAmphoe,
               province: this.companyProvince,
-              postcode: this.companyZipcode
+              postcode: this.companyZipcode.toString()
             };
           }
           axios
