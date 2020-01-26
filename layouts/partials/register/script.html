@@ -62,60 +62,60 @@
       submit: function(e) {
         if (this.$refs.registerForm.checkValidity()) {
           this.loading = true;
-          /*  grecaptcha
+          grecaptcha
             .execute("6LePQbQUAAAAAILI-KSHN9i43DkaNAktt0bq_4mu", {
               action: "homepage"
             })
-            .then(function(token) {*/
-          var body = {
-            course: this.courseID,
-            customer: {
-              fnameTh: this.nameTH,
-              lnameTh: this.surnameTH,
-              fnameEn: this.nameEN,
-              lnameEn: this.surnameEN,
-              address: this.address,
-              subDistrict: this.district,
-              district: this.amphoe,
-              province: this.province,
-              postcode: this.zipcode.toString(),
-              tel: this.tel,
-              email: this.email
-            },
-            note: this.note,
-            needQuotation: this.quotation === "yes",
-            captchaToken: "token"
-          };
-          if (this.type === "2") {
-            body.customer.company = {
-              nameTh: this.companyNameTH,
-              nameEn: this.companyNameEN,
-              branch: this.branch,
-              taxId: this.taxID,
-              address: this.companyAddress,
-              subDistrict: this.companyDistrict,
-              district: this.companyAmphoe,
-              province: this.companyProvince,
-              postcode: this.companyZipcode.toString()
-            };
-          }
-          axios
-            .post("{{ .Site.Params.apiURL }}/api/public/registers", body)
-            .then(res => {
-              this.loading = false;
-              registerModal.modal("hide");
-              $("#successModal")
-                .modal({ backdrop: "static", keyboard: false })
-                .modal("show");
-            })
-            .catch(e => {
-              this.loading = false;
-              $("#failModal")
-                .modal({ backdrop: "static", keyboard: false })
-                .modal("show");
-              failModal.errors = e.response.data.message;
+            .then(function(token) {
+              var body = {
+                course: this.courseID,
+                customer: {
+                  fnameTh: this.nameTH,
+                  lnameTh: this.surnameTH,
+                  fnameEn: this.nameEN,
+                  lnameEn: this.surnameEN,
+                  address: this.address,
+                  subDistrict: this.district,
+                  district: this.amphoe,
+                  province: this.province,
+                  postcode: this.zipcode.toString(),
+                  tel: this.tel,
+                  email: this.email
+                },
+                note: this.note,
+                needQuotation: this.quotation === "yes",
+                captchaToken: token
+              };
+              if (this.type === "2") {
+                body.customer.company = {
+                  nameTh: this.companyNameTH,
+                  nameEn: this.companyNameEN,
+                  branch: this.branch,
+                  taxId: this.taxID,
+                  address: this.companyAddress,
+                  subDistrict: this.companyDistrict,
+                  district: this.companyAmphoe,
+                  province: this.companyProvince,
+                  postcode: this.companyZipcode.toString()
+                };
+              }
+              axios
+                .post("{{ .Site.Params.apiURL }}/api/public/registers", body)
+                .then(res => {
+                  this.loading = false;
+                  registerModal.modal("hide");
+                  $("#successModal")
+                    .modal({ backdrop: "static", keyboard: false })
+                    .modal("show");
+                })
+                .catch(e => {
+                  this.loading = false;
+                  $("#failModal")
+                    .modal({ backdrop: "static", keyboard: false })
+                    .modal("show");
+                  failModal.errors = e.response.data.message;
+                });
             });
-          // });
         } else {
           this.$refs.registerForm.reportValidity();
         }
