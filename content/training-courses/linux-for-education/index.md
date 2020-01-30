@@ -1,6 +1,6 @@
 ---
 title: 'Linux for Education'
-subID: '17'
+subID: '5e32c6df369cdf2fdc2896ff'
 date: 2019-06-23T10:56:49+07:00
 draft: false
 totalHours: 6
