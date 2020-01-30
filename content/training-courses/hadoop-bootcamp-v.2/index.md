@@ -1,13 +1,13 @@
 ---
-title: 'Hadoop Bootcamp V.2'
-subID: '29'
+title: "Hadoop Bootcamp V.2"
+subID: "5e32c6df369cdf2fdc2896f9"
 date: 2019-12-19T13:47:20+07:00
 draft: false
 weight: 40
 totalHours: 18
 totalDays: 3
 price: 14980
-pdfURL: 'http://clusterkit.co.th/training/pdf/Hadoop_Bootcamp_V2.pdf'
+pdfURL: "http://clusterkit.co.th/training/pdf/Hadoop_Bootcamp_V2.pdf"
 ---
 
 ## รายละเอียดหลักสูตร

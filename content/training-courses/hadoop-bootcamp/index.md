@@ -1,6 +1,6 @@
 ---
 title: "Hadoop Bootcamp"
-subID: "5e1584ced3694b50e078c2d0"
+subID: "5e32c6df369cdf2fdc2896f5"
 date: 2019-06-23T10:52:01+07:00
 draft: false
 weight: 10

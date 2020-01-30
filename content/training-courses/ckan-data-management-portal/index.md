@@ -1,6 +1,6 @@
 ---
 title: 'Ckan Data Management Portal'
-subID: '31' 
+subID: '5e32c6df369cdf2fdc289707' 
 date: 2019-12-23T09:36:25+07:00
 draft: false
 totalHours: 18

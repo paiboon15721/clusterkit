@@ -1,6 +1,6 @@
 ---
 title: 'Ubuntu Desktop'
-subID: '02'
+subID: '5e32c6df369cdf2fdc2896fa'
 date: 2019-06-23T10:58:48+07:00
 draft: false
 totalHours: 12
