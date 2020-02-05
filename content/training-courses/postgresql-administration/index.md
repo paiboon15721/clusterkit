@@ -1,6 +1,6 @@
 ---
 title: 'PostgreSQL Administration'
-subID: '16'
+subID: '5e32c6df369cdf2fdc289704'
 date: 2019-06-23T11:01:16+07:00
 draft: false
 weight: 60

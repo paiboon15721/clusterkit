@@ -10,21 +10,21 @@
   <div class="row">
     <div v-cloak v-for="v in subjects" class="col-md-6 px-md-5 mb-5">
       <h2 class="display-6">
-        <a :href="v.detail_url" class="text-dark">
-          ${v.sub_enname}
+        <a :href="v.detailUrl" class="text-dark">
+          ${v.nameEn}
         </a>
       </h2>
       <div class="h2-line"></div>
       <div class="markdown">
         <ul class="list-unstyled">
-          <li>จำนวน: ${v.sub_period} ชั่วโมง (${v.sub_days} วัน)</li>
+          <li>จำนวน: ${v.defaultDuration} ชั่วโมง (${v.totalDates} วัน)</li>
           <li>
-            ราคา: ${v.sub_price.toLocaleString()} บาท (รวมภาษีมูลค่าเพิ่มแล้ว)
+            ราคา: ${v.defaultPrice.toLocaleString()} บาท (รวมภาษีมูลค่าเพิ่มแล้ว)
           </li>
           {{ partial "training-courses/register-events" }}
         </ul>
       </div>
-      <a :href="v.detail_url" class="btn btn-outline-primary btn-sm">
+      <a :href="v.detailUrl" class="btn btn-outline-primary btn-sm">
         ดูรายละเอียดเพิ่มเติม
       </a>
     </div>
@@ -42,10 +42,12 @@
     </a>
   </div>
 </div>
-{{ partial "register/site-register" . }} {{ end }} {{ define "javascript" }}
+{{ partial "register/site-register" . }}
+{{ end }}
+{{ define "javascript" }}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
-{{ partial "register/script" }}
+{{ partial "register/script" . }}
 <script>
   var app = new Vue({
     el: "#app",
@@ -56,15 +58,9 @@
     },
     mounted() {
       this.loading = true;
-      axios.get("http://www.clusterkit.co.th/api/subjects.php").then(res => {
+      axios.get("{{ .Site.Params.apiURL }}/api/public/subjects").then(res => {
         this.loading = false;
-        var subjects = res.data.map(v => {
-          if (v.classes.length) {
-            v.sub_price = v.classes[0].course_price;
-          }
-          return v;
-        });
-        this.subjects = subjects;
+        this.subjects = res.data.data;
       });
     }
   });

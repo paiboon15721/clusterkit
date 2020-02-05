@@ -1,13 +1,13 @@
 ---
-title: 'Advanced Proxmox Cluster Management'
-subID: '27'
+title: "Advanced Proxmox Cluster Management"
+subID: "5e32c6df369cdf2fdc2896f7"
 date: 2019-06-23T10:51:48+07:00
 draft: false
 weight: 40
 totalHours: 12
 totalDays: 2
 price: 10700
-pdfURL: 'http://www.clusterkit.co.th/training/pdf/Advanced%20Proxmox%20Cluster%20Management.pdf'
+pdfURL: "http://www.clusterkit.co.th/training/pdf/Advanced%20Proxmox%20Cluster%20Management.pdf"
 ---
 
 ## รายละเอียดหลักสูตร
@@ -45,12 +45,12 @@ pdfURL: 'http://www.clusterkit.co.th/training/pdf/Advanced%20Proxmox%20Cluster%2
 - Virtualize Engine : KVM and LXC
 - Network Device
 - Network model
-    - Bridge (Default)
-    - Routed
-    - NAT
+  - Bridge (Default)
+  - Routed
+  - NAT
 - Storage Model
-    - Local
-    - Share Storage
+  - Local
+  - Share Storage
 - **Workshop:** ติดตั้งซอฟต์แวร์ Proxmox แบบ Single Node
 - Introduction to web-based management (GUI)
 - Authentication and User management

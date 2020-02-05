@@ -1,18 +1,18 @@
-<li v-for="c in v.classes">
+<li v-for="c in v.courses">
   <a
     href="#"
     class="text-info"
-    :class="{ 'text-danger disabled': c.closed || (c.registered >= c.course_seatlimit) }"
+    :class="{ 'text-danger disabled': !c.available }"
     data-backdrop="static"
     data-keyboard="false"
     data-toggle="modal"
     data-target="#registerModal"
-    :data-subid="v.sub_id"
-    :data-subname="v.sub_enname"
-    :data-courseid="c.course_id"
+    :data-subid="v._id"
+    :data-subname="v.nameEn"
+    :data-courseid="c._id"
   >
-    รุ่นที่ ${c.course_class} เรียนวันที่ ${c.course_datestudies} ${
-    (c.registered >= c.course_seatlimit) ? '(เต็มแล้ว)' : '' } ${c.closed ?
+    รุ่นวันที่ ${c.dates} ${
+    (c.availableSeat <= 0) ? '(เต็มแล้ว)' : '' } ${c.datesLeft <= 0 ?
     '(ปิดรับการลงทะเบียน)' : ''}
   </a>
 </li>
@@ -24,8 +24,8 @@
     data-toggle="modal"
     data-target="#registerModal"
     data-courseid=""
-    :data-subid="v.sub_id"
-    :data-subname="v.sub_enname"
+    :data-subid="v._id"
+    :data-subname="v.nameEn"
     :class="{ 'btn-dark': !v.opening }"
     :disabled="!v.opening"
   >
