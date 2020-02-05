@@ -3,7 +3,7 @@
   "languageCode": "en-us",
   "title": "ClusterKit",
   "params": {
-    "apiURL": "",
+    "apiURL": "https://www.clusterkit.co.th",
     "contact": {
       "phone": "0 2881 3800",
       "email": "info@clusterkit.co.th",
