@@ -1,6 +1,6 @@
 ---
 title: 'Openstack Administration'
-subID: '20'
+subID: '5e32c6df369cdf2fdc2896f2'
 date: 2019-06-23T10:52:42+07:00
 draft: false
 weight: 30

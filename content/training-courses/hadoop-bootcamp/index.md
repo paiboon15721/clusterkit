@@ -1,13 +1,13 @@
 ---
-title: 'Hadoop Bootcamp'
-subID: '24'
+title: "Hadoop Bootcamp"
+subID: "5e32c6df369cdf2fdc2896f5"
 date: 2019-06-23T10:52:01+07:00
 draft: false
 weight: 10
 totalHours: 18
 totalDays: 3
 price: 10700
-pdfURL: 'http://clusterkit.co.th/training/pdf/Hadoop%20Bootcamp.pdf'
+pdfURL: "http://clusterkit.co.th/training/pdf/Hadoop%20Bootcamp.pdf"
 ---
 
 ## รายละเอียดหลักสูตร
@@ -49,60 +49,60 @@ pdfURL: 'http://clusterkit.co.th/training/pdf/Hadoop%20Bootcamp.pdf'
 - แนะนำ Cloudera Hadoop
 - การติดตั้ง JDK
 - การปรับแต่งระบบลีนุกซ์เพื่อเตรียมติดตั้ง Hadoop แบบคลัสเตอร์
-    - การสร้าง ssh key และวางคีย์เพื่อสร้างสภาพแวดล้อมแบบ Single Sign On
-    - การปรับแต่งไฟล์วอลล์เพื่อความปลอดภัย
-    - การกำหนดค่าไฟล์ /etc/hosts
-    - การปิด selinux
+  - การสร้าง ssh key และวางคีย์เพื่อสร้างสภาพแวดล้อมแบบ Single Sign On
+  - การปรับแต่งไฟล์วอลล์เพื่อความปลอดภัย
+  - การกำหนดค่าไฟล์ /etc/hosts
+  - การปิด selinux
 - ติดตั้งและใช้งาน HDFS
-    - การออกแบบระบบ HDFS
-    - รู้จักกับค่าคอนฟิกกูเรชั่นที่เกี่ยวข้อง
-    - การตรวจดูสถานะและใช้งานหน้าเว็บ HDFS
-    - การใช้คำสั่ง hadoop การจัดการไฟล์ในระบบ HDFS
-    - การตรวจดูสถานะ HDFS ผ่านคำสั่งที่เกี่ยวข้อง เช่น dfsadmin
-    - การอ่านLog File และการวิเคราะห์ปัญหาที่เกิดขึ้น
-    - การจัดการบัญชีผู้ใช้งาน
+  - การออกแบบระบบ HDFS
+  - รู้จักกับค่าคอนฟิกกูเรชั่นที่เกี่ยวข้อง
+  - การตรวจดูสถานะและใช้งานหน้าเว็บ HDFS
+  - การใช้คำสั่ง hadoop การจัดการไฟล์ในระบบ HDFS
+  - การตรวจดูสถานะ HDFS ผ่านคำสั่งที่เกี่ยวข้อง เช่น dfsadmin
+  - การอ่านLog File และการวิเคราะห์ปัญหาที่เกิดขึ้น
+  - การจัดการบัญชีผู้ใช้งาน
 - การติดตั้งและใช้งาน MapReduce2 (Yarn)
-    - การรันโปรแกรมคำนวณค่า Pi ผ่าน MapReduce2
-    - การคอมไพล์และรันโปรแกรม MapReduce
-    - ตัวอย่างโปรแกรม WordCount
-    - การ Monitor MapReduce Task
+  - การรันโปรแกรมคำนวณค่า Pi ผ่าน MapReduce2
+  - การคอมไพล์และรันโปรแกรม MapReduce
+  - ตัวอย่างโปรแกรม WordCount
+  - การ Monitor MapReduce Task
 - การติดตั้ง Pig
-    - การเขียน Pig Script และรัน
+  - การเขียน Pig Script และรัน
 
 ### วันที่ 2
 
 - รู้จักกับ Hive เครื่องมือที่จะช่วยให้เราสามารถสั่ง SQL เพื่อทำ MapReduce ได้
-    - การตั้งและปรับแต่ง HiveServer2
-    - การติดตั้ง MySQL และเพิ่มบัญชีสำหรับ Hive Metastore
-    - การติดตั้ง MySQL JDBC และเข้าใจปัญหาของ JDBC ที่มีกับ Hive
-    - การปรับแต่งและคอนฟิก Hive
-    - การใช้งาน Hive ผ่านคำสั่ง hive และ beeline
-    - เทคนิคการนำเข้าข้อมูล Hive
-    - รู้จักกับรูปแบบการจัดเก็บข้อมูลอื่น ๆ บน Hive
-    - กรณีศึกษาตัวอย่างการใช้งานจริง
+  - การตั้งและปรับแต่ง HiveServer2
+  - การติดตั้ง MySQL และเพิ่มบัญชีสำหรับ Hive Metastore
+  - การติดตั้ง MySQL JDBC และเข้าใจปัญหาของ JDBC ที่มีกับ Hive
+  - การปรับแต่งและคอนฟิก Hive
+  - การใช้งาน Hive ผ่านคำสั่ง hive และ beeline
+  - เทคนิคการนำเข้าข้อมูล Hive
+  - รู้จักกับรูปแบบการจัดเก็บข้อมูลอื่น ๆ บน Hive
+  - กรณีศึกษาตัวอย่างการใช้งานจริง
 - รู้จักและติดตั้ง Zookeeper
-    - ใช้งาน Zookeeper ร่วมกับ Hive เพื่อใช้งาน Table Lock Manager
+  - ใช้งาน Zookeeper ร่วมกับ Hive เพื่อใช้งาน Table Lock Manager
 - รู้จักกับ Sqoop เครื่องมือที่ใช้เชื่อมต่อกับ JDBC เพื่อนำเข้าข้อมูลจากฐานข้อมูล
-    - การติดตั้งและใช้งาน Sqoop
-    - การนำเข้าข้อมูลจาก MySQL สู่ HDFS และ Hive
-    - การนำออกข้อมูลจาก HDFS และ Hive สู่ MySQL
+  - การติดตั้งและใช้งาน Sqoop
+  - การนำเข้าข้อมูลจาก MySQL สู่ HDFS และ Hive
+  - การนำออกข้อมูลจาก HDFS และ Hive สู่ MySQL
 - รู้จักกับ Hue Web Interface
-    - การติดตั้งและคอนฟิก Hue
-    - การใช้งาน Hue UI
-    - การติดตั้งและปรับแต่ง OOZIE – Workflow
-    - การปรับแต่งเพื่อใช้ DBMS อื่นเก็บ Database ของ Hue
+  - การติดตั้งและคอนฟิก Hue
+  - การใช้งาน Hue UI
+  - การติดตั้งและปรับแต่ง OOZIE – Workflow
+  - การปรับแต่งเพื่อใช้ DBMS อื่นเก็บ Database ของ Hue
 - รู้จักกับ flume
-    - ติดตั้งและทดลองใช้งาน flume กับ log data
+  - ติดตั้งและทดลองใช้งาน flume กับ log data
 
 ### วันที่ 3
 
 - รู้จักกับ Spark
-    - การติดตั้ง Spark
-    - ทดสอบการใช้งาน Spark ด้วยโปรแกรมหาค่า Pi
-    - การใช้งาน Spark ผ่านภาษา python (pyspark)
-    - ตัวอย่างการใช้งาน Spark ML ด้วยการรัน K-mean กับชุดข้อมูล Iris
-    - การคอนฟิก Livy spark server เพื่อใช้งาน Spark บนหน้าเว็บ HUE
-    - การใช้งาน Spark Notebook
+  - การติดตั้ง Spark
+  - ทดสอบการใช้งาน Spark ด้วยโปรแกรมหาค่า Pi
+  - การใช้งาน Spark ผ่านภาษา python (pyspark)
+  - ตัวอย่างการใช้งาน Spark ML ด้วยการรัน K-mean กับชุดข้อมูล Iris
+  - การคอนฟิก Livy spark server เพื่อใช้งาน Spark บนหน้าเว็บ HUE
+  - การใช้งาน Spark Notebook
 - การติดตั้ง และใช้งาน Impala
 - การใช้งาน WebHDFS API
 - การปรับแต่งประสิทธิภาพที่สำคัญสำหรับการใช้งานจริง
