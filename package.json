@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"no test\"",
-    "deploy": "ssh clusterkit \"cd clusterkit; git pull origin dev; yarn; yarn build\"",
+    "deploy": "ssh clusterkit \"cd clusterkit; git pull; yarn; yarn build\"",
     "build": "rimraf public && hugo --minify",
     "update": "git add -A && git commit -m 'update' && git push origin dev"
   },
