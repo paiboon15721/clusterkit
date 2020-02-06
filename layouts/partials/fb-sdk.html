@@ -10,11 +10,13 @@
   async
   defer
   crossorigin="anonymous"
-  src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v4.0&appId=512515016217939&autoLogAppEvents=1"
+  src="https://connect.facebook.net/th_TH/sdk.js"
 ></script>
 <script>
   window.fbAsyncInit = function() {
     FB.init({
+      appId: "512515016217939",
+      autoLogAppEvents: true,
       xfbml: true,
       version: "v6.0"
     });
