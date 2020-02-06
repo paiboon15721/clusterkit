@@ -1,5 +1,5 @@
 {
-  "baseURL": "http://clusterkit.co.th",
+  "baseURL": "https://clusterkit.co.th",
   "languageCode": "en-us",
   "enableRobotsTXT": true,
   "canonifyURLs": true,
