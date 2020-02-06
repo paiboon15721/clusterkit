@@ -1,0 +1,31 @@
+<div id="fb-root"></div>
+<div
+  class="fb-customerchat"
+  attribution="setup_tool"
+  page_id="121756997840490"
+  logged_in_greeting="สวัสดีครับ ท่านสามารถสอบถามทีมงานทางนี้ได้เลยนะครับ"
+  logged_out_greeting="สวัสดีครับ ท่านสามารถสอบถามทีมงานทางนี้ได้เลยนะครับ"
+></div>
+<script
+  async
+  defer
+  crossorigin="anonymous"
+  src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v4.0&appId=512515016217939&autoLogAppEvents=1"
+></script>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      xfbml: true,
+      version: "v6.0"
+    });
+  };
+  (function(d, s, id) {
+    var js,
+      fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://connect.facebook.net/th_TH/sdk/xfbml.customerchat.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  })(document, "script", "facebook-jssdk");
+</script>

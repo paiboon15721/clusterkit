@@ -15,29 +15,13 @@
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
   </head>
   <body>
-    <div id="fb-root"></div>
-    <div class="fb-customerchat" page_id="121756997840490"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v4.0&appId=512515016217939&autoLogAppEvents=1"></script>
-    <script>
-    window.fbAsyncInit = function() {
-      FB.init({
-        appId            : '512515016217939',
-        autoLogAppEvents : true,
-        xfbml            : true,
-        version          : 'v6.0'
-      });
-    };
-  </script>
-  <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+    {{ partial "fb-sdk" . }}
     {{ partial "navbar/site-navbar.html" . }}
     <main role="main">
       {{ block "content" . }}
       {{ end }}
     </main>
     {{ partial "footer.html" . }}
-    <a href="https://m.me/clusterkit" target="_blank" class="messenger-btn">
-      <i class="fab fa-facebook-messenger"></i>
-    </a>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
