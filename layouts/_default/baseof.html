@@ -15,6 +15,17 @@
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
   </head>
   <body>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId: "512515016217939",
+          autoLogAppEvents: true,
+          xfbml: true,
+          version: "v6.0"
+        });
+      };
+    </script>
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
     {{ partial "navbar/site-navbar.html" . }}
     <main role="main">
       {{ block "content" . }}
