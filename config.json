@@ -1,8 +1,12 @@
 {
   "baseURL": "http://clusterkit.co.th",
   "languageCode": "en-us",
+  "enableRobotsTXT": true,
+  "canonifyURLs": true,
   "title": "ClusterKit",
   "params": {
+    "description": "Professional service in open source distributed system including System design, Integration, Maintenance and Training in HPC Cluster, Web Load-balancing, MySQL Cluster and more.",
+    "title": "Brisuthi",
     "apiURL": "https://www.clusterkit.co.th",
     "contact": {
       "phone": "0 2881 3800",
