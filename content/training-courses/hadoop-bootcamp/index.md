@@ -15,7 +15,7 @@ pdfURL: 'http://clusterkit.co.th/training/pdf/Hadoop%20Bootcamp.pdf'
 ## หลักสูตรมีการอัพเดทเป็น Hadoop Bootcamp V.2
 
 คลัสเตอร์คิท ได้ปรับปรุงเนื้อหาและรูปแบบการสอนใหม่ วิทยากรจะสอนทั้งฝั่ง Cloudera Enterprise และ Hortonworks Data Platform ผู้เข้าอบรมสามารถเลือกติดตั้งค่ายใดก็ได้ และเพื่อให้เสมือนติดตั้งบนโปรดักชันจริงๆ ทางคลัสเตอร์คิทได้เตรียมคลาวด์ไว้ให้คนละ 6 เครื่อง มีหน่วยความจำขนาด 1x16GB และ 5x4GB ตลอด 3 วัน ...
-<a href="../../training-courses/hadoop-bootcamp-v.2/"> **_>>> คลิกดูรายละเอียด <<<_** </a>
+<a href="../../training-courses/hadoop-bootcamp-v.2/"> **>>> คลิกดูรายละเอียด <<<** </a>
 
 ---
 
