@@ -123,12 +123,8 @@
       }
     }
   });
-  registerModal.on("hide.bs.modal", function(e) {
-    FB.CustomerChat.show(false);
-  });
 
   registerModal.on("show.bs.modal", function(e) {
-    FB.CustomerChat.hide();
     Object.assign(register.$data, register.$options.data());
     register.subID = $(e.relatedTarget).data("subid");
     register.subName = $(e.relatedTarget).data("subname");
