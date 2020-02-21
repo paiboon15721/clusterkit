@@ -1,5 +1,5 @@
 ---
-title: 'หลักสูตรประจำเดือนมีนาคม 2563'
+title: 'โปรโมชันหลักสูตรด้าน HPC'
 date: 2020-02-20T16:52:16+07:00
 draft: false
 ---
@@ -10,7 +10,7 @@ draft: false
 <!--more-->
 
 <table class="table table-striped">
-  <thead class="bg-danger">
+  <thead class="bg-primary">
     <tr>
       <th>หลักสูตร</th>
       <th>วันที่อบรม</th>
