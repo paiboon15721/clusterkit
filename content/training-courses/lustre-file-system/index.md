@@ -9,6 +9,8 @@ price: 7490
 pdfURL: 'http://www.clusterkit.co.th/training/pdf/Lustre%20File%20System.pdf'
 ---
 
+ทางบริษัท ฯ ได้จัดรายการส่งเสริมการขายสำหรับผู้ที่อบรมหลักสูตร Rocks Cluster Administration จะได้รับสิทธิ์ส่วนลดอบรมหลักสูตร {{< link url="../../training-courses/lustre-file-system" text="Lustre File System" >}} ทันที 3,000 บาท จากราคา 7,490 บาท เหลือเพียง 4,280 บาท
+
 ## รายละเอียดหลักสูตร
 
 Lustre File System เป็นระบบไฟล์แบบขนาน (parallel file system) ที่ได้รับความนิยมใช้งานกับระบบประมวลผลสมรรถนะสูง (High Performance Computing) โดยใน 100 อันดับแรกของระบบคอมพิวเตอร์ที่เร็วที่สุดในโลก จัดอันดับโดยเว็บ www.top500.org มีเครื่องมากกว่าร้อยละ 60 ที่ใช้ระบบไฟล์แบบขนานนี้
