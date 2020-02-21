@@ -6,7 +6,7 @@ draft: false
 totalHours: 12
 totalDays: 2
 price: 7490
-pdfURL: 'https://www.clusterkit.co.th/training/pdf/Rocks Cluster Administration.pdf'
+pdfURL: 'https://www.clusterkit.co.th/training/pdf/Rocks%20Cluster%20Administration.pdf'
 ---
 ทางบริษัท ฯ ได้จัดรายการส่งเสริมการขายสำหรับผู้ที่อบรมหลักสูตร Rocks Cluster Administration จะได้รับสิทธิ์ส่วนลดอบรมหลักสูตร {{< link url="../../training-courses/lustre-file-system" text="Lustre File System" >}} ทันที 3,000 บาท จากราคา 7,490 บาท เหลือเพียง 4,280 บาท
 
