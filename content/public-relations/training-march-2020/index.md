@@ -31,7 +31,7 @@ draft: false
    </tbody>
 </table>
 
-## โปรโมชั่น
+## โปรโมชัน
 
 - ส่วนลด 10 % สำหรับสมาชิก<a href="https://www.oseda.or.th/th/">สมาคมศึกษาและพัฒนาโอเพ่นซอร์ส (OSEDA)</a> 
 - เมื่อท่านลงทะเบียนและชำระเงินหลักสูตร Rocks Cluster Administration รุ่นวันที่ 10 - 11 มี.ค. 63 จะได้รับส่วนลด 3,000 บาท สำหรับหลักสูตร {{< link url="../../training-courses/lustre-file-system" text="Lustre File System" >}} รุ่นวันที่ 17 - 18 มี.ค. 63 (***โปรโมชันนี้ไม่สามารถใช้รวมกับโปรโมชันอื่นได้***)
