@@ -64,3 +64,7 @@ a:hover {
 .grecaptcha-badge {
   visibility: hidden;
 }
+
+.modal {
+  z-index: 9999999999;
+}
