@@ -12,7 +12,7 @@
     :data-courseid="c._id"
   >
     รุ่นวันที่ ${c.dates} ${
-    (c.availableSeat <= 0) ? '(เต็มแล้ว)' : '' } ${c.datesLeft <= 0 ?
+    (c.availableSeat <= 0) ? '(เต็มแล้ว)' : '' } (${c.price.toLocaleString()} บาท) ${c.datesLeft <= 0 ?
     '(ปิดรับการลงทะเบียน)' : ''}
   </a>
 </li>
