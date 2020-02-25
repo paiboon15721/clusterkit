@@ -3,8 +3,13 @@
   <div class="header">
     <h1 class="display-4">ฝึกอบรม</h1>
     <p class="lead">
-      สอนโดยทีมงานผู้เชี่ยวชาญ พร้อมที่จะแบ่งปันจากประสบการณ์จริง<br>
-      โปรโมชัน ! ผู้ที่อบรมหลักสูตร Rocks Cluster Administration จะได้รับสิทธิ์ส่วนลดอบรมหลักสูตร Lustre File System ทันที 3,000 บาท
+      สอนโดยทีมงานผู้เชี่ยวชาญ พร้อมที่จะแบ่งปันจากประสบการณ์จริง
+      <br />
+      <br />
+      <span style="font-weight: 500; color: red; font-size: 1.5rem">
+        โปรโมชัน 🔥 ผู้ที่อบรมหลักสูตร Rocks Cluster Administration
+        จะได้รับสิทธิ์ส่วนลดอบรมหลักสูตร Lustre File System ทันที 3,000 บาท 🎉🎉
+      </span>
     </p>
   </div>
   {{ partial "training-courses/loading" }}
@@ -40,9 +45,7 @@
     </a>
   </div>
 </div>
-{{ partial "register/site-register" . }}
-{{ end }}
-{{ define "javascript" }}
+{{ partial "register/site-register" . }} {{ end }} {{ define "javascript" }}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
 {{ partial "register/script" . }}
