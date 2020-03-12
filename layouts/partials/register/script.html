@@ -56,14 +56,66 @@
       companyDistrict: "",
       companyAmphoe: "",
       companyProvince: "",
-      companyZipcode: ""
+      companyZipcode: "",
+      usedCoupon: "",
+      discountCode: "",
+      discountCodeValid: "",
+      discountCodeInvalid: "",
+      coursePrice: 0,
+      price: 0
     }),
     methods: {
+      onCourseChange: function(e) {
+        this.coursePrice = register.courses.find(
+          v => v._id === e.target.value
+        ).price;
+        this.price = this.coursePrice;
+        this.usedCoupon = "";
+        this.discountCode = "";
+        this.discountCodeValid = "";
+        this.discountCodeInvalid = "";
+      },
+      onDiscountCodeSubmit: function() {
+        if (this.usedCoupon) {
+          this.price = this.coursePrice;
+          this.usedCoupon = "";
+          this.discountCodeValid = "";
+          this.discountCodeInvalid = "";
+          return;
+        }
+        axios
+          .get(
+            "{{ .Site.Params.apiURL }}/api/public/code-verify/" +
+              this.discountCode.toUpperCase()
+          )
+          .then(res => {
+            const coupon = res.data.data;
+            if (coupon.course !== this.courseID) {
+              this.discountCodeInvalid =
+                "รหัสส่วนลดนี้ไม่สามารถใช้งานร่วมกับคอร์สเรียนนี้ได้";
+              return;
+            }
+            if (coupon.used) {
+              this.discountCodeInvalid = "ขออภัย รหัสส่วนลดนี้ถูกใช้งานแล้ว";
+              return;
+            }
+            this.discountCodeValid =
+              "คุณได้รับส่วนลดมูลค่า " +
+              coupon.discount.toLocaleString() +
+              " บาท";
+            this.usedCoupon = coupon._id;
+            this.price = this.coursePrice - coupon.discount;
+          })
+          .catch(() => {
+            this.discountCodeInvalid = "รหัสส่วนลดนี้ไม่สามารถใช้งานได้";
+          });
+      },
       submit: function(e) {
         if (this.$refs.registerForm.checkValidity()) {
           this.loading = true;
           var body = {
             course: this.courseID,
+            usedCoupon: this.usedCoupon,
             customer: {
               fnameTh: this.nameTH,
               lnameTh: this.surnameTH,
@@ -135,6 +187,12 @@
       register.courses = app.subjects.find(
         v => v._id === register.subID
       ).courses;
+    }
+    if (register.courseID) {
+      register.coursePrice = register.courses.find(
+        v => v._id === register.courseID
+      ).price;
+      register.price = register.coursePrice;
     }
   });
   $.Thailand.setup({

@@ -6,9 +6,11 @@
       สอนโดยทีมงานผู้เชี่ยวชาญ พร้อมที่จะแบ่งปันจากประสบการณ์จริง
       <br />
       <br />
-      <span style="font-weight: 500; color: red; font-size: 1.5rem">
-        โปรโมชัน 🔥 ผู้ที่อบรมหลักสูตร Rocks Cluster Administration
-        จะได้รับสิทธิ์ส่วนลดอบรมหลักสูตร Lustre File System ทันที 3,000 บาท 🎉🎉
+      <span
+        v-if="promotion"
+        style="font-weight: 500; color: red; font-size: 1.5rem"
+      >
+        ${promotion} 🎉🎉
       </span>
     </p>
   </div>
@@ -55,13 +57,17 @@
     delimiters: ["${", "}"],
     data: {
       loading: false,
-      subjects: []
+      subjects: [],
+      promotion: ""
     },
     mounted() {
       this.loading = true;
       axios.get("{{ .Site.Params.apiURL }}/api/public/subjects").then(res => {
         this.loading = false;
         this.subjects = res.data.data;
+      });
+      axios.get("{{ .Site.Params.apiURL }}/api/public/promotion").then(res => {
+        this.promotion = res.data.statusCode === 200 ? res.data.data.message : "";
       });
     }
   });
