@@ -1,7 +1,13 @@
 <div class="form-row">
   <div class="form-group col-md-12">
     <label for="class">กรุณาเลือกรุ่นที่เรียน</label>
-    <select id="class" v-model="courseID" class="form-control" required>
+    <select
+      id="class"
+      v-model="courseID"
+      class="form-control"
+      @change="onCourseChange"
+      required
+    >
       <option disabled selected value> -- กรุณาเลือกวันที่เรียน -- </option>
       <option v-for="v in courses" :value="v._id" :disabled="!v.available">
         รุ่นวันที่ ${v.dates} (${v.price.toLocaleString()} บาท) ${
@@ -148,6 +154,49 @@
     </div>
   </div>
   <div class="form-group col-md-6">
+    <label for="discountCode">รหัสส่วนลด</label>
+    <div class="input-group">
+      <input
+        type="text"
+        maxlength="5"
+        v-model="discountCode"
+        class="form-control text-uppercase"
+        :disabled="usedCoupon !== ''"
+        id="discountCode"
+      />
+      <div class="input-group-append">
+        <button
+          class="btn btn-primary"
+          :class="{ 'btn-danger': usedCoupon }"
+          @click="onDiscountCodeSubmit"
+          :disabled="discountCode.length < 5 || !courseID"
+          type="button"
+        >
+          ${usedCoupon ? 'ยกเลิก' : 'ยืนยัน'}
+        </button>
+      </div>
+    </div>
+    <span v-show="discountCodeValid" class="form-text text-success">
+      ${discountCodeValid}
+    </span>
+    <span v-show="discountCodeInvalid" class="form-text text-danger">
+      ${discountCodeInvalid}
+    </span>
+  </div>
+  <div class="form-group col-md-6">
+    <label for="note">หมายเหตุ</label>
+    <input
+      type="text"
+      class="form-control"
+      v-model="note"
+      id="note"
+      aria-describedby="noteHelp"
+    />
+    <span class="form-text text-danger" id="noteHelp">
+      โปรดแจ้ง หากท่านทานอาหารเจ มังสวิรัติหรือฮาลาล
+    </span>
+  </div>
+  <div class="form-group col-md-6">
     <div class="form-check">
       <input
         class="form-check-input"
@@ -164,19 +213,6 @@
         บริษัทจะจัดส่งให้ในวันทำการถัดไป
       </span>
     </div>
-  </div>
-  <div class="form-group col-md-6">
-    <label for="note">หมายเหตุ</label>
-    <input
-      type="text"
-      class="form-control"
-      v-model="note"
-      id="note"
-      aria-describedby="noteHelp"
-    />
-    <span class="form-text text-danger" id="noteHelp">
-      โปรดแจ้ง หากท่านทานอาหารเจ มังสวิรัติหรือฮาลาล
-    </span>
   </div>
   <div class="form-group col-md-12">
     <div class="form-check form-check-inline">
