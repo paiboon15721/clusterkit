@@ -1,5 +1,5 @@
 {{ define "content" }}
-<div id="app" class="container">
+<div v-cloak id="app" class="container">
   <div class="header">
     <h1 class="display-4">ฝึกอบรม</h1>
     <p class="lead">
@@ -16,7 +16,7 @@
   </div>
   {{ partial "training-courses/loading" }}
   <div class="row">
-    <div v-cloak v-for="v in subjects" class="col-md-6 px-md-5 mb-5">
+    <div v-for="v in subjects" class="col-md-6 px-md-5 mb-5">
       <h2 class="display-6">
         <a :href="v.detailUrl" class="text-dark">
           ${v.nameEn}
