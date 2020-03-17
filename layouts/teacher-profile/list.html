@@ -1,0 +1,24 @@
+{{ define "content" }}
+<div class="container">
+  <div class="header">
+    <h1 class="display-4">ประวัติวิทยากร</h1>
+  </div>
+  <div class="row">
+    {{ range.Pages.ByDate.Reverse }}
+    {{ partial "teacher-profile-item" . }}
+    {{ end }}
+  </div>
+</div>
+<div class="learn-more mt-5">
+  <div class="container">
+    <h3>เรามีคอร์สเชิงเทคนิคสอนโดยทีมงานที่มีความเชี่ยวชาญ</h3>
+    <a
+      class="btn btn-secondary btn-lg px-5 mt-3"
+      href="{{ `/training-courses/` | relURL }}"
+      role="button"
+    >
+      หลักสูตรฝึกอบรมของเรา
+    </a>
+  </div>
+</div>
+{{ end }}
