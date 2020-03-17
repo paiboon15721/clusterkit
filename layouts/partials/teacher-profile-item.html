@@ -1,0 +1,27 @@
+<div class="col-lg-4 col-md-6 px-md-5 mb-5">
+  <a href="{{ .Permalink }}" class="text-dark">
+    <h2 class="display-6">
+      {{ .Title }}
+    </h2>
+    <div class="d-flex justify-content-end">
+      <time>วันที่ {{ .Date.Format "02/01/2006" }}</time>
+    </div>
+    <div class="h2-line"></div>
+    {{ $page := . }}
+    {{ range first 1 (.Resources.ByType "image") }}
+    {{ $image := . }}
+    {{ $image = $image.Resize "1200x" }}
+    <img
+      src="{{ $image.RelPermalink }}"
+      class="img-fluid my-2"
+      alt="{{ $page.Title }}"
+    />
+    {{ end }}
+    <div class="markdown">
+      {{ .Summary }}
+      <a href="{{ .Permalink }}" class="btn btn-outline-primary btn-sm">
+        อ่านต่อ
+      </a>
+    </div>
+  </a>
+</div>
