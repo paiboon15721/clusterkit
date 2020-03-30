@@ -24,5 +24,10 @@ NVIDIA GPU รุ่น
 {{< link url="https://h20195.www2.hpe.com/v2/getdocument.aspx?docname=a50000191enw" text="DL Dummies free download" >}} <br>
 {{< link url="https://h20195.www2.hpe.com/v2/getdocument.aspx?docname=a50000191enw" text="DL with NGC on HPE Systems" >}}
 
-ติดต่อได้ที่ อีเมล : info@clusterkit.co.th หรือ โทรศัพท์ : 02-881-3800
-หมดเขต 25 ธันวาคม 2563<br>
+#### เงื่อนไข
+- หากต้องการสั่งซื้อในนามของสถานศึกษาจะต้องลงทะเบียนล่วงหน้าก่อน 15 วัน
+- หมดเขตภายในวันที่ 25 ธันวาคม 2563
+
+#### ติดต่อได้ที่
+- อีเมล : info@clusterkit.co.th
+- โทรศัพท์ : 02-881-3800
