@@ -1,7 +1,7 @@
 ---
 title: 'โปรโมชัน GPU สำหรับสถานศึกษา'
 date: 2020-03-30T10:30:43+07:00
-draft: false
+draft: true
 ---
 
 สถานศึกษาที่สนใจใช้ GPU สำหรับประมวลผล Machine Learning หรือ Deep Learning
