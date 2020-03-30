@@ -1,12 +1,11 @@
 ---
-title: 'ส่วนลดสูงสุด 1,475$ USD'
+title: 'HPE ลดราคา NVIDIA GPU สำหรับสถานศึกษา'
 date: 2020-03-30T10:30:43+07:00
 draft: false
 ---
 
 สถานศึกษาที่สนใจใช้ GPU สำหรับประมวลผล Machine Learning หรือ Deep Learning
 คลัสเตอร์คิทมีโปรโมชันให้สำหรับสถานศึกษาในราคาพิเศษ
-
 <!--more-->
 
 NVIDIA GPU รุ่น
@@ -20,7 +19,6 @@ NVIDIA GPU รุ่น
 - Quadro RTX5000
 
 ## HPE Servers for DL Starter Kit vertical
-<!-- ![](https://clusterkit.co.th/public-relations/gpu-promotion-for-school/HPE_Servers_for_DL_Starter_Kit_vertical.jpg) -->
 ![](../../public-relations/gpu-promotion-for-school/HPE_Servers_for_DL_Starter_Kit_vertical.jpg)
 {{< link url="https://h20195.www2.hpe.com/v2/getdocument.aspx?docname=a50000191enw" text="Deep Learning Solution" >}} <br>
 {{< link url="https://h20195.www2.hpe.com/v2/getdocument.aspx?docname=a50000191enw" text="DL Dummies free download" >}} <br>
