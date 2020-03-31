@@ -10,7 +10,7 @@ draft: false
 
 NVIDIA GPU รุ่น
 
-- Tesla V100 PCIe 32GB  ลด $1,475 USD
+- * Tesla V100 PCIe 32GB  ลด $1,475 USD
 - Tesla V100S PCIe 32GB ลด $1,475 USD
 - Tesla V100 SXM2 32GB ลด $1,475 USD
 - Tesla T4 ลด $350 USD
@@ -19,6 +19,7 @@ NVIDIA GPU รุ่น
 - Quadro RTX5000 ลด $150 USD
 
 ## HPE Servers for DL Starter Kit vertical
+
 ![](../../public-relations/gpu-promotion-for-school/HPE_Servers_for_DL_Starter_Kit_vertical.jpg)
 {{< link url="https://h20195.www2.hpe.com/v2/getdocument.aspx?docname=a50000191enw" text="Deep Learning Solution" >}} <br>
 {{< link url="https://h20195.www2.hpe.com/v2/getdocument.aspx?docname=a50000191enw" text="DL Dummies free download" >}} <br>
