@@ -10,7 +10,7 @@ draft: false
 
 NVIDIA GPU รุ่น
 
-- Tesla V100 PCIe 32GB           ลด $1,475 USD
+- Tesla V100 PCIe 32GB  ลด $1,475 USD
 - Tesla V100S PCIe 32GB ลด $1,475 USD
 - Tesla V100 SXM2 32GB ลด $1,475 USD
 - Tesla T4 ลด $350 USD
@@ -25,6 +25,7 @@ NVIDIA GPU รุ่น
 {{< link url="https://h20195.www2.hpe.com/v2/getdocument.aspx?docname=a50000191enw" text="DL with NGC on HPE Systems" >}}
 
 #### หมายเหตุ
+- ซื้อได้สูงสุดไม่เกิน 64 ชิ้นต่อรุ่น ต่อ 1 สถานศึกษา ต่อปี
 - หากต้องการสั่งซื้อในนามของสถานศึกษาจะต้องลงทะเบียนล่วงหน้าก่อน 15 วัน
 - หมดเขตภายในวันที่ 25 ธันวาคม 2563
 
