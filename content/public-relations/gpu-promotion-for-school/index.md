@@ -6,6 +6,7 @@ draft: false
 
 HPE จัดชุด CPU Server มานำเสนอสำหรับคนที่ต้องการประมวลผล Machine Learning หรือ Deep Learning
 <!--more--> 
+
 <div class="col-">
 ![](../../public-relations/gpu-promotion-for-school/HPE_Servers_for_DL_Starter_Kit_vertical.jpg)
 </div>
