@@ -10,13 +10,13 @@ draft: false
 
 NVIDIA GPU รุ่น
 
-- Tesla V100 PCIe 32GB
-- Tesla V100S PCIe 32GB
-- Tesla V100 SXM2 32GB
-- Tesla T4
-- Quadro RTX8000
-- Quadro RTX6000
-- Quadro RTX5000
+- Tesla V100 PCIe 32GB           ลด $1,475 USD
+- Tesla V100S PCIe 32GB ลด $1,475 USD
+- Tesla V100 SXM2 32GB ลด $1,475 USD
+- Tesla T4 ลด $350 USD
+- Quadro RTX8000 ลด $700 USD
+- Quadro RTX6000 ลด $500 USD
+- Quadro RTX5000 ลด $150 USD
 
 ## HPE Servers for DL Starter Kit vertical
 ![](../../public-relations/gpu-promotion-for-school/HPE_Servers_for_DL_Starter_Kit_vertical.jpg)
@@ -24,7 +24,7 @@ NVIDIA GPU รุ่น
 {{< link url="https://h20195.www2.hpe.com/v2/getdocument.aspx?docname=a50000191enw" text="DL Dummies free download" >}} <br>
 {{< link url="https://h20195.www2.hpe.com/v2/getdocument.aspx?docname=a50000191enw" text="DL with NGC on HPE Systems" >}}
 
-#### เงื่อนไข
+#### หมายเหตุ
 - หากต้องการสั่งซื้อในนามของสถานศึกษาจะต้องลงทะเบียนล่วงหน้าก่อน 15 วัน
 - หมดเขตภายในวันที่ 25 ธันวาคม 2563
 
