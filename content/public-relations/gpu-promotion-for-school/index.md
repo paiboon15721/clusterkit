@@ -4,7 +4,15 @@ date: 2020-03-30T10:30:43+07:00
 draft: false
 ---
 
-สถานศึกษาที่สนใจใช้เครื่อง Server พร้อม GPU สำหรับประมวลผล Machine Learning หรือ Deep Learning ทาง HPE มีโปรโมชันให้สำหรับสถานศึกษาในราคาพิเศษเมื่อซื้อ Server พร้อม NVIDIA GPU โดยมีส่วนลดในแต่ละรุ่นต่อ GPU ดังต่อไปนี้
+HPE จัดชุด CPU Server มานำเสนอสำหรับคนที่ต้องการประมวลผล Machine Learning หรือ Deep Learning
+<!-- ## HPE Servers for DL Starter Kit vertical -->
+![](../../public-relations/gpu-promotion-for-school/HPE_Servers_for_DL_Starter_Kit_vertical.jpg)
+<br>
+{{< link url="https://h20195.www2.hpe.com/v2/getdocument.aspx?docname=a50000191enw" text="Deep Learning Solution" >}} <br>
+{{< link url="https://h20195.www2.hpe.com/v2/getdocument.aspx?docname=a50000191enw" text="DL Dummies free download" >}} <br>
+{{< link url="https://h20195.www2.hpe.com/v2/getdocument.aspx?docname=a50000191enw" text="DL with NGC on HPE Systems" >}}
+
+ทาง HPE มีโปรโมชันให้สำหรับสถานศึกษาในราคาพิเศษเมื่อซื้อ Server พร้อม NVIDIA GPU โดยมีส่วนลดในแต่ละรุ่นต่อ GPU ดังต่อไปนี้
 <!--more-->
 
 - Tesla V100 PCIe 32GB ลด $1,475 USD
@@ -15,15 +23,10 @@ draft: false
 - Quadro RTX6000 ลด $500 USD
 - Quadro RTX5000 ลด $150 USD
 
-## HPE Servers for DL Starter Kit vertical
 
-![](../../public-relations/gpu-promotion-for-school/HPE_Servers_for_DL_Starter_Kit_vertical.jpg)
-{{< link url="https://h20195.www2.hpe.com/v2/getdocument.aspx?docname=a50000191enw" text="Deep Learning Solution" >}} <br>
-{{< link url="https://h20195.www2.hpe.com/v2/getdocument.aspx?docname=a50000191enw" text="DL Dummies free download" >}} <br>
-{{< link url="https://h20195.www2.hpe.com/v2/getdocument.aspx?docname=a50000191enw" text="DL with NGC on HPE Systems" >}}
 
 #### หมายเหตุ
-- ซื้อได้สูงสุดไม่เกิน 64 ชิ้นต่อรุ่น ต่อ 1 สถานศึกษา ต่อปี
+- ซื้อได้สูงสุดไม่เกิน 64 ชิ้นต่อรุ่น ต่อ 1 สถานศึกษา
 - หากต้องการสั่งซื้อในนามของสถานศึกษาจะต้องลงทะเบียนล่วงหน้าก่อน 15 วัน
 - หมดเขตภายในวันที่ 25 ธันวาคม 2563
 
