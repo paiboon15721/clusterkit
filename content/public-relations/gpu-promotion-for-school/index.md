@@ -4,15 +4,14 @@ date: 2020-03-30T10:30:43+07:00
 draft: false
 ---
 
-สถานศึกษาที่สนใจใช้ GPU สำหรับประมวลผล Machine Learning หรือ Deep Learning
-คลัสเตอร์คิทมีโปรโมชันให้สำหรับสถานศึกษาในราคาพิเศษ
+สถานศึกษาที่สนใจใช้เครื่อง Server พร้อม GPU สำหรับประมวลผล Machine Learning หรือ Deep Learning ทาง HPE มีโปรโมชันให้สำหรับสถานศึกษาในราคาพิเศษ
 <!--more-->
 
-NVIDIA GPU รุ่น
+เมื่อซื้อ Server พร้อม NVIDIA GPU per GPU รุ่น
 
-- * Tesla V100 PCIe 32GB  ลด $1,475 USD
-- Tesla V100S PCIe 32GB ลด $1,475 USD
-- Tesla V100 SXM2 32GB ลด $1,475 USD
+- Tesla V100 PCIe 32GB ลด $1,475 USD
+- Tesla V100S PCIe 32GB ลด $1,475 USD 
+- Tesla V100 SXM2 32GB ลด $1,475 USD 
 - Tesla T4 ลด $350 USD
 - Quadro RTX8000 ลด $700 USD
 - Quadro RTX6000 ลด $500 USD
