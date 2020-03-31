@@ -4,10 +4,8 @@ date: 2020-03-30T10:30:43+07:00
 draft: false
 ---
 
-สถานศึกษาที่สนใจใช้เครื่อง Server พร้อม GPU สำหรับประมวลผล Machine Learning หรือ Deep Learning ทาง HPE มีโปรโมชันให้สำหรับสถานศึกษาในราคาพิเศษ
+สถานศึกษาที่สนใจใช้เครื่อง Server พร้อม GPU สำหรับประมวลผล Machine Learning หรือ Deep Learning ทาง HPE มีโปรโมชันให้สำหรับสถานศึกษาในราคาพิเศษเมื่อซื้อ Server พร้อม NVIDIA GPU โดยมีส่วนลดในแต่ละรุ่นต่อ GPU ดังต่อไปนี้
 <!--more-->
-
-เมื่อซื้อ Server พร้อม NVIDIA GPU per GPU รุ่น
 
 - Tesla V100 PCIe 32GB ลด $1,475 USD
 - Tesla V100S PCIe 32GB ลด $1,475 USD 
