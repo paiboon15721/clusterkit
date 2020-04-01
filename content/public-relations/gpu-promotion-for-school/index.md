@@ -8,9 +8,6 @@ HPE จัดชุด GPU Server มานำเสนอสำหรับค�
 <!--more--> 
 
 {{< image src="../../public-relations/gpu-promotion-for-school/HPE_Servers_for_DL_Starter_Kit_vertical.jpg" title="" >}}
-{{< link url="https://h20195.www2.hpe.com/v2/getdocument.aspx?docname=a50000191enw" text="Deep Learning Solution" >}} <br>
-{{< link url="https://h20195.www2.hpe.com/v2/getdocument.aspx?docname=a50000191enw" text="DL Dummies free download" >}} <br>
-{{< link url="https://h20195.www2.hpe.com/v2/getdocument.aspx?docname=a50000191enw" text="DL with NGC on HPE Systems" >}}
 
 ซึ่งทาง HPE จัดโปรโมชันสำหรับสถานศึกษาในราคาพิเศษเมื่อซื้อ Server พร้อม NVIDIA GPU โดยมีส่วนลดในแต่ละรุ่นต่อ GPU ดังต่อไปนี้
 
@@ -28,7 +25,8 @@ HPE จัดชุด GPU Server มานำเสนอสำหรับค�
 - หากต้องการสั่งซื้อในนามของสถานศึกษาจะต้องลงทะเบียนล่วงหน้าก่อน 15 วัน
 - หมดเขตภายในวันที่ 25 ธันวาคม 2563
 
-#### ติดต่อได้ที่
+#### เอกสารเพิ่มเติม 
 
-- อีเมล : info@clusterkit.co.th
-- โทรศัพท์ : 02-881-3800
+- {{< link url="https://h20195.www2.hpe.com/v2/getdocument.aspx?docname=a50000191enw" text="Deep Learning Solution" >}}
+- {{< link url="https://h20195.www2.hpe.com/v2/getdocument.aspx?docname=a50000191enw" text="DL Dummies free download" >}}
+- {{< link url="https://h20195.www2.hpe.com/v2/getdocument.aspx?docname=a50000191enw" text="DL with NGC on HPE Systems" >}}
