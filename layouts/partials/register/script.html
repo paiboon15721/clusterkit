@@ -17,6 +17,7 @@
 <script src="https://www.google.com/recaptcha/api.js?render=6LePQbQUAAAAAILI-KSHN9i43DkaNAktt0bq_4mu"></script>
 <script>
   var registerModal = $("#registerModal");
+  var privacyModal = $("#privacyModal");
   var failModal = new Vue({
     el: "#failModal",
     delimiters: ["${", "}"],
@@ -176,11 +177,14 @@
     }
   });
 
-  registerModal.on("show.bs.modal", function(e) {
+  privacyModal.on("show.bs.modal", function(e) {
     Object.assign(register.$data, register.$options.data());
     register.subID = $(e.relatedTarget).data("subid");
     register.subName = $(e.relatedTarget).data("subname");
     register.courseID = $(e.relatedTarget).data("courseid");
+  });
+
+  registerModal.on("show.bs.modal", function(e) {
     if (app.v) {
       register.courses = app.v.courses;
     } else {
