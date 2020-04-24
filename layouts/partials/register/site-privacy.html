@@ -1,0 +1,45 @@
+<div class="modal fade" id="privacyModal" role="dialog">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-privacy">
+                    นโยบายความเป็นส่วนตัว
+                </h5>
+                <button 
+                  type="button" 
+                  class="close" 
+                  data-dismiss="modal" 
+                  aria-label="Close"
+                >
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body px-lg-5 py-4">
+                {{ partial "privacy.html" }}
+                <div class="border border-dark p-4 m-4">
+                <b class="text-danger">*หมายเหตุ</b> การลงทะเบียนอบรม ทางบริษัทฯ ต้องได้รับความยินยอมตามนโยบายข้างต้น    
+                </div>
+          </div>
+          <div class="modal-footer">
+                <button 
+                    type="button" 
+                    class="btn btn-sm btn-secondary" 
+                    data-dismiss="modal" 
+                    :disabled="loading"
+                >
+                    ไม่ยินยอม
+                </button>
+                <button
+                    class="btn btn-sm btn-success px-3"
+                    data-dismiss="modal"
+                    data-backdrop="static"
+                    data-keyboard="false"
+                    data-toggle="modal"
+                    data-target="#registerModal"
+                >
+                    ยินยอม
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
