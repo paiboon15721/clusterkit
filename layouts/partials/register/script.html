@@ -47,6 +47,7 @@
       tel: "",
       email: "",
       quotation: "no",
+      subscribe: "yes",
       note: "",
       type: "1",
       companyNameEN: "",
@@ -131,7 +132,8 @@
               email: this.email
             },
             note: this.note,
-            needQuotation: this.quotation === "yes"
+            needQuotation: this.quotation === "yes",
+            subscribe: this.subscribe === "yes"
           };
           if (this.type === "2") {
             body.customer.company = {
