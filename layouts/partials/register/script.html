@@ -152,7 +152,7 @@
             .execute("6LePQbQUAAAAAILI-KSHN9i43DkaNAktt0bq_4mu", {
               action: "homepage"
             })
-            .then(function(token) {
+            .then(token => {
               body.captchaToken = token;
               axios
                 .post("{{ .Site.Params.apiURL }}/api/public/registers", body)
