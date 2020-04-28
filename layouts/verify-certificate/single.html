@@ -3,11 +3,61 @@
   <div class="row">
     <div class="col-md-8 offset-md-2">
       <h1 class="display-5">{{ .Title }}</h1>
-      {{ $page := . }}
       <div class="h1-line"></div>
-      {{ .Content }}
+      <div class="input-group mb-4">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Ref No."
+          aria-label="Ref No."
+          aria-describedby="button-addon2"
+        />
+        <div class="input-group-append">
+          <button class="btn btn-success" type="button">
+            ตรวจสอบ
+          </button>
+        </div>
+      </div>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th
+              class="bg-primary text-light text-center"
+              colspan="2"
+              scope="col"
+            >
+              <h4>Certified / Regconize Verify Certificate</h4>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="bg-primary text-light" scope="row">Name - Surname</th>
+            <td>Somphop Suwanpradit</td>
+          </tr>
+          <tr>
+            <th class="bg-primary text-light" scope="row">ชื่อ - นามสกุล</th>
+            <td>สมภพ สุวรรณประดิษฐ์</td>
+          </tr>
+          <tr>
+            <th class="bg-primary text-light" scope="row">
+              Type of Certificate
+            </th>
+            <td>Recognize in Hadoop Bootcamp</td>
+          </tr>
+          <tr>
+            <th class="bg-primary text-light" scope="row">
+              Certificates of Expertise
+            </th>
+            <td>Hadoop Bootcamp</td>
+          </tr>
+          <tr>
+            <th class="bg-primary text-light" scope="row">วันที่อบรม</th>
+            <td>20/04/2563 - 23/04/2563</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    {{ partial "facebook" . }}
   </div>
 </div>
 {{ end }}
