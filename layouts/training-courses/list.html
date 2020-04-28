@@ -3,18 +3,21 @@
   <div class="header">
     <h1 class="display-4">ฝึกอบรม</h1>
     <p class="lead">
-      สอนโดยทีมงานผู้เชี่ยวชาญ พร้อมที่จะแบ่งปันจากประสบการณ์จริง <br /> <br />
+      สอนโดยทีมงานผู้เชี่ยวชาญ พร้อมที่จะแบ่งปันจากประสบการณ์จริง <br />
+      <br />
       📢📢 ประกาศของดการอบรมในเดือนเมษายน เพื่อความปลอดภัยของท่าน <br />
-      และลดโอกาสการแพร่ระบาดของไวรัส Covid-19 ด้วยความห่วงใยจากคลัสเตอร์คิท <br /> <br />
+      และลดโอกาสการแพร่ระบาดของไวรัส Covid-19 ด้วยความห่วงใยจากคลัสเตอร์คิท
+      <br />
+      <br />
       <span
         v-if="promotion"
-        style="font-weight: 500; color: red; font-size: 1.5rem"
+        style="font-weight: 500; color: red; font-size: 1.5rem;"
       >
         ${promotion} 🎉🎉
       </span>
     </p>
   </div>
-  {{ partial "training-courses/loading" }}
+  {{ partial "loading" }}
   <div class="row">
     <div v-for="v in subjects" class="col-md-6 px-md-5 mb-5">
       <h2 class="display-6">
@@ -58,18 +61,21 @@
     data: {
       loading: false,
       subjects: [],
-      promotion: ""
+      promotion: "",
     },
     mounted() {
       this.loading = true;
-      axios.get("{{ .Site.Params.apiURL }}/api/public/subjects").then(res => {
+      axios.get("{{ .Site.Params.apiURL }}/api/public/subjects").then((res) => {
         this.loading = false;
         this.subjects = res.data.data;
       });
-      axios.get("{{ .Site.Params.apiURL }}/api/public/promotion").then(res => {
-        this.promotion = res.data.statusCode === 200 ? res.data.data.message : "";
-      });
-    }
+      axios
+        .get("{{ .Site.Params.apiURL }}/api/public/promotion")
+        .then((res) => {
+          this.promotion =
+            res.data.statusCode === 200 ? res.data.data.message : "";
+        });
+    },
   });
 </script>
 {{ end }}
