@@ -27,6 +27,6 @@
   let uri = window.location.search.substring(1);
   let params = new URLSearchParams(uri);
   let id = params.get("id");
-  document.getElementById("subscribe").href = "/api/subscribe/" + id;
+  document.getElementById("subscribe").href = "/api/crms/subscribe/" + id;
 </script>
 {{ end }}
