@@ -4,60 +4,165 @@
     <div class="col-md-8 offset-md-2">
       <h1 class="display-5">{{ .Title }}</h1>
       <div class="h1-line"></div>
-      <div class="input-group mb-4">
-        <input
-          type="text"
-          class="form-control"
-          placeholder="Ref No."
-          aria-label="Ref No."
-          aria-describedby="button-addon2"
-        />
-        <div class="input-group-append">
-          <button class="btn btn-success" type="button">
-            ตรวจสอบ
-          </button>
+      <div id="app">
+        <form
+          id="verifyForm"
+          ref="verifyForm"
+          @submit.prevent="submit"
+          class="mb-3"
+          novalidate
+        >
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Ref No."
+              :class="{ 'is-invalid': error, 'is-valid': subject }"
+              v-model="refNo"
+              aria-label="Ref No."
+              required
+            />
+            <div class="input-group-append">
+              <button
+                class="btn btn-success"
+                type="submit"
+                form="verifyForm"
+                :disabled="loading"
+              >
+                <span
+                  v-if="loading"
+                  class="spinner-border spinner-border-sm"
+                  role="status"
+                  aria-hidden="true"
+                ></span>
+                ตรวจสอบ
+              </button>
+            </div>
+          </div>
+        </form>
+        {{ partial "loading" }}
+        <div v-if="error" class="alert alert-danger" role="alert">
+          This certification is invalid!
         </div>
+        <div v-if="subject" class="alert alert-success" role="alert">
+          This certification is valid.
+        </div>
+        <table v-if="subject" class="table table-bordered">
+          <thead>
+            <tr>
+              <th
+                class="bg-primary text-light text-center"
+                colspan="2"
+                scope="col"
+              >
+                <h4>Certified / Regconize Verify Certificate</h4>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th class="bg-primary text-light" scope="row">Name - Surname</th>
+              <td>${nameEn}</td>
+            </tr>
+            <tr>
+              <th class="bg-primary text-light" scope="row">ชื่อ - นามสกุล</th>
+              <td>${nameTh}</td>
+            </tr>
+            <tr>
+              <th class="bg-primary text-light" scope="row">
+                Type of Certificate
+              </th>
+              <td>Recognize in ${subject}</td>
+            </tr>
+            <tr>
+              <th class="bg-primary text-light" scope="row">
+                Certificates of Expertise
+              </th>
+              <td>${subject}</td>
+            </tr>
+            <tr>
+              <th class="bg-primary text-light" scope="row">วันที่อบรม</th>
+              <td>${courseDate}</td>
+            </tr>
+            <tr>
+              <th class="bg-primary text-light" scope="row">
+                Certificate รูปแบบ PDF
+              </th>
+              <td>
+                <a
+                  class="btn btn-sm btn-outline-primary"
+                  :href="`{{ .Site.Params.apiURL }}/api/certificates/${refNo}`"
+                  target="_blank"
+                >
+                  ดาวน์โหลด
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th
-              class="bg-primary text-light text-center"
-              colspan="2"
-              scope="col"
-            >
-              <h4>Certified / Regconize Verify Certificate</h4>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th class="bg-primary text-light" scope="row">Name - Surname</th>
-            <td>Somphop Suwanpradit</td>
-          </tr>
-          <tr>
-            <th class="bg-primary text-light" scope="row">ชื่อ - นามสกุล</th>
-            <td>สมภพ สุวรรณประดิษฐ์</td>
-          </tr>
-          <tr>
-            <th class="bg-primary text-light" scope="row">
-              Type of Certificate
-            </th>
-            <td>Recognize in Hadoop Bootcamp</td>
-          </tr>
-          <tr>
-            <th class="bg-primary text-light" scope="row">
-              Certificates of Expertise
-            </th>
-            <td>Hadoop Bootcamp</td>
-          </tr>
-          <tr>
-            <th class="bg-primary text-light" scope="row">วันที่อบรม</th>
-            <td>20/04/2563 - 23/04/2563</td>
-          </tr>
-        </tbody>
-      </table>
     </div>
   </div>
 </div>
+{{ end }} {{ define "javascript" }}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+<script>
+  new Vue({
+    el: "#app",
+    delimiters: ["${", "}"],
+    data: () => ({
+      loading: false,
+      refNo: "",
+      nameEn: "",
+      nameTh: "",
+      subject: "",
+      courseDate: "",
+      error: "",
+    }),
+    methods: {
+      verify: function () {
+        console.log(this.$refs.verifyForm);
+        this.loading = true;
+        this.nameEn = "";
+        this.nameTh = "";
+        this.subject = "";
+        this.courseDate = "";
+        this.error = "";
+        axios
+          .get(
+            "{{ .Site.Params.apiURL }}/api/public/certificates/" + this.refNo
+          )
+          .then((res) => {
+            this.loading = false;
+            let v = res.data.data;
+            this.nameEn = v.nameEn;
+            this.nameTh = v.nameTh;
+            this.subject = v.subject;
+            this.courseDate = v.courseDate;
+          })
+          .catch((e) => {
+            this.loading = false;
+            this.error = e.response.data.message;
+          });
+      },
+      submit: function (e) {
+        if (this.$refs.verifyForm.checkValidity()) {
+          this.verify();
+        } else {
+          this.$refs.verifyForm.reportValidity();
+        }
+      },
+    },
+    mounted: function () {
+      let uri = window.location.search.substring(1);
+      let params = new URLSearchParams(uri);
+      let refNo = params.get("refno");
+      if (refNo) {
+        this.refNo = refNo;
+        this.verify();
+      }
+    },
+  });
+</script>
 {{ end }}
