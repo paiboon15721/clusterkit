@@ -1,0 +1,29 @@
+{{ define "content" }}
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <h1 class="display-6">{{ .Title }}</h1>
+      <div class="h2-line"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 offset-md-2 mt-4 text-center">
+      <p class="lead">
+        ขอบคุณที่ให้ความสนใจรับข้อมูลข่าวสารจากเรา
+        ถ้าหากทางเรามีโปรโมชั่นที่น่าสนใจจะแจ้งให้ท่านทราบทันที
+        ผ่านทางอีเมลที่ท่านได้ให้ไว้
+      </p>
+      <a
+        class="btn btn-primary btn-lg px-5 mt-4"
+        href="{{ `/` | relURL }}"
+        role="button"
+      >
+        กลับสู่หน้าหลัก
+      </a>
+    </div>
+  </div>
+</div>
+{{ partial "main/public-relations.html" . }}
+{{ partial "main/training-section.html" }}
+{{ partial "contact.html" . }}
+{{ end }}

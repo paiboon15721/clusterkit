@@ -1,0 +1,32 @@
+{{ define "content" }}
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <h1 class="display-6">{{ .Title }}</h1>
+      <div class="h2-line"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 offset-md-2 text-center">
+      <p class="lead">
+        หากนี่เป็นการกดผิด ท่านสามารถกดรับข้อมูลข่าวสารใหม่ได้
+        <a href="#" id="subscribe">ที่นี่</a>
+      </p>
+      <a
+        class="btn btn-primary btn-lg px-5 mt-4"
+        href="{{ `/` | relURL }}"
+        role="button"
+      >
+        กลับสู่หน้าหลัก
+      </a>
+    </div>
+  </div>
+</div>
+{{ partial "contact.html" . }} {{ end }} {{ define "javascript" }}
+<script>
+  let uri = window.location.search.substring(1);
+  let params = new URLSearchParams(uri);
+  let id = params.get("id");
+  document.getElementById("subscribe").href = "/api/subscribe/" + id;
+</script>
+{{ end }}
