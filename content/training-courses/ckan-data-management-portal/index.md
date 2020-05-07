@@ -36,7 +36,7 @@ pdfURL: 'https://www.clusterkit.co.th/training/pdf/ckan-data-management-portal.p
 ผู้เข้าอบรมต้องเตรียมเครื่องคอมพิวเตอร์ที่มีหน่วยความจำไม่น้อยกว่า 4 GB และมีพื้นที่ว่าง (Disk space) ไม่น้อยกว่า 30GB มาในการอบรม พร้อมติดตั้ง VirtualBox และ VirtualBox Extension Pack และเปิดฟังก์ชั่น Virtualization ใน BIOS มาให้เรียบร้อยตาม {{< link url="http://www.clusterkit.co.th/training/pdf/VirtualBox_64bit_Problem.pdf" text="คู่มือ" >}}
 
 ## เนื้อหาหลักสูตร
-* รู้จักกับ open data 
+* รู้จักกับ Open Data 
 * เข้าใจการทำงาน และรู้จักกับซอฟต์แวร์ CKAN ในภาพรวม                      
 * แนะนำคุณสมบัติต่าง ๆ ของซอฟต์แวร์ CKAN
 * ติดตั้งเว็บเซิร์ฟเวอร์
