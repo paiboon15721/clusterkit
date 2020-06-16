@@ -22,8 +22,8 @@
     el: "#failModal",
     delimiters: ["${", "}"],
     data: () => ({
-      errors: []
-    })
+      errors: [],
+    }),
   });
   var register = new Vue({
     el: "#register",
@@ -64,12 +64,22 @@
       discountCodeValid: "",
       discountCodeInvalid: "",
       coursePrice: 0,
-      price: 0
+      price: 0,
+      bringOwnLaptop: "no",
     }),
+    computed: {
+      showBringOwnLaptop: function () {
+        return (
+          ["5e32c6df369cdf2fdc2896ef", "5e32c6df369cdf2fdc2896ed"].indexOf(
+            this.subID
+          ) > -1
+        );
+      },
+    },
     methods: {
-      onCourseChange: function(e) {
+      onCourseChange: function (e) {
         this.coursePrice = register.courses.find(
-          v => v._id === e.target.value
+          (v) => v._id === e.target.value
         ).price;
         this.price = this.coursePrice;
         this.usedCoupon = "";
@@ -77,7 +87,7 @@
         this.discountCodeValid = "";
         this.discountCodeInvalid = "";
       },
-      onDiscountCodeSubmit: function() {
+      onDiscountCodeSubmit: function () {
         if (this.usedCoupon) {
           this.price = this.coursePrice;
           this.usedCoupon = "";
@@ -90,7 +100,7 @@
             "{{ .Site.Params.apiURL }}/api/public/code-verify/" +
               this.discountCode.toUpperCase()
           )
-          .then(res => {
+          .then((res) => {
             const coupon = res.data.data;
             if (coupon.course !== this.courseID) {
               this.discountCodeInvalid =
@@ -112,7 +122,7 @@
             this.discountCodeInvalid = "รหัสส่วนลดนี้ไม่สามารถใช้งานได้";
           });
       },
-      submit: function(e) {
+      submit: function (e) {
         if (this.$refs.registerForm.checkValidity()) {
           this.loading = true;
           var body = {
@@ -129,12 +139,16 @@
               province: this.province,
               postcode: this.zipcode.toString(),
               tel: this.tel,
-              email: this.email
+              email: this.email,
             },
-            note: this.note,
+            note: `${
+              this.bringOwnLaptop === "yes" ? "นำ Notebook มาเอง, " : ""
+            }${this.note}`,
             needQuotation: this.quotation === "yes",
-            subscribe: this.subscribe === "yes"
+            subscribe: this.subscribe === "yes",
           };
+          console.log(body);
+          return;
           if (this.type === "2") {
             body.customer.company = {
               nameTh: this.companyNameTH,
@@ -145,14 +159,14 @@
               subDistrict: this.companyDistrict,
               district: this.companyAmphoe,
               province: this.companyProvince,
-              postcode: this.companyZipcode.toString()
+              postcode: this.companyZipcode.toString(),
             };
           }
           grecaptcha
             .execute("6LePQbQUAAAAAILI-KSHN9i43DkaNAktt0bq_4mu", {
-              action: "homepage"
+              action: "homepage",
             })
-            .then(token => {
+            .then((token) => {
               body.captchaToken = token;
               axios
                 .post("{{ .Site.Params.apiURL }}/api/public/registers", body)
@@ -163,7 +177,7 @@
                     .modal({ backdrop: "static", keyboard: false })
                     .modal("show");
                 })
-                .catch(e => {
+                .catch((e) => {
                   this.loading = false;
                   $("#failModal")
                     .modal({ backdrop: "static", keyboard: false })
@@ -175,34 +189,34 @@
           this.$refs.registerForm.reportValidity();
         }
         this.isValidated = true;
-      }
-    }
+      },
+    },
   });
 
-  privacyModal.on("show.bs.modal", function(e) {
+  privacyModal.on("show.bs.modal", function (e) {
     Object.assign(register.$data, register.$options.data());
     register.subID = $(e.relatedTarget).data("subid");
     register.subName = $(e.relatedTarget).data("subname");
     register.courseID = $(e.relatedTarget).data("courseid");
   });
 
-  registerModal.on("show.bs.modal", function(e) {
+  registerModal.on("show.bs.modal", function (e) {
     if (app.v) {
       register.courses = app.v.courses;
     } else {
       register.courses = app.subjects.find(
-        v => v._id === register.subID
+        (v) => v._id === register.subID
       ).courses;
     }
     if (register.courseID) {
       register.coursePrice = register.courses.find(
-        v => v._id === register.courseID
+        (v) => v._id === register.courseID
       ).price;
       register.price = register.coursePrice;
     }
   });
   $.Thailand.setup({
-    database: "/db.json"
+    database: "/db.json",
   });
 
   $.Thailand({
@@ -210,12 +224,12 @@
     $amphoe: $("#amphoe"),
     $province: $("#province"),
     $zipcode: $("#zipcode"),
-    onDataFill: function(data) {
+    onDataFill: function (data) {
       register.district = data.district;
       register.amphoe = data.amphoe;
       register.province = data.province;
       register.zipcode = data.zipcode;
-    }
+    },
   });
 
   $.Thailand({
@@ -223,11 +237,11 @@
     $amphoe: $("#companyAmphoe"),
     $province: $("#companyProvince"),
     $zipcode: $("#companyZipcode"),
-    onDataFill: function(data) {
+    onDataFill: function (data) {
       register.companyDistrict = data.district;
       register.companyAmphoe = data.amphoe;
       register.companyProvince = data.province;
       register.companyZipcode = data.zipcode;
-    }
+    },
   });
 </script>
