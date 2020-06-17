@@ -68,7 +68,7 @@
       bringOwnLaptop: "no",
     }),
     computed: {
-      noshowBringOwnLaptop: function () {
+      showBringOwnLaptop: function () {
         return (
           ["5e32c6df369cdf2fdc2896ef", "5e32c6df369cdf2fdc2896ed"].indexOf(
             this.subID
@@ -142,7 +142,7 @@
               email: this.email,
             },
             note: `${
-              this.nobringOwnLaptop === "yes" ? "ประสงค์ให้บริษัทฯ เตรียมเครื่องให้, " : ""
+              this.bringOwnLaptop === "yes" ? "ประสงค์ให้บริษัทฯ เตรียมเครื่องให้, " : ""
             }${this.note}`,
             needQuotation: this.quotation === "yes",
             subscribe: this.subscribe === "yes",
