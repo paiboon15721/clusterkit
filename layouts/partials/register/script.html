@@ -65,10 +65,10 @@
       discountCodeInvalid: "",
       coursePrice: 0,
       price: 0,
-      bringOwnLaptop: "no",
+      needComputer: "no",
     }),
     computed: {
-      showBringOwnLaptop: function () {
+      showNeedComputer: function () {
         return (
           ["5e32c6df369cdf2fdc2896ef", "5e32c6df369cdf2fdc2896ed"].indexOf(
             this.subID
@@ -142,7 +142,7 @@
               email: this.email,
             },
             note: `${
-              this.bringOwnLaptop === "yes" ? "ประสงค์ให้บริษัทฯ เตรียมเครื่องให้, " : ""
+              this.needComputer === "yes" ? "ประสงค์ให้บริษัทฯ เตรียมเครื่องให้, " : ""
             }${this.note}`,
             needQuotation: this.quotation === "yes",
             subscribe: this.subscribe === "yes",
