@@ -25,7 +25,7 @@ draft: false
     <tr>
       <td>CKAN Data Management Portal</td>
       <td>รุ่นที่วันที่ 16 - 17 ก.ค. 63
-      <td>{{< link url="../../training-courses/machine-learning-with-apache-spark/" text="ลงทะเบียน" >}}</td>
+      <td>{{< link url="../../training-courses/ckan-data-management-portal/" text="ลงทะเบียน" >}}</td>
     </tr>
    </tbody>
 </table>
