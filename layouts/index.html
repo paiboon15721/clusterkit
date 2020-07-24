@@ -1,4 +1,31 @@
 {{ define "content" }}
+
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#exampleModal").modal('show');
+    });
+</script>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+       <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+
+    <div class="modal-content">
+
+      <div class="modal-body">
+        <img
+          src="{{ `imgs/main/king.png` | relURL }}"
+          class="img-fluid"
+        />
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 {{ partial "main/jumbotron-1.html" }}
 {{ partial "main/jumbotron-2.html" }}
 {{ partial "our-solutions.html" }}
