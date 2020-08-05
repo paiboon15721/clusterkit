@@ -22,8 +22,9 @@ type: 'identity'
 * {{< link url="../../identity/ClusterKit_Letter_Form.odt" text="Document Template - Cluster Kit Letter Form" >}}
 * {{< link url="../../identity/ClusterKit_Letter_Form2.odt" text="Document Template - Cluster Kit Letter Form2" >}} 
 * {{< link url="../../identity/template_manual.odt" text="Manual Template - Manual/Report Template" >}} 
-* {{< link url="../../identity/template_manual2.odt" text="Manual Template - Manual/Report Template" >}} 
+* {{< link url="../../identity/template_manual2.odt" text="Manual Template - Manual/Report Template2" >}} 
 * {{< link url="../../identity/CK-JigsawTemplate.otp" text="Presentation Template - Cluster Kit Jigsaw" >}} 
+* {{< link url="../../identity/CK-JigsawTemplate2019.odp" text="Presentation Template 2019 - Cluster Kit Jigsaw 2019" >}} 
 
 ## เครื่องมือในการทำเอกสาร (Free Software)
 * {{< link url="https://www.libreoffice.org/" text="https://www.libreoffice.org/" >}} 
