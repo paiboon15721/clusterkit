@@ -1,6 +1,6 @@
 ---
 title: 'Linux Administration'
-subID: '5e32c6df369cdf2fdc2896fd'
+subID: '5e32c6df369cdf2fdc2896fb'
 date: 2019-06-23T10:58:37+07:00
 draft: false
 totalHours: 30
