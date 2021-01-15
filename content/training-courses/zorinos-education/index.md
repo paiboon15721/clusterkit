@@ -1,11 +1,24 @@
 ---
-title: 'ZorinOS Education'
-subID: '6000fc17f972914e1f9070ab'
-date: 2021-01-15T10:01:34+07:00
+title: 'Zorinos Education'
+subID: '6000fc17f972914e1f9070ab' 
+date: 2021-01-15T11:01:11+07:00
 draft: false
-totalHours: 6
-totalDays: 1
-price: 1
+totalHours: 18
+totalDays: 3
+price: 10700
 pdfURL: ''
 ---
 
+## รายละเอียดหลักสูตร
+
+## หลักสูตรนี้เหมาะสำหรับ
+
+## วัตถุประสงค์
+
+## ความรู้พื้นฐาน
+
+## ซอฟต์แวร์ที่ใช้
+
+## สิ่งที่ผู้เข้าอบรมต้องเตรียม
+
+## เนื้อหาหลักสูตร
