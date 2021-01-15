@@ -5,7 +5,7 @@ date: 2021-01-15T10:01:34+07:00
 draft: false
 totalHours: 6
 totalDays: 1
-price: 0
-pdfURL: 'https://www.clusterkit.co.th/training/pdf/Ceph%20Storage%20Administration.pdf'
+price: 1
+pdfURL: ''
 ---
 
