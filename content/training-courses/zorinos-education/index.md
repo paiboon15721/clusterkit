@@ -1,5 +1,5 @@
 ---
-title: 'ZorinOS-Education'
+title: 'ZorinOS Education'
 subID: '6000fc17f972914e1f9070ab'
 date: 2019-06-23T11:01:34+07:00
 draft: false
