@@ -3,9 +3,9 @@ title: 'Power BI'
 subID: '5e32c6df369cdf2fdc289706' 
 date: 2019-12-23T11:04:43+07:00
 draft: false
-totalHours: 18
-totalDays: 3
-price: 10700
+totalHours: 12
+totalDays: 2
+price: 7490
 pdfURL: 'http://www.clusterkit.co.th/training/pdf/Power_BI.pdf'
 ---
 
