@@ -3,8 +3,8 @@ title: 'Ckan Data Management Portal'
 subID: '5e32c6df369cdf2fdc289707' 
 date: 2019-12-23T09:36:25+07:00
 draft: false
-totalHours: 18
-totalDays: 3
+totalHours: 12
+totalDays: 2
 price: 10700
 pdfURL: 'https://www.clusterkit.co.th/training/pdf/ckan-data-management-portal.pdf'
 ---
