@@ -6,6 +6,6 @@ draft: false
 totalHours: 6
 totalDays: 1
 price: 0
-pdfURL: '#'
+pdfURL: ''
 ---
 
