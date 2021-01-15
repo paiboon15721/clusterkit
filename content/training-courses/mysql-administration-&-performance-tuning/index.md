@@ -5,7 +5,7 @@ date: 2021-01-15T09:29:40+07:00
 draft: false
 totalHours: 12
 totalDays: 2
-price: 
+price: 7490
 pdfURL: '#'
 ---
 
