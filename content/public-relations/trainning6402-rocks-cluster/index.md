@@ -4,6 +4,8 @@ date: 2021-02-02T13:45:36+07:00
 draft: false
 ---
 
+Rocks ซอฟต์แวร์โอเพนซอร์สสำหรับทำ HPC (High Performance Computing) โดยในหลักสูตร Rocks Cluster Administration ท่านจะได้เรียนรู้การสร้างระบบคอมพิวเตอร์คลัสเตอร์ การปรับแต่งระบบ และการใช้งานเพื่อใช้ในงานประมวลสมรรถนะสูงทั้งในแบบ High Performance Computing และ High Throughput Computing ซึ่งเหมาะสำหรับงานคำนวณทางวิทยาศาสตร์และงานจำลองสถานการณ์
+
 <!--more-->
 
 ## สมัครง่าย ๆ ใน 2 ขั้นตอน
