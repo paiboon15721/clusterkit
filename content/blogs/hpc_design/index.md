@@ -1,5 +1,5 @@
 ---
-title: 'HPC Cluster design'
+title: 'การออกแบบคลัสเตอร์ HPC'
 date: 2021-03-29T10:48:58+07:00
 draft: false
 ---
