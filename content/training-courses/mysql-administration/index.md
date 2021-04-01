@@ -6,10 +6,8 @@ draft: false
 totalHours: 12
 totalDays: 2
 price: 7490
-pdfURL: 'http://www.clusterkit.co.th/training/pdf/MySQL_Admin_Outline2564.pdff'
+pdfURL: 'http://www.clusterkit.co.th/training/pdf/MySQL%20Administration%20.pdf'
 ---
-
-http://www.clusterkit.co.th/training/pdf/MySQL%20Administration%20.pdf
 
 ## รายละเอียดหลักสูตร
 
