@@ -1,11 +1,11 @@
 ---
-title: 'MySQL Administration'
+title: 'MySQL / Mariadb Administration'
 subID: '5e32c6df369cdf2fdc289702'
 date: 2019-06-23T11:01:25+07:00
 draft: false
 totalHours: 12
 totalDays: 2
-price: 7490
+price: 10700
 pdfURL: 'http://www.clusterkit.co.th/training/pdf/MySQL%20Administration.pdf'
 ---
 
