@@ -6,7 +6,7 @@ draft: false
 totalHours: 18
 totalDays: 3
 price: 10700
-pdfURL: ''
+pdfURL: 'http://www.clusterkit.co.th/training/pdf/PostgreSQL-Administration-II.pdf'
 ---
 
 <!-- ## รายละเอียดหลักสูตร
