@@ -1,6 +1,6 @@
 ---
 title: 'PostgreSQL Administration II'
-subID: '' 
+subID: '6098e4321c86a7056e962de5' 
 date: 2021-05-10T14:44:45+07:00
 draft: false
 totalHours: 18
