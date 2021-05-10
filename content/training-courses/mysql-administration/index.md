@@ -6,7 +6,7 @@ draft: false
 totalHours: 12
 totalDays: 2
 price: 7490
-pdfURL: 'http://www.clusterkit.co.th/training/pdf/MySQL%20Administration%20.pdf'
+pdfURL: 'http://www.clusterkit.co.th/training/pdf/MySQL%20Administration.pdf'
 ---
 
 ## รายละเอียดหลักสูตร
