@@ -31,8 +31,7 @@ draft: false
     </tr>
     <tr>
       <td>Advanced Proxmox Cluster Management</td>
-      <td>วันที่ 22 - 23 ก.ค. 64<br>
-          วันที่ 16 - 17 ก.ย. 64<br></td>
+      <td>วันที่ 16 - 17 ก.ย. 64</td>
       <td>{{< link url="../../training-courses/advanced-proxmox-cluster-management" text="ลงทะเบียน" >}}</td>
     </tr>
     <tr>
