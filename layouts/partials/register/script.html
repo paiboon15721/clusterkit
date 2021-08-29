@@ -1,19 +1,11 @@
-<script
-  type="text/javascript"
-  src="https://earthchie.github.io/jquery.Thailand.js/jquery.Thailand.js/dependencies/JQL.min.js"
-></script>
-<script
-  type="text/javascript"
-  src="https://earthchie.github.io/jquery.Thailand.js/jquery.Thailand.js/dependencies/typeahead.bundle.js"
-></script>
-<link
-  rel="stylesheet"
-  href="https://earthchie.github.io/jquery.Thailand.js/jquery.Thailand.js/dist/jquery.Thailand.min.css"
-/>
-<script
-  type="text/javascript"
-  src="https://earthchie.github.io/jquery.Thailand.js/jquery.Thailand.js/dist/jquery.Thailand.min.js"
-></script>
+<script type="text/javascript"
+  src="https://earthchie.github.io/jquery.Thailand.js/jquery.Thailand.js/dependencies/JQL.min.js"></script>
+<script type="text/javascript"
+  src="https://earthchie.github.io/jquery.Thailand.js/jquery.Thailand.js/dependencies/typeahead.bundle.js"></script>
+<link rel="stylesheet"
+  href="https://earthchie.github.io/jquery.Thailand.js/jquery.Thailand.js/dist/jquery.Thailand.min.css" />
+<script type="text/javascript"
+  src="https://earthchie.github.io/jquery.Thailand.js/jquery.Thailand.js/dist/jquery.Thailand.min.js"></script>
 <script src="https://www.google.com/recaptcha/api.js?render=6LePQbQUAAAAAILI-KSHN9i43DkaNAktt0bq_4mu"></script>
 <script>
   var registerModal = $("#registerModal");
@@ -97,11 +89,16 @@
         axios
           .get(
             "{{ .Site.Params.apiURL }}/api/public/code-verify/" +
-              this.discountCode.toUpperCase()
+            this.discountCode.toUpperCase()
           )
           .then((res) => {
             const coupon = res.data.data;
-            if (coupon.course !== this.courseID) {
+            if (coupon.expired) {
+              this.discountCodeInvalid =
+                "ขออภัย รหัสส่วนลดนี้หมดอายุแล้ว";
+              return;
+            }
+            if (coupon.course && coupon.course !== this.courseID) {
               this.discountCodeInvalid =
                 "รหัสส่วนลดนี้ไม่สามารถใช้งานร่วมกับคอร์สเรียนนี้ได้";
               return;
@@ -110,12 +107,17 @@
               this.discountCodeInvalid = "ขออภัย รหัสส่วนลดนี้ถูกใช้งานแล้ว";
               return;
             }
-            this.discountCodeValid =
-              "คุณได้รับส่วนลดมูลค่า " +
-              coupon.discount.toLocaleString() +
-              " บาท";
+            if (coupon.discountedPrice) {
+              this.discountCodeValid = "คุณได้รับส่วนลดมูลค่า " + (this.coursePrice - coupon.discountedPrice).toLocaleString() + " บาท"
+              this.price = coupon.discountedPrice;
+            } else {
+              this.discountCodeValid =
+                "คุณได้รับส่วนลดมูลค่า " +
+                coupon.discount.toLocaleString() +
+                " บาท";
+              this.price = this.coursePrice - coupon.discount;
+            }
             this.usedCoupon = coupon._id;
-            this.price = this.coursePrice - coupon.discount;
           })
           .catch(() => {
             this.discountCodeInvalid = "รหัสส่วนลดนี้ไม่สามารถใช้งานได้";
@@ -140,9 +142,8 @@
               tel: this.tel,
               email: this.email,
             },
-            note: `${
-              this.needComputer === "yes" ? "ประสงค์ให้บริษัทฯ เตรียมเครื่องให้, " : ""
-            }${this.note}`,
+            note: `${this.needComputer === "yes" ? "ประสงค์ให้บริษัทฯ เตรียมเครื่องให้, " : ""
+              }${this.note}`,
             needQuotation: false,
             subscribe: this.subscribe === "yes",
           };
