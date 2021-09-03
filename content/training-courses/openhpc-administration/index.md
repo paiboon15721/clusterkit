@@ -31,7 +31,10 @@ pdfURL: 'http://www.clusterkit.co.th/training/pdf/OpenHPC-Administration.pdf'
 4. ซอฟต์แวร์ Ganglia Monitoring
 
 ## สิ่งที่ผู้เข้าอบรมต้องเตรียม
-ผู้เข้าอบรมต้องเตรียมเครื่องคอมพิวเตอร์ที่มีหน่วยความจำไม่น้อยกว่า 8 GB และมีพื้นที่ว่าง (Disk space) ไม่น้อยกว่า 50GB มาในการอบรม พร้อมติดตั้ง VirtualBox และ VirtualBox Extension Pack และเปิดฟังก์ชั่น Virtualization ใน BIOS มาให้เรียบร้อยตาม{{< link url="http://www.clusterkit.co.th/training/pdf/VirtualBox_64bit_Problem.pdf" text="คู่มือ" >}}
+ผู้เข้าอบรมต้องเตรียมเครื่องคอมพิวเตอร์ที่มีหน่วยความจำไม่น้อยกว่า 8 GB และมีพื้นที่ว่าง (Disk space) ไม่น้อยกว่า 50GB มาในการอบรม พร้อมติดตั้ง VirtualBox และ VirtualBox Extension Pack และเปิดฟังก์ชั่น Virtualization ใน BIOS มาให้เรียบร้อยตาม{{< link url="http://www.clusterkit.co.th/training/pdf/VirtualBox_64bit_Problem.pdf" text="คู่มือ" >}} 
+
+- หลักสูตร online ผู้เรียนจะต้องเตรียม VM ที่ติดตั้งระบบปฏิบัติการ CentOS7 ก่อนวันอบรม 
+- หลักสูตร onsite ท่านสามารถใช้ VM ที่ทางบริษัทฯ จัดเตรียมไว้ให้ท่านในวันอบรม
 
 ## เนื้อหาหลักสูตร
 ### วันที่ 1
