@@ -33,7 +33,7 @@ pdfURL: 'http://www.clusterkit.co.th/training/pdf/Ceph%20Storage%20Administratio
 ## ซอฟต์แวร์ที่ใช้
 
 1. Ceph
-2. CentOS 
+2. CentOS  
 
 ## สิ่งที่ผู้เข้าอบรมต้องเตรียม
 
