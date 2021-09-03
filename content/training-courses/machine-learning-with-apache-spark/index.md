@@ -36,7 +36,7 @@ pdfURL: 'http://www.clusterkit.co.th/training/pdf/Machine-Learning-with-Apache-S
 
 ## สิ่งที่ผู้เข้าอบรมต้องเตรียม
 
-ผู้เข้าอบรมนำเครื่องโน๊ตบุ๊คส่วนตัว โดยมีหน่วยความจำไม่น้อยกว่า 4GB และมีพื้นที่ว่าง (Disk space) ไม่น้อยกว่า 30GB สำหรับสร้าง VMs โดยในการอบรมจะใช้ซอฟต์แวร์ VirtualBox จำลองเครื่องและเปิดฟังก์ชั่น Virtualization ใน BIOS มาให้เรียบร้อยตาม {{< link url="http://www.clusterkit.co.th/training/pdf/VirtualBox_64bit_Problem.pdf" text="คู่มือ" >}} และผู้เรียนจะต้องติดตั้งระบบปฏิบัติการ Ubuntu Desktop 18.04 ลงมาให้ใน VM ให้พร้อมก่อนวันอบรม 
+ผู้เข้าอบรมนำเครื่องโน๊ตบุ๊คส่วนตัว โดยมีหน่วยความจำไม่น้อยกว่า 4GB และมีพื้นที่ว่าง (Disk space) ไม่น้อยกว่า 30GB สำหรับสร้าง VMs โดยในการอบรมจะใช้ซอฟต์แวร์ VirtualBox จำลองเครื่องและเปิดฟังก์ชั่น Virtualization ใน BIOS มาให้เรียบร้อยตาม {{< link url="http://www.clusterkit.co.th/training/pdf/VirtualBox_64bit_Problem.pdf" text="คู่มือ" >}} และผู้เรียนจะต้องติดตั้งระบบปฏิบัติการ Ubuntu Desktop 20.04 ลงมาให้ใน VM ให้พร้อมก่อนวันอบรม 
 
 ## เนื้อหาหลักสูตร
 
