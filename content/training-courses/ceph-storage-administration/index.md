@@ -28,16 +28,19 @@ pdfURL: 'http://www.clusterkit.co.th/training/pdf/Ceph%20Storage%20Administratio
 
 ## รูปแบบการสอน
 
-บรรยายและปฏิบัติการจริง (Workshop) โดยใช้ Virtual Machine 6 เครื่อง เพื่อจำลองสภาพแวดล้อมการติดตั้งระบบ Ceph Storage ให้เสมือนจริง
+บรรยายและปฏิบัติการจริง (Workshop) โดยใช้ Virtual Machine 3 เครื่อง เพื่อจำลองสภาพแวดล้อมการติดตั้งระบบ Ceph Storage ให้เสมือนจริง
 
 ## ซอฟต์แวร์ที่ใช้
 
 1. Ceph
-2. CentOS 7.1
+2. CentOS 
 
 ## สิ่งที่ผู้เข้าอบรมต้องเตรียม
 
-ผู้เข้าอบรมต้องเตรียมเครื่องคอมพิวเตอร์ที่มีหน่วยความจำไม่น้อยกว่า 8 GB และมีพื้นที่ว่าง (Disk space) ไม่น้อยกว่า 50GB มาในการอบรม พร้อมติดตั้ง VirtualBox และ VirtualBox Extension Pack และเปิดฟังก์ชั่น Virtualization ใน BIOS มาให้เรียบร้อยตาม{{< link url="http://www.clusterkit.co.th/training/pdf/VirtualBox_64bit_Problem.pdf" text="คู่มือ" >}}
+ผู้เข้าอบรมต้องเตรียมเครื่องคอมพิวเตอร์ที่มีหน่วยความจำไม่น้อยกว่า 8 GB และมีพื้นที่ว่าง (Disk space) ไม่น้อยกว่า 50GB มาในการอบรม พร้อมติดตั้ง VirtualBox และ VirtualBox Extension Pack และเปิดฟังก์ชั่น Virtualization ใน BIOS ให้เรียบร้อยตาม{{< link url="http://www.clusterkit.co.th/training/pdf/VirtualBox_64bit_Problem.pdf" text="คู่มือ" >}} 
+
+- หลักสูตร online ผู้เรียนจะต้องเตรียม VM ที่ติดตั้งระบบปฏิบัติการ CentOS7 ก่อนวันอบรม 
+- หลักสูตร onsite ท่านสามารถใช้ VM ที่ทางบริษัทฯ จัดเตรียมไว้ให้ท่านในวันอบรม
 
 ## เนื้อหาหลักสูตร
 
