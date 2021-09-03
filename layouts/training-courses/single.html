@@ -2,7 +2,7 @@
 <div class="container mt-5">
   <div class="row">
     <div v-cloak id="app" class="col-md-8 offset-md-2">
-      <h1 class="display-5">${v.nameEn}</h1>
+      <h1 class="display-5">${v.nameEn} (Course Online)</h1>
       <div class="h1-line"></div>
       {{ range first 1 (.Resources.ByType "image") }}
       {{ $image := . }}
@@ -22,6 +22,10 @@
           </li>
           {{ partial "training-courses/register-events" }}
         </ul>
+          <p class="lead" style="color:red;">พิเศษ!! สำหรับอาจารย์มหาวิทยาลัย ทุกหลักสูตรจ่ายเพียง 3,210.- 🎉🎉
+          <p class="lead" style="color:red;"></p>
+            <u><a href="../../public-relations/univercity-discount/">คลิก!! เพื่อดูเงื่อนไขโปรโมชัน</a></u>
+          </p>
         {{ .Content }}
       </div>
       {{ partial "register/site-after-register" . }}
