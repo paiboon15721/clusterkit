@@ -48,12 +48,12 @@ draft: false
     </tr>
     <tr>
       <td>OpenHPC Administration</td>
-      <td>วันที่ 23 - 24 พ.ย. 64</td>
+      <td>วันที่ 15 - 16 พ.ย. 64</td>
       <td>{{< link url="../../training-courses/openhpc-administration" text="ลงทะเบียน" >}}</td>
     </tr>
     <tr>
       <td>Lustre File System</td>
-      <td>วันที่ 25 - 26 พ.ย. 64</td>
+      <td>วันที่ 17 - 18 พ.ย. 64</td>
       <td>{{< link url="../../training-courses/lustre-file-system" text="ลงทะเบียน" >}}</td>
     </tr>
     <tr>
