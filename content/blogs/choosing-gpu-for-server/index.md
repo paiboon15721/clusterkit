@@ -46,21 +46,15 @@ draft: false
 โดยจะมีขนาดความสูง (height) x ความยาว (length) = 120 mm x 312 mm
 และความหนา (width) ของ 1 slot = 20.32 mm
 
+{{< image src="blogs/choosing-gpu-for-server/pcie-bracket-height.png" title="" >}}
 
-รูป
-
-
----
-
-
-รูป
+{{< image src="blogs/choosing-gpu-for-server/pci-card-type.png" title="" >}}
 
 Power Supply and Power Connector
 ในกรณีการ์ด GPU ที่ใส่ในเครื่อง Server จากแบรนด์หลัก ๆ เช่น HPE, DELL หากต้องการติดตั้งการ์ด GPU เพิ่มเติมนั้น จะต้องวางแผนเลือกรุ่นที่ Support การใส่ GPU เพราะว่าจะออกแบบพื้นที่ว่างสำหรับ GPU และ Power Connector สำหรับต่อกับ GPU ถ้าเป็นรุ่นที่ไม่ Support อาจจะใส่ได้ แต่ไม่มี Connector ต่อไฟเลี้ยง GPU เพิ่มและเลือก Power Supply เพื่อจ่ายไฟให้กับ GPU ให้พอ (แนะนำเลือกเป็นตัวที่จ่ายไฟได้สูงสุด) และต้องสั่ง Power Connector Cable ที่จ่ายให้ GPU เผื่อตั้งแต่สั่งเครื่องครั้งแรกมาก่อนเลย เนื่องจาก Part พวกนี้จะสั่งที่หลังมาเพิ่มเติมไม่ได้ และตรวจสอบอัตราการกินไฟของการ์ด GPU ที่ต้องการว่าเครื่องจ่ายได้ไหวหรือไม่ และอีกส่วนหนึ่งก็คือ Power connector ที่ต้องจ่ายไฟเพิ่มให้กับ GPU ซึ่งต้องดูว่าเป็น Connector แบบใด 6Pin, 8Pin หรือ 12Pin โดยเครื่อง Server คิดว่าน่าจะ Provide เป็น 8Pin มา หากใส่ GPU รุ่นที่ต้องการไฟแบบ 6 Pin ก็จะต้องหาสาย Convert จาก 8Pin ลงมาเป็น 6Pin
 
+{{< image src="blogs/choosing-gpu-for-server/connector.jpg" title="" >}}
 
-
-รูป
 
 
 
