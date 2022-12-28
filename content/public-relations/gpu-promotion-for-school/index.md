@@ -3,8 +3,7 @@ title: 'HPE ลดราคา NVIDIA GPU สำหรับสถานศึ�
 date: 2020-03-30T10:30:43+07:00
 draft: false
 ---
-
-HPE จัดชุด GPU Server มานำเสนอสำหรับคนที่ต้องการประมวลผล Machine Learning หรือ Deep Learning ดังนี้.
+HPE จัดชุด GPU Server มานำเสนอสำหรับคนที่ต้องการประมวลผล Machine Learning หรือ Deep Learning ดังนี้
 <!--more--> 
 
 {{< image src="../../public-relations/gpu-promotion-for-school/HPE_Servers_for_DL_Starter_Kit_vertical.jpg" title="" >}}
