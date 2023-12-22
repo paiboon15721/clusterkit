@@ -1,5 +1,5 @@
 ---
-title: 'Hadoop Integrator (HDP+HUE+LDAP)'
+title: 'Hadoop Integrator With HDP+HUE+LDAP'
 subID: '658458b7b765b32335c8bba6' 
 date: 2023-12-21T23:53:31+07:00
 draft: false
