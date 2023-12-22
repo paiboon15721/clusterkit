@@ -1,5 +1,5 @@
 ---
-title: 'Hadoop Integrator'
+title: 'Hadoop Integrator (HDP+HUE+LDAP)'
 subID: '658458b7b765b32335c8bba6' 
 date: 2023-12-21T23:53:31+07:00
 draft: false
@@ -7,7 +7,6 @@ totalHours: 18
 totalDays: 3
 price: 21400
 pdfURL: "http://clusterkit.co.th/training/pdf/Hadoop_Integrator.pdf"
----
 ---
 
 ## รายละเอียดหลักสูตร
