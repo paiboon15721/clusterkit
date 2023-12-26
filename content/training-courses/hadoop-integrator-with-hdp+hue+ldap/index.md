@@ -39,6 +39,7 @@ pdfURL: "http://clusterkit.co.th/training/pdf/HDP-HUE-LDAP.pdf"
 
 ## เนื้อหาหลักสูตร
 
+### วันที่ 1
 - ภาพรวมของสิ่งที่จะทำ โหนดไหนทำอะไร
 - Hardware sizing for production 
 - การปรับแต่งระบบลีนุกซ์เพื่อเตรียมติดตั้ง Hadoop แบบคลัสเตอร์
