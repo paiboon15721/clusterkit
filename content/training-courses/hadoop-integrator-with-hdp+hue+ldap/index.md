@@ -1,12 +1,12 @@
 ---
-title: 'Hadoop Integrator With HDP+HUE+LDAP'
+title: 'Hadoop Integrator with HDP+HUE+LDAP'
 subID: '658458b7b765b32335c8bba6' 
 date: 2023-12-21T23:53:31+07:00
 draft: false
 totalHours: 18
 totalDays: 3
 price: 21400
-pdfURL: "http://clusterkit.co.th/training/pdf/Hadoop_Integrator.pdf"
+pdfURL: "http://clusterkit.co.th/training/pdf/HDP-HUE-LDAP.pdf"
 ---
 
 ## รายละเอียดหลักสูตร
@@ -30,11 +30,12 @@ pdfURL: "http://clusterkit.co.th/training/pdf/Hadoop_Integrator.pdf"
 
 ## สิ่งที่ผู้เข้าอบรมต้องเตรียม
 
-1. ผู้เข้าอบรมเตรียมเครื่องคอมพิวเตอร์หรือ Virtual Machine ติดตั้ง CentOS-7 ที่สามารถออกอินเทอร์เน็ตและรีโมตไปติดตั้งซอฟต์แวร์ได้ ที่มีขนาดอย่างน้อย 2 CPU cores และมีหน่วยความจำอย่างน้อยดังต่อไปนี้ 
+- ผู้เข้าอบรมเตรียมโน้ตบุ๊คมาในวันอบรม
+
+บริษัท ฯ จะจำลองสภาพแวดล้อมแบบคลัสเตอร์บน Cloud จำนวน 7 VM (โดยทางบริษัท ฯ จัดเตรียม Cloud ให้) โดยเตรียม Virtual Machine ติดตั้ง CentOS-7 ที่สามารถออกอินเทอร์เน็ตและรีโมตไปติดตั้งซอฟต์แวร์ได้ ที่มีขนาดอย่างน้อย 2 CPU cores และมีหน่วยความจำอย่างน้อยดังต่อไปนี้ 
   - แรม 24 GB จำนวน 1 เครื่อง (เครื่องนี้ติดตั้งแบบ Server with GUI for ambari and Edge node) 
   - แรม   8 GB จำนวน 5 เครื่อง (for master and worker nodes)
   - แรม   2 GB จำนวน 1 เครื่อง (Rocky9 for FreeIPA)
-2. ผู้เข้าอบรมเตรียมโน้ตบุ๊คมาในวันอบรม
 
 ## เนื้อหาหลักสูตร
 
