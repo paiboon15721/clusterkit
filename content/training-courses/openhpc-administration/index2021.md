@@ -5,7 +5,7 @@ date: 2021-05-10T15:16:28+07:00
 draft: false
 totalHours: 12
 totalDays: 2
-price: 10700
+price: 7490
 pdfURL: 'http://www.clusterkit.co.th/training/pdf/OpenHPC-Administration.pdf'
 ---
 
@@ -25,13 +25,16 @@ pdfURL: 'http://www.clusterkit.co.th/training/pdf/OpenHPC-Administration.pdf'
 ผู้เข้าอบรมต้องผ่านการฝึกอบรมหลักสูตร Linux Administration หรือเป็นผู้ดูแลระบบที่มีความเชี่ยวชาญในการดูแลระบบ Linux Server
 
 ## ซอฟต์แวร์ที่ใช้
-1. ระบบปฏิบัติการ Rocky 8 
+1. ระบบปฏิบัติการ CentOS7/8 
 2. ซอฟต์แวร์ OpenHPC – https://openhpc.community/ 
 3. ซอฟต์แวร์ Slurm / OpenPBS
-4. ซอฟต์แวร์ Monitoring
+4. ซอฟต์แวร์ Ganglia Monitoring
 
 ## สิ่งที่ผู้เข้าอบรมต้องเตรียม
 ผู้เข้าอบรมต้องเตรียมเครื่องคอมพิวเตอร์ที่มีหน่วยความจำไม่น้อยกว่า 8 GB และมีพื้นที่ว่าง (Disk space) ไม่น้อยกว่า 50GB มาในการอบรม พร้อมติดตั้ง VirtualBox และ VirtualBox Extension Pack และเปิดฟังก์ชั่น Virtualization ใน BIOS มาให้เรียบร้อยตาม{{< link url="http://www.clusterkit.co.th/training/pdf/VirtualBox_64bit_Problem.pdf" text="คู่มือ" >}} 
+
+- หลักสูตร online ผู้เรียนจะต้องเตรียม VM ที่ติดตั้งระบบปฏิบัติการ CentOS7 ก่อนวันอบรม 
+- หลักสูตร onsite ท่านสามารถใช้ VM ที่ทางบริษัทฯ จัดเตรียมไว้ให้ท่านในวันอบรม
 
 ## เนื้อหาหลักสูตร
 ### วันที่ 1
@@ -51,8 +54,8 @@ pdfURL: 'http://www.clusterkit.co.th/training/pdf/OpenHPC-Administration.pdf'
 ### บ่าย
 * การใช้งานระบบคอมพิวเตอร์คลัสเตอร์
     * คำสั่งพื้นฐานและคำสั่งแบบขนาน 
-    * หลักการทำงานของระบบ Monitoring 
-    * Workshop 2 การใช้งานระบบ Monitoring  
+    * หลักการทำงานของระบบ Ganglia Monitoring 
+    * Workshop 2 การใช้งานระบบ Ganglia Web Monitoring  
 * Workshop 3 : การ Login ระยะไกล และใช้งานคำสั่งพื้นฐาน
 * การบริหารจัดการระบบคอมพิวเตอร์คลัสเตอร์ 
     * การจัดการบัญชีผู้ใช้
@@ -70,7 +73,7 @@ pdfURL: 'http://www.clusterkit.co.th/training/pdf/OpenHPC-Administration.pdf'
 * Workshop 5: การติดตั้ง Application Software
 * โปรแกรมแบบขนาน
     * อธิบายการทำงานของโปรแกรมแบบขนาน 
-    * MPI ชนิดต่าง ๆ ที่มากับซอฟต์แวร์ OpenHPC 
+    * MPI ชนิดต่าง ๆ ที่มากับซอฟต์แวร์ Rocks 
 * การพัฒนาโปรแกรมแบบขนานเบื้องต้นด้วย MPICH
     * ตำแหน่งและคอนฟิกกูเรชั่นที่เกี่ยวข้องกับ MPICH 
 * Workshop 6: การ Compile และ Run โปรแกรมแบบขนาน 
