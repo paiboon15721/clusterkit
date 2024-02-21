@@ -10,6 +10,10 @@ price: 10700
 pdfURL: "http://www.clusterkit.co.th/training/pdf/Advanced%20Proxmox%20Cluster%20Management.pdf"
 ---
 
+---
+## ** เพิ่มเติมเนื้อหา เป็นหลักสูตรใหม่ 
+## {{< link url="https://www.clusterkit.co.th/training-courses/extreme-proxmox-cluster-administration/" text="หลักสูตร Extreme Proxmox Cluster Administration" >}}
+---
 ## รายละเอียดหลักสูตร
 
 หลักสูตรนี้เป็นการเรียนรู้การติดตั้งและใช้งาน Open Source Software ระบบ Virtualization ที่ชื่อ Proxmox Virtual Environment (Proxmox VE หรือ PVE) โดยเป็นซอฟต์แวร์บริหารจัดการทรัพยากร คอมพิวเตอร์สำหรับองค์กร เนื้อหาในหลักสูตรครอบคลุมตั้งแต่ การติดตั้งระบบ การจัดการบัญชีผู้ใช้ การสร้างและรัน VM บนระบบ การปรับแต่งการใช้งานในรูปแบบคลัสเตอร์ การทำ Live Migration และการขยายระบบในแบบ Hyper Converged Infrastructure
