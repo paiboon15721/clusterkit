@@ -29,7 +29,7 @@ pdfURL: 'http://www.clusterkit.co.th/training/pdf/Hadoop-Ecosystem-for-Big-Data.
 
 ## ซอฟต์แวร์ที่ใช้
 
-Hadoop Cluster ที่ติดตั้งด้วยซอฟต์แวร์ Hortonworks และ Hue พร้อมเชื่อมต่อระบบยืนยันตัวตนผ่าน LDAP 
+บริษัทจะเตรียม Hadoop Cluster ที่ติดตั้งด้วยซอฟต์แวร์ Hortonworks และ Hue พร้อมเชื่อมต่อระบบยืนยันตัวตนผ่าน LDAP ไว้ใช้ในการอบรม
 
 ## สิ่งที่ผู้เข้าอบรมต้องเตรียม
 
