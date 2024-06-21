@@ -4,7 +4,7 @@ subID: '658a9f63b765b32335c8bbaa'
 date: 2024-02-21T15:48:47+07:00
 draft: false
 totalHours: 18
-totalDays: 3
+totalDays: 23
 price: 17655
 pdfURL: 'http://clusterkit.co.th/training/pdf/Extreme-Proxmox-Cluster-Administration-3Days.pdf'
 ---
