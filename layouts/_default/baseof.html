@@ -3,7 +3,6 @@
   <head>
     {{ block "meta" . }}
     {{ end }}
-    {{ partial "seo-schema" . }}
     <link rel="icon" href="{{ `favicon.ico` | relURL }}" />
     <title>{{ .Title }} - {{ .Site.Title }}</title>
     {{ $style := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
