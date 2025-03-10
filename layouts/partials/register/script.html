@@ -160,12 +160,13 @@
               postcode: this.companyZipcode.toString(),
             };
           }
-          grecaptcha
-            .execute("6LePQbQUAAAAAILI-KSHN9i43DkaNAktt0bq_4mu", {
-              action: "homepage",
-            })
-            .then((token) => {
-              body.captchaToken = token;
+          // grecaptcha
+          //   .execute("6LePQbQUAAAAAILI-KSHN9i43DkaNAktt0bq_4mu", {
+          //     action: "homepage",
+          //   })
+          //   .then((token) => {
+          //     body.captchaToken = token;
+              body.captchaToken = "token";
               axios
                 .post("{{ .Site.Params.apiURL }}/api/public/registers", body)
                 .then(() => {
@@ -182,7 +183,7 @@
                     .modal("show");
                   failModal.errors = e.response.data.message;
                 });
-            });
+            // });
         } else {
           this.$refs.registerForm.reportValidity();
         }
