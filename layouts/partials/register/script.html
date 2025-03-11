@@ -6,7 +6,7 @@
   href="https://earthchie.github.io/jquery.Thailand.js/jquery.Thailand.js/dist/jquery.Thailand.min.css" />
 <script type="text/javascript"
   src="https://earthchie.github.io/jquery.Thailand.js/jquery.Thailand.js/dist/jquery.Thailand.min.js"></script>
-<script src="https://www.google.com/recaptcha/api.js?render=6LePQbQUAAAAAILI-KSHN9i43DkaNAktt0bq_4mu"></script>
+<script src="https://www.google.com/recaptcha/enterprise.js?render=6LdK3PAqAAAAACPUFBQgXsBju0e4Ge76bcx8I0te"></script>
 <script>
   var registerModal = $("#registerModal");
   var privacyModal = $("#privacyModal");
@@ -160,13 +160,12 @@
               postcode: this.companyZipcode.toString(),
             };
           }
-          // grecaptcha
-          //   .execute("6LePQbQUAAAAAILI-KSHN9i43DkaNAktt0bq_4mu", {
-          //     action: "homepage",
-          //   })
-          //   .then((token) => {
-          //     body.captchaToken = token;
-              body.captchaToken = "token";
+          grecaptcha
+            .enterprise.execute("6LdK3PAqAAAAACPUFBQgXsBju0e4Ge76bcx8I0te", {
+              action: "homepage",
+            })
+            .then((token) => {
+              body.captchaToken = token;
               axios
                 .post("{{ .Site.Params.apiURL }}/api/public/registers", body)
                 .then(() => {
@@ -183,7 +182,7 @@
                     .modal("show");
                   failModal.errors = e.response.data.message;
                 });
-            // });
+            });
         } else {
           this.$refs.registerForm.reportValidity();
         }
